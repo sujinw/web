@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ejs 测试页面</title>
+	<script type="text/javascript" src="ejs.js"></script>
+	<script type="text/javascript">
+		var data = {
+			title:"name and job",
+			name: ["slade","sujinw","sss","aaa","ssss"],
+			job:["html","js","css","java","php"]
+		}
+	</script>
+</head>
+<body>
+	<div id="name"></div>
+<script type="text/javascript">
+	html = new EJS({url: 'tpl.ejs'}).render(data);
+	document.getElementById("name").innerHTML = html
+	console.log(html);
+</script>
+</body>
+</html>

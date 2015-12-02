@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+<title>Mobilebone.js API文档-data-callbackKeys</title>
+<link rel="stylesheet" href="../src/mobilebone.css">
+<link rel="stylesheet" href="docs.css">
+</head>
+
+<body>
+<aside></aside>
+<div class="page out">
+	<div class="content">
+    	<h2>data-callbackKeys</h2>
+        <p>这里的<code>callbackKeys</code>只是一种统称，实际没有这个自定义属性的，指的是一系列回调写法，因为除了长相不一样，其他都类似，所以合在一起讲了。</p>
+        <p>其家庭成员包括：</p>
+        <ul>
+        	<li>data-onpagefirstinto</li>
+        	<li>data-callback</li>
+            <li>data-fallback</li>
+            <li>data-animationstart</li>
+            <li>data-animationend</li>
+            <li>data-preventdefault</li>
+        </ul>
+        <p>每个回调的作用于使用场景可参见博文说明：<a href="http://www.zhangxinxu.com/wordpress/2014/10/mobilebone-js-mobile-web-app-core/" class="link">点击这里</a>。</p>
+        <p>其中，<code>data-preventdefault</code>并非<code>page</code>元素专有，<code>a</code>元素，<code>form</code>元素也支持此回调，具体可<a href="data-preventDefault.html" class="link">点击这里</a>。</p>
+        <h3>其他说明</h3>
+        <p><code>data-ajaxKeys</code>也是类似的集合API。</p>
+        <h3>补充说明(<time>2015-04-15</time>)</h3>
+        <p>有很多人问过静态页面间传参的问题。由于是单页，因此，可以设置个全局对象，专门负责参数传递，但是，有些人就是不想走全局对象传参，怎么办？</p>
+        <p>是这样的，如果你是点击<code>&lt;a&gt;</code>元素触发的过场，则所有的回调函数中的<code>options</code>这个参数（是个纯对象）中会有一个target属性，其值就是我们之前点击的<code>&lt;a&gt;</code>元素，于是，你就可以获得你想要的参数了。例如：</p>
+        <pre>&lt;a href="load.html?id=111">页面111&lt;/a></pre>
+        <p>111可能是你想传递的参数，然后，就可以通过下面一行脚本获得：</p>
+        <pre>var id = options.target.href.replace(/\D/g, "");</pre>
+    </div>
+</div>
+
+<script src="../src/mobilebone.js"></script>
+<script>
+Mobilebone.captureLink = false;
+window.navKey = "data-callbackKeys";
+</script>
+<script src="nav.js"></script>
+<script src="docs.js"></script>
+</body>
+</html>

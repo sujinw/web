@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+<title>表单提交</title>
+<link rel="stylesheet" href="../../src/mobilebone.css">
+<link rel="stylesheet" href="../test.css">
+<link rel="stylesheet" href="zxx.lib.css">
+<style>
+[name], .submit {
+	height: 40px; width: 100%; padding: 10px; box-sizing: border-box; font-size: 100%;
+}
+[type=radio], [type=checkbox] {
+	width: auto; height: auto;
+}
+</style>
+</head>
+
+<body>
+<div id="pageHome" class="page out">
+	<ul>
+        <li class="pl10 pr10">
+            <form method="get" action="search.html">
+            	<p><select name="city" required>
+                	<option value="1">上海</option>
+                    <option value="1">北京</option>
+                </select></p>
+                <p><textarea name="mark">标注内容</textarea></p>
+                <p>
+                	<input type="radio" name="radio" value="1"><label class="mr20">单选1</label>
+                    <input type="radio" name="radio" value="2"><label>单选2</label>
+                </p>
+                <p>
+                	<input type="checkbox" name="check" value="1"><label class="mr20">复选1</label>
+                    <input type="checkbox" name="check" value="2" checked><label class="mr20">复选2</label>
+                    <input type="checkbox" name="check" value="3" checked><label class="mr20">复选3</label>
+                    <input type="checkbox" name="check" value="4"><label class="mr20">复选4</label>
+                </p>
+                <p><input type="search" class="search mr10" name="key" required></p>
+                <p><input type="submit" class="submit" value="搜索"></p>
+            </form>
+    	</li>
+    </ul>
+    <ul>
+        <li><a href="form.html">点击动态加载一个表单</a></li>
+    </ul>
+    <ul>
+        <li><a href="../index.html" data-ajax="false">&laquo; 返回测试引导首页</a></li>
+    </ul>
+</div>
+
+<script src="../../src/mobilebone.js"></script>
+<!--<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>-->
+</body>
+</html>

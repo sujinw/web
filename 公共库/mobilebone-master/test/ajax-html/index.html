@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+<title>ajax请求HTML</title>
+<link rel="stylesheet" href="../../src/mobilebone.css">
+<link rel="stylesheet" href="../test.css">
+</head>
+
+<body>
+<div id="container"></div>
+<div id="pageHome" class="page out">
+    <ul>
+        <li><a href="ajax-page.html" data-container="container">点击加载(缓存，若后2项已请求，则无请求)</a></li>
+        <li><a href="ajax-page.html#a=1#b=1&c=1#" data-reload>点击加载(每次都请求， 返回含page结构)</a></li>
+        <li><a href="ajax-page.html?&&" data-formdata="?a=1">点击加载(缓存, url过滤测试)</a></li>
+        <li><a href="ajax-page.html?debug=zhangrui.songyi#&/index.php/Home/Mall/index/sid/251 " data-reload data-formdata="?a=1">点击加载(data-formdata测试)-全覆盖loading</a></li>
+        <li><a href="ajax-page.html?a=1&#tt_fo#nt=m&tt_#daymode=1" data-reload data-formdata="&c=1" data-mask="true">点击加载(data-formdata测试)-内覆盖loading</a></li>
+        <li><a href="ajax-page.html?a=1&b=" class="follow" data-reload data-formdata="c=1&d=1" data-mask="true">点击加载(data-formdata测试)-跟随loading</a></li>
+    </ul>
+    <ul>
+        <li><a href="ajax-without-page.html" data-title="纯a标签元素返回页面">点击加载-返回不含page, 自动创建page</a></li>
+    </ul>
+    <ul>
+    	<li><a href="root-reload.php?id=1">根地址不缓存1</a></li>
+        <li><a href="root-reload.php?id=2">根地址不缓存2</a></li>
+        <li><a href="root-reload.php?id=3">根地址不缓存3</a></li>
+        <li><a href="root-reload.php?id=4">根地址不缓存4</a></li>
+    </ul>
+    <ul>
+        <li><a href="b.html">连续加载测试-加载b页面</a></li>
+        <li><a href="b.html?a=1">连续加载测试-加载b页面</a></li>
+    </ul>
+    <ul>
+        <li><a href="http://www.zhangxinxu.com/sp/char.html" target="_blank">外部地址测试，应该直接跳转</a></li>
+    </ul>
+    <ul>
+        <li><a href="../index.html" data-ajax="false">&laquo; 返回测试引导首页</a></li>
+    </ul>
+</div>
+
+<script src="../../src/mobilebone.js"></script>
+<script src="../../src/mobilebone.js"></script>
+<script>
+var optionsTest = function(elein, eleout, options) {
+	// ajax过场回调options参数测试
+	// console.log("点击的元素是：" + (options.target && options.target.outerHTML));
+	// console.log("请求内容是：" + options.response);
+};
+var init = function(ele) {
+	var button = document.querySelector(".ajaxButton");
+	button.addEventListener("click", function() {
+		console.log("clicked!");	
+	});
+	ele.querySelector(".result").innerHTML += 'inited! ';
+};
+
+var root_reload = function() {
+	var show = document.getElementById("idShow"), should = document.getElementById("idShould");
+	if (show && should) {
+		show.innerHTML = should.innerHTML;
+	}
+};
+
+var page_b_first = function() {
+	console.log("first?");
+};
+var page_root_first = function() {
+	// console.log("root?");
+};
+
+Mobilebone.evalScript = true;
+</script>
+</body>
+</html>

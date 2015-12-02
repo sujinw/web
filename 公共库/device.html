@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>幻影特效网-手机上的前端学习平台</title>
+  <script src="device.js"></script>
+</head>
+
+<body style="margin: auto; position: absolute; width:100%; height: 100%">
+
+<script>
+ var isMobile = device.mobile(),
+     isTable = device.tablet();
+
+    if(isMobile || isTable){
+        window.location.href="http://3ghy.com/wapindex.aspx?siteid=1000&sid=-2-0-0-0-320";
+    }
+    else{
+         window.location.href="http://3ghy.com/wapindex.aspx?siteid=1000&sid=-3-0-0-0-320";
+    }
+</script>
+</body>
+</html>
