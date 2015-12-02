@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+   #block{
+	   width:200px;
+	   height:200px;
+	   border:1px solid #333;
+	   margin:100px auto;
+	   
+	   -webkit-transition:all 0.2s linear;
+    -moz-transition:all 0.2s linear;
+    -o-transition:all 0.2s linear;
+    transition:all 0.2s linear;
+	   }
+   #block a{
+	   height:32px;
+	   width:100px;
+	   display:block;
+	   padding:0 0 0 32px;
+	   margin:50px auto;
+	   position:relative;
+	   
+		   
+	   }
+   .loaded{
+	   background-image:url(hotword_change.png);
+	   background-repeat:no-repeat; 
+	   background-position:left center;
+	   display:block;
+	position:absolute;
+    left:0px;
+    width:32px;
+	height:32px;
+    text-align:center;
+    line-height:32px;
+    -webkit-transition:all 0.3s ease-in-out;
+    -moz-transition:all 0.3s ease-in-out;
+    -o-transition:all 0.3s ease-in-out;
+    transition:all 0.3s ease-in-out;}
+   .rodate{
+	   -webkit-transform:scale(1.05);
+       -moz-transform:scale(1.05);
+    -ms-transform:scale(1.05);
+    -o-transform:scale(1.05);
+    transform:scale(1.05);
+   }
+   .span{
+	   opacity:0.5;
+       -webkit-transform:rotate(360deg);
+       -moz-transform:rotate(360deg);
+       -ms-transform:rotate(360deg);
+       -o-transform:rotate(360deg);
+       transform:rotate(360deg);
+	   }
+</style>
+<script>
+window.onload=function(){
+	
+	var span=document.getElementById('clickid').getElementsByTagName('span')[0];
+
+	
+	document.getElementById('clickid').onclick=function(){
+		
+		this.className="rodate";
+		span.className+=' span';
+		
+		setTimeout(function(){
+			span.className='loaded'
+			},500)
+	}
+}
+</script>
+</head>
+
+<body>
+<div id="block">
+ <a href="javascript:;" id="clickid"><span class="loaded"></span>刷新一下</a>
+</div>
+</body>
+</html>
