@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<meta name="google-site-verification" content="fM6DqXlSiXrgTqqlmf4-3yXPK-unhwWwGoJnxTqW-6Y">
+	<meta name="keywords" content="CSS, CSS3, CSS generator, CSS3 generator, button generator, border-radius, box-shadow, linear-gradient, opacity, older browser support">
+	<meta name="description" content="A visually clean customizable CSS3 generator which includes support for older browsers.">
+	<title>网友杰立分享css3样式代码生成器小工具</title>
+	<link rel="stylesheet" href="css/css3.css">
+	<!--[if IE]>
+<style>
+	/*By default unknown elements are display:inline*/
+	header, footer, article, section, nav, menu, hgroup {display: block;}
+</style>
+<script>
+	/*This script must run before the elements are created.
+	  Each element must specifically be created.*/
+	document.createElement("article");
+	document.createElement("aside");
+	document.createElement("footer");
+	document.createElement("header");
+	document.createElement("hgroup");
+	document.createElement("menu");
+	document.createElement("nav");
+	document.createElement("section");
+</script>
+<![endif]-->
+<!---->
+</head>
+<body class="noise">
+<div class="wrppr clearfix">
+		<div class="leftSide">
+			<div class="defaultPanel"> <a id="openDefault" href="javascript:void(0);" onClick="document.getElementById(&#39;defaultPanelContent&#39;).style.display=&#39;block&#39;;this.style.display=&#39;none&#39;;"><span class="cog"></span><span class="basicsText">编辑全局配置</span></a>
+				<div id="defaultPanelContent">
+					<table>
+						<tbody><tr>
+							<td><div class="panelTitle">
+									<p>basics:</p>
+								</div></td>
+							<td><div class="largeInputContainer">
+									<input id="bwInput" class="largeInput" maxlength="1" value="2" onFocus="this.select();" onKeyUp="changeInputValue(event,this,0,9);CSS3ME.setBasics();" autocomplete="off">
+								</div></td>
+							<td><div class="colorInputContainer bcInputContainer">
+									<div class="colorInputDiv">
+										<input id="bcInput" class="colorInput" value="border:" readonly="">
+										<div id="bcInputCP" class="colorPickerBox" onClick="createPicker(&#39;borderColor&#39;)"> </div>
+									</div>
+									<input id="bcHiddenInput" type="hidden" value="#999999">
+								</div></td>
+							<td><div class="colorInputContainer bgInputContainer">
+									<div class="colorInputDiv">
+										<input id="bgInput" class="colorInput" value="background:" readonly="">
+										<div id="bgInputCP" class="colorPickerBox" onClick="createPicker(&#39;backgroundColor&#39;)"> </div>
+									</div>
+									<input id="bgHiddenInput" type="hidden" value="#ffffff">
+								</div></td>
+						</tr>
+					</tbody></table>
+					<a class="closeDefault" href="javascript:void(0);" onClick="document.getElementById(&#39;defaultPanelContent&#39;).style.display=&#39;none&#39;;document.getElementById(&#39;openDefault&#39;).style.display=&#39;inline-block&#39;;" onMouseOut="document.getElementById(&#39;basicsCodeTT&#39;).style.display=&#39;none&#39;;" onMouseOver="document.getElementById(&#39;basicsCodeTT&#39;).style.display=&#39;block&#39;;"> </a>
+					<div id="basicsCodeTT" class="openMore">
+						<div class="moreTT">
+							<p>Closing this will remove the basics from the generated code</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel one morePanel">
+				<div class="icon radius"> </div>
+				<div class="panelContent">
+					<div class="openMore" onMouseOver="this.className=&#39;openMore ttOn&#39;;" onMouseOut="this.className=&#39;openMore&#39;;" onClick="this.parentNode.parentNode.className=&#39;panel one morePanel&#39;;">
+						<span class="openMoreText">+</span>
+						<div class="moreTT">
+							<p>Open this panel to edit specific values for this property</p>
+						</div>
+					</div>
+					<div class="closeMore" onClick="this.parentNode.parentNode.className=&#39;panel one morePanelOff&#39;;">
+						<span class="closeMoreText">–</span>
+					</div>
+					<table>
+						<tbody><tr>
+							<td><div class="panelTitle">
+									<p>border-radius:</p>
+								</div></td>
+							<td><div class="sliderMinus">-</div></td>
+							<td><div class="sliderContainer">
+									<div id="brSlider" class="slider">
+										<div id="brThumb" class="sliderThumb" style="left: 145px;"> </div>
+									</div>
+								</div></td>
+							<td><div class="sliderPlus">+</div></td>
+							<td><div class="largeInputContainer">
+									<input id="brInput" class="largeInput" onKeyUp="changeInputValue(event,this,0,50);CSS3ME.updateBorderRadius(Math.round(sliderBR.posPercToPx(Number(this.value))));CSS3ME.sliderBR.moveThumb(sliderBR.posPercToPx((this.value*2)+&#39;%&#39;))" maxlength="2" value="0" onFocus="this.select();" autocomplete="off">
+								</div></td>
+						</tr>
+					</tbody></table>
+				</div>
+				<div class="moreContent panelContent">
+					<table>
+						<tbody><tr>
+							<td><div class="brMoreInputs">
+									<div class="smallInputContainer brTLInputContainer">
+										<input id="brTLInput" class="smallInput" maxlength="2" value="0" onFocus="this.select();" onKeyUp="changeInputValue(event,this,0,50);CSS3ME.setBorderRadii();" autocomplete="off">
+									</div>
+									<div class="smallInputContainer brTRInputContainer">
+										<input id="brTRInput" class="smallInput" maxlength="2" value="0" onFocus="this.select();" onKeyUp="changeInputValue(event,this,0,50);CSS3ME.setBorderRadii();" autocomplete="off">
+									</div>
+									<div class="smallInputContainer brBRInputContainer">
+										<input id="brBRInput" class="smallInput" maxlength="2" value="0" onFocus="this.select();" onKeyUp="changeInputValue(event,this,0,50);CSS3ME.setBorderRadii();" autocomplete="off">
+									</div>
+									<div class="smallInputContainer brBLInputContainer">
+										<input id="brBLInput" class="smallInput" maxlength="2" value="0" onFocus="this.select();" onKeyUp="changeInputValue(event,this,0,50);CSS3ME.setBorderRadii();" autocomplete="off">
+									</div>
+									<div class="brBGBox"> </div>
+								</div></td>
+						</tr>
+					</tbody></table>
+				</div>
+			</div>
+			<div class="panel two">
+				<div class="icon shadow"> </div>
+				<div class="panelContent">
+					<div class="openMore" onMouseOver="this.className=&#39;openMore ttOn&#39;;" onMouseOut="this.className=&#39;openMore&#39;;" onClick="this.parentNode.parentNode.className=&#39;panel two morePanel&#39;;">
+						<span class="openMoreText">+</span>
+						<div class="moreTT">
+							<p>Open this panel to edit specific values for this property</p>
+						</div>
+					</div>
+					<div class="closeMore" onClick="this.parentNode.parentNode.className=&#39;panel two morePanelOff&#39;;">
+						<span class="closeMoreText">–</span>
+					</div>
+					<table>
+						<tbody><tr>
+							<td><div class="panelTitle">
+									<p>box-shadow:</p>
+								</div></td>
+							<td><div class="sliderMinus">-</div></td>
+							<td><div class="sliderContainer">
+									<div id="bsSlider" class="slider">
+										<div id="bsThumb" class="sliderThumb" style="left: -4px;"> </div>
+									</div>
+								</div></td>
+							<td><div class="sliderPlus">+</div></td>
+							<td><div class="largeInputContainer">
+									<input id="bsInput" class="largeInput" onKeyUp="changeInputValue(event,this,0,20);CSS3ME.updateBoxShadow(Math.round(sliderBS.posPercToPx(Number(this.value))));CSS3ME.sliderBS.moveThumb(sliderBS.posPercToPx((this.value*5)+&#39;%&#39;))" maxlength="2" value="0" onFocus="this.select();" autocomplete="off">
+								</div></td>
+						</tr>
+					</tbody></table>
+				</div>
+				<div class="moreContent panelContent">
+					<table>
+						<tbody><tr>
+							<td><div class="bsMoreInputs">
+									<table>
+										<tbody><tr>
+											<td><label for="bsHorzInput">horizontal</label>
+												<span class="smallInputContainer bsHorzInputContainer">
+												<input id="bsHorzInput" class="smallInput" maxlength="3" value="0" onFocus="this.select();" onKeyUp="changeInputValue(event,this,-99,99);CSS3ME.setBoxShadow();" autocomplete="off">
+												</span></td>
+											<td><label for="bsVertInput">vertical</label>
+												<span class="smallInputContainer bsVertInputContainer">
+												<input id="bsVertInput" class="smallInput" maxlength="3" value="0" onFocus="this.select();" onKeyUp="changeInputValue(event,this,-99,99);CSS3ME.setBoxShadow();" autocomplete="off">
+												</span></td>
+											<td><div class="colorInputContainer">
+													<div class="colorInputDiv">
+														<input id="bsColorInput" class="colorInput" value="shadow:" readonly="">
+														<div id="bsInputCP" class="colorPickerBox" onClick="createPicker(&#39;boxShadowColor&#39;)"> </div>
+													</div>
+													<input id="bsColorHiddenInput" type="hidden" value="#000000">
+												</div></td>
+										</tr>
+										<tr>
+											<td><label for="bsBlurInput">blur</label>
+												<span class="smallInputContainer bsBlurInputContainer">
+												<input id="bsBlurInput" class="smallInput" maxlength="2" value="0" onFocus="this.select();" onKeyUp="changeInputValue(event,this,0,99);CSS3ME.setBoxShadow();" autocomplete="off">
+												</span></td>
+											<td><label for="bsSpreadInput">spread</label>
+												<span class="smallInputContainer bsSpreadInputContainer">
+												<input id="bsSpreadInput" class="smallInput" maxlength="3" value="0" onFocus="this.select();" onKeyUp="changeInputValue(event,this,-99,99);CSS3ME.setBoxShadow();" autocomplete="off">
+												</span></td>
+											<td><div id="insetShadowBtn" class="insetBtn" onClick="if(this.className==&#39;insetBtn&#39;){this.className=&#39;outsetBtn&#39;;}else{this.className=&#39;insetBtn&#39;;}CSS3ME.setBoxShadow();"><span class="insetBtnOff">Inset Shadow?</span><span class="insetBtnOn">Outset Shadow?</span></div></td>
+										</tr>
+									</tbody></table>
+								</div></td>
+						</tr>
+					</tbody></table>
+				</div>
+			</div>
+			<div class="panel three">
+				<div class="icon gradient"> </div>
+				<div class="panelContent">
+					<div class="openMore" onMouseOver="this.className=&#39;openMore ttOn&#39;;" onMouseOut="this.className=&#39;openMore&#39;;" onClick="this.parentNode.parentNode.className=&#39;panel three morePanel&#39;;">
+						<span class="openMoreText">+</span>
+						<div class="moreTT">
+							<p>Open this panel to edit specific values for this property</p>
+						</div>
+					</div>
+					<div class="closeMore" onClick="this.parentNode.parentNode.className=&#39;panel three morePanelOff&#39;;">
+						<span class="closeMoreText">–</span>
+					</div>
+					<table>
+						<tbody><tr>
+							<td><div class="panelTitle">
+									<p>background gradient:</p>
+								</div></td>
+							<td><span class="gradTextOff">OFF</span><span id="gradientSwitch" class="gradSwitch" onClick="if(this.className!=&#39;gradSwitch gradOn&#39;){this.className=&#39;gradSwitch gradOn&#39;;}else{this.className=&#39;gradSwitch&#39;;}CSS3ME.updateGradient();"> </span><span class="gradTextOn">ON</span></td>
+							<td><div class="colorInputContainer bgFromContainer">
+									<div class="colorInputDiv">
+										<input id="bgFromInput" class="colorInput" value="from:" readonly="">
+										<div id="bgFromInputCP" class="colorPickerBox" onClick="createPicker(&#39;backgroundFromColor&#39;)"> </div>
+									</div>
+									<input id="bgFromHiddenInput" type="hidden" value="#ffffff">
+								</div></td>
+							<td><div class="gradientArrow"> </div></td>
+							<td><div class="colorInputContainer bgToContainer">
+									<div class="colorInputDiv">
+										<input id="bgToInput" class="colorInput" value="to:" readonly="">
+										<div id="bgToInputCP" class="colorPickerBox" onClick="createPicker(&#39;backgroundToColor&#39;)"> </div>
+									</div>
+									<input id="bgToHiddenInput" type="hidden" value="#000000">
+								</div></td>
+						</tr>
+					</tbody></table>
+				</div>
+				<div class="panelContent moreContent">
+					<table>
+						<tbody><tr>
+							<td><div class="radioWrp">
+									<div id="bgT2B" class="radioBtn radioChecked" onClick="CSS3ME.bgRadioChecked(this.id)"> </div>
+									<p onClick="CSS3ME.bgRadioChecked(&#39;bgT2B&#39;)">top to bottom</p>
+								</div></td>
+							<td><div class="radioWrp">
+									<div id="bgL2R" class="radioBtn" onClick="CSS3ME.bgRadioChecked(this.id)"> </div>
+									<p onClick="CSS3ME.bgRadioChecked(&#39;bgL2R&#39;)">left to right</p>
+								</div></td>
+							<td><div class="radioWrp">
+									<div id="bgR2L" class="radioBtn" onClick="CSS3ME.bgRadioChecked(this.id)"> </div>
+									<p onClick="CSS3ME.bgRadioChecked(&#39;bgR2L&#39;)">right to left</p>
+								</div></td>
+						</tr>
+					</tbody></table>
+				</div>
+			</div>
+			<div class="panel four">
+				<div class="icon opacity"> </div>
+				<div class="panelContent">
+					<table>
+						<tbody><tr>
+							<td><div class="panelTitle">
+									<p>opacity:</p>
+								</div></td>
+							<td><div class="sliderMinus">-</div></td>
+							<td><div class="sliderContainer">
+									<div id="oSlider" class="slider">
+										<div id="oThumb" class="sliderThumb" style="left: 253px;"> </div>
+									</div>
+								</div></td>
+							<td><div class="sliderPlus">+</div></td>
+							<td><div class="largeInputContainer">
+									<input id="oInput" class="largeInput" maxlength="3" value="100" onFocus="this.select();" onKeyUp="changeInputValue(event,this,0,100);CSS3ME.updateOpacity(Math.round(sliderO.posPercToPx(Number(this.value))));CSS3ME.sliderO.moveThumb(sliderO.posPercToPx((this.value)+&#39;%&#39;));" autocomplete="off">
+								</div></td>
+						</tr>
+					</tbody></table>
+				</div>
+			</div>
+		</div>
+		<div class="rightSide">
+			<div class="ribbon"> </div>
+			<div id="ieSuppError"> Only one filter will be previewed at a time </div>
+			<div class="preview">
+				<div id="changeDivBG">JQ学堂</div>
+				<div id="changedDiv" style="border-top-left-radius: 29px; border-top-right-radius: 29px; border-bottom-right-radius: 29px; border-bottom-left-radius: 29px; -webkit-box-shadow: rgb(0, 0, 0) 0px 0px 0px; box-shadow: rgb(0, 0, 0) 0px 0px 0px; opacity: 1;"> </div>
+			</div>
+			
+		</div>
+</div>
+	<div class="codeActions">
+		<a class="getCode" href="javascript:void(0);" onClick="document.getElementById(&#39;mask&#39;).style.display=&#39;block&#39;;CSS3ME.centerModal(&#39;code&#39;);CSS3ME.updateShowCode();">获取样式代码!</a>
+		
+	</div>
+	<div id="mask" onClick="this.style.display=&#39;none&#39;;document.getElementById(&#39;code&#39;).style.display=&#39;none&#39;;" style="display: none;"> </div>
+	<div id="code" style="display: none; position: fixed; top: 50%; margin-top: -183.5px; left: 50%; margin-left: -285.5px;">
+		<header class="codeHead">
+			<h2>你的样式生成代码!</h2>
+			<div class="closeOverlay" onClick="document.getElementById(&#39;mask&#39;).style.display=&#39;none&#39;;document.getElementById(&#39;code&#39;).style.display=&#39;none&#39;;">×</div>
+		</header>
+		<section class="codeWrpr">
+			<table>
+				<tbody><tr>
+					<td>
+						<input id="oldMSCheck" class="browserCheck" type="checkbox" onChange="CSS3ME.updateShowCode()"><label class="browserLabel" for="oldMSCheck">Old Microsoft</label>
+					</td>
+					<td colspan="2">
+						<input id="oldMozCheck" class="browserCheck" type="checkbox" onChange="CSS3ME.updateShowCode()"><label class="browserLabel" for="oldMozCheck">Old Mozilla</label>
+					</td>
+					<td>
+						<input id="oldWebkitCheck" class="browserCheck" type="checkbox" onChange="CSS3ME.updateShowCode()"><label class="browserLabel" for="oldWebkitCheck">Old Webkit</label>
+					</td>
+					<td>
+						<input id="commentsCheck" class="browserCheck" type="checkbox" onChange="CSS3ME.updateShowCode()"><label class="browserLabel" for="commentsCheck">/*COMMENTS*/</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input id="msCheck" class="browserCheck" type="checkbox" onChange="CSS3ME.updateShowCode()"><label class="browserLabel" for="msCheck">Microsoft</label>
+					</td>
+					<td>
+						<input id="mozCheck" class="browserCheck" type="checkbox" onChange="CSS3ME.updateShowCode()"><label class="browserLabel" for="mozCheck">Mozilla</label>
+					</td>
+					<td>
+						<input id="operaCheck" class="browserCheck" type="checkbox" onChange="CSS3ME.updateShowCode()"><label class="browserLabel" for="operaCheck">Opera</label>
+					</td>
+					<td>
+						<input id="webkitCheck" class="browserCheck" type="checkbox" onChange="CSS3ME.updateShowCode()"><label class="browserLabel" for="webkitCheck">Webkit</label>
+					</td>
+					<td>
+						<input checked="" id="defaultCheck" class="browserCheck" type="checkbox" onChange="CSS3ME.updateShowCode()" disabled="disabled"><label class="browserLabel defaultBrowserLabel" for="defaultCheck">Default</label>
+					</td>
+				</tr>
+			</tbody></table>
+			<textarea id="codeToCopy" onFocus="this.select()" readonly=""></textarea>
+		</section>
+		<footer class="codeFoot">			
+			
+			<div class="selectCode" onClick="document.getElementById(&#39;codeToCopy&#39;).focus();document.getElementById(&#39;codeToCopy&#39;).select();">选择代码</div>
+		</footer>
+	</div>
+	<script src="js/slider.js">
+	</script>
+	<script src="js/css3.js">
+	</script>
+	<script src="js/picker.js">
+	</script>
+	<script>
+var cpm = false;
+var currOpenCPMElmId = false;
+function isMouseOut(e, handler) {
+	if (e.type !== 'mouseout') {
+		return false;
+	}
+	var reltg = e.relatedTarget ? e.relatedTarget : e.type === 'mouseout' ? e.toElement : e.fromElement;
+	while (reltg && reltg !== handler) {
+		reltg = reltg.parentNode;
+	}
+	return (reltg !== handler);
+}
+var listOfColorItemInfo = {
+	'borderColor' : {'elmId' : 'bcInputCP', 'hiddenInputId' : 'bcHiddenInput', 'textInputId' : 'bcInput'},
+	'backgroundColor' : {'elmId' : 'bgInputCP', 'hiddenInputId' : 'bgHiddenInput', 'textInputId' : 'bgInput'},
+	'boxShadowColor' : {'elmId' : 'bsInputCP', 'hiddenInputId' : 'bsColorHiddenInput', 'textInputId' : 'bsColorInput'},
+	'backgroundFromColor' : {'elmId' : 'bgFromInputCP', 'hiddenInputId' : 'bgFromHiddenInput', 'textInputId' : 'bgFromInput'},
+	'backgroundToColor' : {'elmId' : 'bgToInputCP', 'hiddenInputId' : 'bgToHiddenInput', 'textInputId' : 'bgToInput'}
+};
+function createPicker(colorItem) {
+	var thisElm = false, thisItem = listOfColorItemInfo[colorItem], currColor = '';
+	if (currOpenCPMElmId) {
+		if (currOpenCPMElmId !== thisItem.elmId) {
+			document.getElementById(currOpenCPMElmId).innerHTML = '';
+			cpm.decontructor();
+			cpm = null;
+			currOpenCPMElmId = false;
+		} else {
+			return;
+		}
+	}
+	currOpenCPMElmId = thisItem.elmId;
+	currColor = document.getElementById(thisItem.hiddenInputId).value;
+	document.getElementById(thisItem.elmId).innerHTML = '<div id="colorPickerWrp">\
+		<div class="safeArea" onmouseout="if(isMouseOut(event,this)){document.getElementById(\'' + thisItem.elmId + '\').innerHTML=\'\';currOpenCPMElmId=false;}">\
+			<div class="colorPicker">\
+				<div class="pickerColorWrpr">\
+					<div id="pickerColor" class="pickerColor" onmousemove="cpm.changeColor(event,this,-1,-1)" onclick="cpm.setColor(event,this,-1,-1)" onmouseover="cpm.hasColorClicked=false;" onmouseout="cpm.resetColor();">\
+						<input type="hidden" id="hiddenColor" value="' + currColor + '" />\
+					</div>\
+				</div>\
+				<div id="pickerHueWrpr" class="pickerHueWrpr">\
+					<div id="pickerHue" class="pickerHue">\
+						<div id="hueColor" class="hueColor" onclick="cpm.setHue(event,this)"></div>\
+						<div id="hueLine" class="hueLine"></div>\
+						<input type="hidden" id="hiddenHue" value="0" />\
+						<div id="hueArrow" class="hueArrow" onmousedown="cpm.startHueChange(event,this)"></div>\
+					</div>\
+				</div>\
+			</div>\
+			<div id="pickerColorTrans" onmouseover="cpm.changeTransparentElms(true)" onmouseout="cpm.changeTransparentElms(false)" onclick="if(!cpm.isTransparent){cpm.toggleTransparent();}">transparent</div>\
+			<input id="pickerColorInput" value="' + currColor + '" onfocus="this.select()" onkeyup="cpm.setColorFromInput(event,this)" maxlength=7 />\
+		</div>\
+	</div>';
+	cpm = new ColorPickerModal({'inputElmId': thisItem.hiddenInputId, 'coloredElmId': thisItem.textInputId, 'startColor': currColor});
+}
+function initPage() {
+	document.getElementById('bwInput').value = 2;
+	document.getElementById('bcHiddenInput').value = "#999999";
+	document.getElementById('bgHiddenInput').value = "#ffffff";
+	document.getElementById('brInput').value = 0;
+	document.getElementById('brTLInput').value = 0;
+	document.getElementById('brTRInput').value = 0;
+	document.getElementById('brBRInput').value = 0;
+	document.getElementById('brBLInput').value = 0;
+	document.getElementById('bsInput').value = 0;
+	document.getElementById('bsHorzInput').value = 0;
+	document.getElementById('bsVertInput').value = 0;
+	document.getElementById('bsColorHiddenInput').value = "#000000";
+	document.getElementById('bsBlurInput').value = 0;
+	document.getElementById('bsSpreadInput').value = 0;
+	document.getElementById('oInput').value = 100;
+	document.getElementById('bgFromHiddenInput').value = "#ffffff";
+	document.getElementById('bgToHiddenInput').value = "#000000";
+}
+initPage();
+function changeInputValue(e, elmToChange, minNum, maxNum) {
+	var currNumber = Number(elmToChange.value);
+	if (e.keyCode === 38) {
+		elmToChange.value = Math.min(currNumber + 1, maxNum);
+	} else if (e.keyCode === 40) {
+		elmToChange.value = Math.max(currNumber - 1, minNum);
+	} else if (e.keyCode === 33) {
+		elmToChange.value = Math.min(currNumber + 10, maxNum);
+	} else if (e.keyCode === 34) {
+		elmToChange.value = Math.max(currNumber - 10, minNum);
+	}
+}
+
+if (navigator.userAgent.indexOf('MSIE') !== -1) {
+	document.getElementById('ieSuppError').style.display = 'inline-block';
+}
+</script>
+ <center>
+  <span style="font-size:15px; font-weight:bold; text-align:center; line-height:25px;position:absolute; z-index:9999; right:0; bottom:0; color:#000; width:100%">网友杰立分享css3样式代码生成器小工具<br />
+     <a href="http://www.jq-school.com" target="_blank" style="color:#000">JquerySchool</a>网站出品（<a href="http://www.jq-school.com" style="color:#000" target="_blank">http://www.jq-school.com</a>）<br />
+	 <a href="http://www.jielisz.com/" target="_blank" style="color:#000">政府资助</a>（<a href="http://www.jielisz.com/" target="_blank" style="color:#000">http://www.jielisz.com/</a>）<br />
+	   （<a href="http://bbs.jq-school.com" target="_blank" style="color:#000">Jquery学堂交流社区</a>）	
+	  <br />
+      官方网站学习交流QQ群<a target="_blank" href="http://wp.qq.com/wpa/qunwpa?idkey=f221dd676cd5f7f51f6b580ff8fe1bdd2fefe911ae0e1137a6f79c58d6e11ebf"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" style="width:90px; height:22px;" alt="Jquery学堂QQ⑧群" width="90" height="22" title="Jquery学堂QQ⑧群"></a></span>
+</center>
+</body></html>
