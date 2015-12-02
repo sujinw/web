@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>HTML5环形音乐播放器 - 站长素材</title>
+
+    <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+
+</head>
+
+<body>
+  <div id="container">
+	<label class="to-back-label" for="to-back"><i class="fa fa-bars fa-lg"></i></label>
+	<input type="checkbox" id="to-back"><!-- playlist toggle -->
+	<canvas id="progress" width="320" height="320"></canvas><!-- progress bar -->
+	<div id="player">
+		<audio id="audio" controls>
+			<source src="Abi_-_Abitude.mp3" type="audio/mpeg" codecs="mp3"></source>		
+		</audio>
+		<img src="1.300.jpg"><!-- album cover -->
+		<label class="to-lyrics-label" for="to-lyrics"><i class="fa fa-caret-down fa-lg"></i></label>
+		<input type="checkbox" id="to-lyrics"><!-- lyrics toggle -->
+		<div class="cover">
+			<div class="controls">
+				<button id="backward" title="Backward"><i class="fa fa-retweet fa-lg"></i></button>
+				<button id="backward" title="Backward"><i class="fa fa-backward fa-2x"></i></button>
+				<button id="play-pause" title="Play" onclick="togglePlayPause()"><i class="fa fa-play fa-3x"></i></button>
+				<button id="forward" title="Forward"><i class="fa fa-forward fa-2x"></i></button>
+				<button id="backward" title="Backward"><i class="fa fa-random fa-lg"></i></button>
+				<input id="volume" name="volume" min="0" max="1" step="0.1" type="range" onchange="setVolume()" />
+			</div><!-- #controls -->
+			<div class="info">
+				<p class="song"><a href="#" target="_blank">Abitude</a></p>
+				<p class="author"><a href="#" target="_blank">Abi</a></p>
+			</div><!-- #info -->
+			<div class="lyrics">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				<p>Donec vulputate nec leo vel tincidunt.</p>
+				<p>Pellentesque urna massa, volutpat eu viverra in, dignissim in diam.</p>
+				<p>Nullam laoreet aliquet pellentesque.</p>
+				<p>Duis varius augue eu sem fringilla dignissim.</p>
+				<p>Cras ligula erat, suscipit ac arcu vel, consectetur mollis nulla.</p>
+				<p>Pellentesque aliquam tortor in mollis pharetra.</p>
+				<p>Vestibulum consequat lacinia blandit.</p>
+				<p>Sed sodales semper nibh pulvinar viverra.</p>
+				<p>Pellentesque id magna ipsum. In hac habitasse platea dictumst.</p>
+				<p>Aliquam lorem lectus, consequat eget fermentum eget, posuere vel dolor.</p>
+				<p>Sed vel tellus gravida, bibendum lacus at, convallis est.</p>
+				<p>Duis cursus purus a ligula gravida pulvinar.</p>
+				<p>Vivamus vitae sem aliquet, interdum orci id, viverra dui.</p>
+				<p>Etiam at laoreet justo, eget congue neque.</p>
+				<p>Morbi tempor semper sem malesuada iaculis.</p>
+				<p>Aenean condimentum massa sit amet venenatis ultricies.</p>
+				<p>Fusce urna justo, interdum at purus sit amet, sagittis tristique orci.</p>
+				<p>Nunc nibh tellus, pretium at diam sit amet, vestibulum tincidunt mauris.</p>
+				<p>Curabitur in augue et nisi adipiscing ultrices.</p>
+				<p>Proin cursus in quam in ullamcorper.</p>
+				<p>Mauris laoreet sodales magna a mollis.</p>
+				<p>Maecenas elementum porttitor dolor nec auctor.</p>
+				<p>Praesent dignissim elit et turpis facilisis, ut sagittis metus congue.</p>
+				<p>Curabitur quis augue pulvinar, condimentum ante et, sollicitudin justo.</p>
+				<p>Ut interdum ut erat nec egestas.</p>
+				<p>Ut a lectus a justo euismod sodales.</p>
+			</div><!-- #lyrics -->
+			<p class="scroll">scroll down</p>
+		</div><!-- #cover -->
+	</div><!-- #player -->
+	<div id="flip-back">
+		<ul class="playlist">
+			<h3>The AbiStory</h3>
+			<li><a href="#">1. Attitude ghetto feat Double Conscience et Métice 54</a></li>
+			<li><a href="#">2. The AbiStory</a></li>
+			<li><a href="#" style="color:#26C5CB;"><i class="fa fa-play" style="margin-right:4px;"></i> 3. Abitude</a></li>
+			<li><a href="#">4. Mon Rap Hashdivy Et Ambdi "Nocredi"</a></li>
+			<li><a href="#">5. Tel Est Mon Destin</a></li>
+			<li><a href="#">6. Celle Qe J'aime Feat Jiji Et Syle</a></li>
+			<li><a href="#">7. Pardonne Moi Feat Sarah</a></li>
+			<li><a href="#">8. Wamaoré Feat Tsutsumbi Remix</a></li>
+			<li><a href="#">9. Comment je m'appelle feat Youssa Gangsta</a></li>
+			<li><a href="#">10. Pour les mecs du bitumes feat Jiiji et Ambdi "Nocredi"</a></li>
+		</ul>
+	</div><!-- #flip-back -->
+</div><!-- #container -->
+
+  <script src="js/index.js"></script>
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+<p>适用浏览器：360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗. 不支持IE8及以下浏览器。</p>
+<p>来源：<a href="http://sc.chinaz.com/" target="_blank">站长素材</a></p>
+</div>
+</body>
+
+</html>
