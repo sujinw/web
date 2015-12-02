@@ -1,0 +1,210 @@
+@charset "utf-8";
+/* CSS Document */
+/*我的地盘开始*/
+.myfile {
+	background-color: #eaeaea;
+	padding-bottom: 10px;
+}
+.myfile .myfile_nav {
+	color: #FFF;
+	background-color: #F9C;
+	height: 40px;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+.myfile .myfile_nav ul li {
+	float: left;
+	height: 40px;
+	width: 15%;
+	line-height: 40px;
+	text-align: center;
+}
+.myfile .myfile_nav ul li:nth-of-type(1) {
+	width: 40%;
+}
+.myfile .myfile_nav ul li:nth-of-type(1) a {
+	display: inline;
+}
+.myfile .myfile_nav ul li:nth-of-type(2) {
+	width: 30%;
+}
+.myfile .myfile_nav ul li:nth-of-type(2) a {
+	display: inline;
+}
+.myfile .myfile_nav ul li a {
+	line-height: 40px;
+	color: #FFF;
+	text-align: center;
+	display: block;
+}
+.myfile .myfile_nav ul li a strong {
+	color: #F00;
+}
+.myfile .name {
+	height: 60px;
+}
+.myfile .name .touxiang {
+	height: 40px;
+	width: 40px;
+	-webkit-border-radius: 40px;
+	-moz-border-radius: 40px;
+	border-radius: 40px;
+	float: left;
+	padding: 4px;
+	margin: 6px;
+	background-color: #FFF;
+}
+.myfile .name .touxiang img {
+	height: 40px;
+	width: 40px;
+	-webkit-border-radius: 40px;
+	-moz-border-radius: 40px;
+	border-radius: 40px;
+}
+.myfile .name .nickname {
+	height: 60px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	float: left;
+	line-height: 30px;
+}
+.myfile .name .nickname span {
+	padding-left: 10px;
+	line-height: 30px;
+}
+.myfile .name .nickname a {
+	line-height: 30px;
+	font-size: 14px;
+	padding-right: 10px;
+}
+.myfile .name_nav {
+	height: 30px;
+	background-color: #FFF;
+	padding: 10px;
+}
+.myfile .name_nav ul li {
+	float: left;
+	height: 30px;
+	width: 20%;
+}
+.myfile .name_nav ul li a {
+	line-height: 30px;
+	text-align: center;
+	display: block;
+	height: 30px;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #CCC;
+}
+.myfile .name_nav ul li:last-of-type a {
+	border-right-style: none;
+}
+.myfile .name_line1 {
+	margin: 10px;
+	background-color: #FFF;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+.myfile .name_line1 ul {
+	padding: 10px;
+}
+.myfile .name_line1 ul li {
+	display: inline-block;
+	text-indent: 5px;
+	line-height: 30px;
+	width: 100%;
+	background-image: url(img/a.png);
+	background-repeat: no-repeat;
+	background-position: right;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #f3f3f3;
+}
+.myfile .name_line1 ul li:last-of-type, .myfile .name_line2 ul li:last-of-type {
+	border-bottom-style: none;
+}
+.myfile .name_line1 ul li a {
+	font-size: 14px;
+}
+.myfile .name_line2 {
+	margin: 10px;
+	background-color: #FFF;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	font-size: 14px;
+}
+.myfile .name_line2 ul {
+	padding: 10px;
+}
+.myfile .name_line2 ul li {
+	display: inline-block;
+	text-indent: 5px;
+	width: 100%;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #f3f3f3;
+}
+.myfile .name_line2 ul li .z {
+	line-height: 30px;
+	width: 28%;
+	float: left;
+}
+.myfile .name_line2 ul li .y {
+	float: left;
+	width: 72%;
+	text-align: center;
+	line-height: 30px;
+}
+.myfile .myfile_tuichu {
+	background-color: #CB4034;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	height: 50px;
+	margin-right: 20px;
+	margin-left: 20px;
+}
+.myfile .myfile_tuichu a {
+	font-size: 18px;
+	line-height: 50px;
+	font-weight: bold;
+	color: #FFF;
+	text-align: center;
+	display: block;
+	height: 50px;
+}
+/*微博日志开始*/
+.boke {
+	background-color: #eaeaea;
+	padding: 10px;
+}
+.boke .boke_weibo {
+}
+.boke .boke_weibo ul li {
+	margin-bottom: 10px;
+	background-color: #FFF;
+	padding: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border: 1px dashed #CCC;
+	font-size: 14px;
+}
+.boke .boke_weibo ul li a {
+	font-size: 14px;
+}
+.boke .boke_weibo ul li::first-letter {
+	font-size: 22px;
+	font-weight: 700;
+	padding-left: 26px;
+}
+.boke .boke_weibo ul li time {
+	color: #666;
+	font-size: 12px;
+}
+.boke .boke_weibo ul li img {
+	height: 60px;
+	width: 60px;
+}

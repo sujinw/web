@@ -1,0 +1,356 @@
+<!DOCTYPE html PUBLIC -//W3C//DTD XHTML 1.0 Strict//EN http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd>
+<html lang="en">
+<head>
+<title>素锦温暖生活模板</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="">
+<meta name="description" content=""> 
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection"> 
+<link rel="stylesheet" href="happylife/css/common.css" type="text/css"/>
+<link rel="stylesheet" href="happylife/css/jquery.mmenu.css" type="text/css"/>
+<script type="text/javascript" src="happylife/js/jquery.min.js"></script>
+<script src="happylife/js/TouchSlide.1.1.js"></script>
+<script src="happylife/js/JScity.js" type="text/javascript"></script>
+</head>
+<body>
+<!--首页顶栏-->
+<div class="header" id="nav">
+<div class="logo_index fl"><img src="css/img/m_logo.png" alt="logo"></div>
+<span class="fr"><ul><li class="ss"><img src="css/img/sousou.png"></li><li class="user" id="user1"></li><li class="nav1" id="nav1"><div id="texttip">+<a href="" id="shuzi">1</a></div>	
+</li><li><span class="index_menu" id="index_menu"><i></i><i></i><i></i></span></li></ul></span></div>
+<div class="navbox"><ul><li><a href="">我的地盘</a></li><li><a href="">我的地盘</a></li><li><a href="">我的地盘</a></li><li><a href="">我的地盘</a></li><li><a href="">我的地盘</a></li></ul></div>
+<section id="headerss" style="display:none">
+<input type="text" class="header_search" value="" placeholder="搜全站" />
+<input type="submit" class="header_submit" value="搜索">
+</section>
+<div id="login" class="login" style="display:none">
+  <form name="f" action="/waplogin.aspx" method="post">
+    <div class="login_system">
+      <h2>登 录</h2>
+      <fieldset class="main">
+        <p>
+          <label>帐号</label>
+          <input type="text" id="cmbox-acct" oninput="input_yz('pt_text','cmbox-acct',this)" placeholder="用户名/手机号/id" name="logname">
+          <a id="pt_text" style="display: none;">清除 </a></p>
+        <p>
+          <label>密码</label>
+          <input type="password" id="cmbox-pwd" oninput="input_yz('pt_inp','cmbox-pwd',this)" placeholder="输入密码" name="logpass">
+          <a id="pt_inp" style="display: none;">清除 </a></p>
+      </fieldset>
+      <div class="bar">
+        <input type="hidden" name="savesid" value="1">
+        <input type="hidden" name="action" value="login">
+        <input type="hidden" name="classid" value="0">
+        <input type="hidden" name="siteid" value="1000">
+        <input type="hidden" name="sid" value="-2-0-0-0-320">
+        <input type="hidden" name="backurl" value="wapindex.aspx%3fsiteid%3d1000%26classid%3d0">
+        <input type="submit" id="cmbox-submit" class="fl" value="登   录">
+        <input type="button" id="cmbox-cancel" onclick="kaiguan('login')" class="fr" value="取   消">
+      </div>
+      <div class="qq_login clear bj"> <a href="/oauth/qq/qqlogin.aspx?siteid=1000&amp;classid=324&amp;sid=-2-0-0-0-320">使用QQ账号登录</a> </div>
+      <div class="login-qt">
+        <ul>
+          <li><a href="/wapreg.aspx?siteid=1000&amp;classid=0&amp;sid=-2-0-0-0-320">免费注册</a></li>
+          <li><a href="/wapgetpw.aspx?siteid=1000&amp;sid=-2-0-0-0-320">忘记密码？</a></li>
+        </ul>
+      </div>
+    </div>
+  </form>
+</div>
+<!--首页导航-->
+<div class="nav">
+    <ul class="clear">
+    <li><a href="#aa">标签</a></li>
+    <li><a href="#ax">标签</a></li>
+    <li><a href="#c">标签</a></li>
+    <li><a href="#a">标签</a></li>
+    <li><a href="#s">标签</a></li>
+    </ul>
+    <ul class="clear">
+    <li><a href="#z">标签</a></li>
+    <li><a href="cs#">标签</a></li>
+    <li><a href="#v">标签</a></li>
+    <li><a href="#w">标签</a></li>
+    <li><a href="#q">标签</a></li>
+    </ul>
+</div>
+<!--重点推荐-->
+<div class="topic">
+  <ul class="cont-list">
+  <li>
+  <span class="live-icon">最新</span>
+  <a href="#">调用最新内容</a>
+  </li>
+  </ul>
+</div>
+<div class="topic">
+  <ul class="cont-list">
+  <li>
+  <span class="live-icon">最新</span>
+  <a href="#">调用最新内容</a>
+  </li>
+  </ul>
+</div>
+<div class="topic">
+  <ul class="cont-list">
+  <li>
+  <span class="live-icon">最新</span>
+  <a href="#">调用最新内容</a>
+  </li>
+  </ul>
+</div>
+<div class="hr_1"></div>	
+<!--焦点图-->    
+<div id="slideBox" class="slideBox">
+  <div class="bd">
+    <ul>
+      <li>
+        <a class="pic" href="#"><img src="happylife/images/1.jpg" /></a>
+        <a class="tit" href="#">墨西哥教师罢工 与警察激烈冲突</a>
+      </li>
+      <li>
+        <a class="pic" href="#"><img src="happylife/images/2.jpg"/></a>
+        <a class="tit" href="#">日右翼游行纪念钓岛"国有化"周年</a>
+      </li>
+      <li>
+        <a class="pic" href="#"><img src="happylife/images/3.jpg"/></a>
+        <a class="tit" href="#">女兵竞选美国小姐鼓励女性自强</a>
+      </li>
+      <li>
+        <a class="pic" href="#"><img src="happylife/images/4.jpg"/></a>
+        <a class="tit" href="#">济南现“最窄人行道” 仅0.2米宽</a>
+      </li>
+      <li>
+        <a class="pic" href="#"><img src="happylife/images/5.jpg"/></a>
+        <a class="tit" href="#">济南现“最窄人行道” 仅0.2米宽</a>
+      </li>
+    </ul>
+  </div>
+  <div class="hd">
+    <ul></ul>
+  </div>
+</div>
+<script type="text/javascript">
+TouchSlide({ 
+slideCell:"#slideBox",
+titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+mainCell:".bd ul",
+delayTime:1000, 
+effect:"leftLoop", 
+autoPage:true,//自动分页
+autoPlay:true //自动播放
+});
+</script>
+<div class="searchbox">
+    <a id="Search"></a>
+        <div id="Search">
+        <form action="" method="get" class="text">
+        <input type="text" id="selecttags" name="q" value="" placeholder="搜文章" />
+        <input type="button" class="lg" id="query_button" value="搜索" />
+        </form>
+        </div><!--Search end-->
+<div id="searchTag">
+<div id="tagClose">关闭</div>
+        <p><span>热门标签：</span><br /><a href="javascript:void(0)" onClick="checktag(this)">搜索热词</a><a href="javascript:void(0)" onClick="checktag(this)">搜索热词</a><a href="javascript:void(0)" onClick="checktag(this)">搜索热词</a><a href="javascript:void(0)" onClick="checktag(this)">搜索热词</a><a href="javascript:void(0)" onClick="checktag(this)">搜索热词</a><a href="javascript:void(0)" onClick="checktag(this)">搜索热词</a><a href="javascript:void(0)" onClick="checktag(this)">搜索热词</a><a href="javascript:void(0)" onClick="checktag(this)">搜索热词</a><a href="javascript:void(0)" onClick="checktag(this)">搜索热词</a></p>
+<!--searchTag end-->
+</div>	
+</div>
+<!--导语-->
+<div class="yy"><em>爱生活，爱文字，爱素锦！</em></div>
+<!--栏目内容-->
+<div id="tabBox" class="tabBox1">
+  <div class="bd">
+    <ul  class="list">
+        <li><a href="#">此处调用相关栏目的内容</a></li>
+        <li><a href="#">此处调用相关栏目的内容</a></li>
+        <li><a href="#">此处调用相关栏目的内容</a></li>
+        <li><a href="#">此处调用相关栏目的内容</a></li>
+        <li><a href="#">此处调用相关栏目的内容</a></li>
+        <li><a href="#">此处调用相关栏目的内容</a></li>
+        <li><a href="#">此处调用相关栏目的内容</a></li>
+    </ul>
+    <ul  class="list">
+        <li><a href="#">此处调用相关栏目的内容</a></li>
+        <li><a href="#">此处调用相关栏目的内容</a></li>
+        <li><a href="#">此处调用相关栏目的内容</a></li>
+        <li><a href="#">此处调用相关栏目的内容</a></li>
+        <li><a href="#">此处调用相关栏目的内容</a></li>
+        <li><a href="#">此处调用相关栏目的内容</a></li>
+        <li><a href="#">此处调用相关栏目的内容</a></li>
+    </ul>
+    <ul  class="list">
+        <li><a href="#">此处调用相关栏目的内容</a></li>
+        <li><a href="#">此处调用相关栏目的内容</a></li>
+        <li><a href="#">此处调用相关栏目的内容</a></li>
+        <li><a href="#">此处调用相关栏目的内容</a></li>
+        <li><a href="#">此处调用相关栏目的内容</a></li>
+        <li><a href="#">此处调用相关栏目的内容</a></li>
+        <li><a href="#">此处调用相关栏目的内容</a></li>
+    </ul>
+  </div>
+  <div id="tabBoxHd" class="hd">
+    <span class="type" style="display:none"><a href="#">标签1</a><a href="#">标签2</a><a href="#">标签3</a></span>
+    <h3><b></b>
+        <ul></ul>
+    </h3>
+  </div>
+</div>
+<script type="text/javascript">
+  TouchSlide({
+	slideCell:"#tabBox",
+	titCell:"#tabBoxHd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+	effect:"leftLoop", 
+	autoPage:true, //自动分页
+	autoPlay:false, //自动播放
+	delayTime:1000,
+	startFun:function(i,c){ // 切换当前标题
+	var hd = document.getElementById("tabBoxHd");					
+		hd.getElementsByTagName("b")[0].innerText=hd.getElementsByTagName("a")[i].innerText;
+	}
+  })
+</script>
+<div id="tabBox1" class="tabBox">
+    <div class="hd">
+        <h3><a href="javascript:void(0)">栏目</a><span>Lanmu</span></h3>
+        <ul>
+            <li><a href="javascript:void(0)">标签</a></li>
+            <li><a href="javascript:void(0)">标签</a></li>
+            <li><a href="javascript:void(0)">标签</a></li>
+        </ul>
+    </div>
+    <div class="bd" id="tabBox1-bd"><!-- 添加id，js用到 -->
+        <div class="con"><!-- 高度自适应需添加外层 -->
+            <ul class="list">
+                <li><a href="#">此处调用相关栏目的内容</a></li>
+                <li><a href="#">此处调用相关栏目的内容</a></li>
+                <li><a href="#">此处调用相关栏目的内容</a></li>
+                <li><a href="#">此处调用相关栏目的内容</a></li>
+                <li><a href="#">此处调用相关栏目的内容</a></li>
+                <li><a href="#">此处调用相关栏目的内容</a></li>
+                <li><a href="#">此处调用相关栏目的内容</a></li>
+                <a class="readMore" href="#">进入频道&gt;&gt;</a>
+            </ul>
+        </div>
+        <div class="con"><!-- 高度自适应需添加外层 -->
+            <ul class="list">
+                <li><a href="#">此处调用相关栏目的内容</a></li>
+                <li><a href="#">此处调用相关栏目的内容</a></li>
+                <li><a href="#">此处调用相关栏目的内容</a></li>
+                <li><a href="#">此处调用相关栏目的内容</a></li>
+                <li><a href="#">此处调用相关栏目的内容</a></li>
+                <li><a href="#">此处调用相关栏目的内容</a></li>
+                <li><a href="#">此处调用相关栏目的内容</a></li>
+                <a class="readMore" href="#">进入频道&gt;&gt;</a>
+            </ul>
+        </div>
+        <div class="con"><!-- 高度自适应需添加外层 -->
+            <ul class="list">
+                <li><a href="#">此处调用相关栏目的内容</a></li>
+                <li><a href="#">此处调用相关栏目的内容</a></li>
+                <li><a href="#">此处调用相关栏目的内容</a></li>
+                <li><a href="#">此处调用相关栏目的内容</a></li>
+                <li><a href="#">此处调用相关栏目的内容</a></li>
+                <li><a href="#">此处调用相关栏目的内容</a></li>
+                <li><a href="#">此处调用相关栏目的内容</a></li>
+                <a class="readMore" href="#">进入频道&gt;&gt;</a>
+            </ul>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+TouchSlide( { slideCell:"#tabBox1",
+effect:"leftLoop", 
+endFun:function(i){ //高度自适应
+  var bd = document.getElementById("tabBox1-bd");
+  bd.parentNode.style.height = bd.children[i].children[0].offsetHeight+"px";
+  if(i>0)bd.parentNode.style.transition="200ms";//添加动画效果
+}
+} );
+</script>
+<div class="tab">
+	<ul class="menu">
+		<li class="active">论坛最新</li>
+		<li>最新日志</li>
+		<li>热门论坛</li>
+	</ul>
+	<div class="con1">
+      <ul class="list clear">
+      <li><a href="">此处调用栏目最新内容</a></li>
+      <li><a href="">此处调用栏目最新内容</a></li>
+      <li><a href="">此处调用栏目最新内容</a></li>
+      <li><a href="">此处调用栏目最新内容</a></li>
+      <li><a href="">此处调用栏目最新内容</a></li>
+      <li><a href="">此处调用栏目最新内容</a></li>
+      <li><a href="">此处调用栏目最新内容</a></li>
+      <li><a href="">此处调用栏目最新内容</a></li>
+      </ul>
+      <a class="readMore" href="#">进入频道&gt;&gt;</a>
+   </div>
+  <div class="con2">
+      <ul class="weibo" id="weibo">
+      <li><a href="">留在岁月深处的人，总会有无法揭露面目，就像躲在黑暗的吸血鬼，终会露出锋利的獠牙！留在岁月深处的人，总会有无法揭露面目，就像躲在黑暗的吸血鬼，终会露出锋利的獠牙！留在岁月深处的人，总会有无法揭露面目，就像躲在黑暗的吸血鬼，终会露出锋利的獠牙！留在岁月深处的人，总会有无法揭露面目，就像躲在黑暗的吸血鬼，终会露出锋利的獠牙！</a>(2013/11/30)</li>
+      <li><a href="">留在岁月深处的人，总会有无法揭露面目，就像躲在黑暗的吸血鬼，终会露出锋利的獠牙！</a>(2013/11/30)</li>
+      <li><a href="">留在岁月深处的人，总会有无法揭露面目，就像躲在黑暗的吸血鬼，终会露出锋利的獠牙！</a>(2013/11/30)</li>
+      <li><a href="">留在岁月深处的人，总会有无法揭露面目，就像躲在黑暗的吸血鬼，终会露出锋利的獠牙！</a>(2013/11/30)</li>
+      <li><a href="">留在岁月深处的人，总会有无法揭露面目，就像躲在黑暗的吸血鬼，终会露出锋利的獠牙！</a>(2013/11/30)</li>
+      <li><a href="">留在岁月深处的人，总会有无法揭露面目，就像躲在黑暗的吸血鬼，终会露出锋利的獠牙！</a>(2013/11/30)</li>
+      </ul><a class="readMore" href="#">进入频道&gt;&gt;</a>
+  </div>
+  <div class="con3">
+      <ul class="bbslist">
+      <li><img src="images/1.jpg"><a href="" class="bbstit">论坛名称</a><span>今日<a href="">11</a>/总共<a href="">1234</a></span></li>
+      <li><img src="images/1.jpg"><a href="" class="bbstit">论坛名称</a><span>今日<a href="">11</a>/总共<a href="">1234</a></span></li>
+      <li><img src="images/1.jpg"><a href="" class="bbstit">论坛名称</a><span>今日<a href="">11</a>/总共<a href="">1234</a></span></li>
+      <li><img src="images/1.jpg"><a href="" class="bbstit">论坛名称</a><span>今日<a href="">11</a>/总共<a href="">1234</a></span></li>
+      <li><img src="images/1.jpg"><a href="" class="bbstit">论坛名称</a><span>今日<a href="">11</a>/总共<a href="">1234</a></span></li>
+      <li><img src="images/1.jpg"><a href="" class="bbstit">论坛名称</a><span>今日<a href="">11</a>/总共<a href="">1234</a></span></li>
+      <li><img src="images/1.jpg"><a href="" class="bbstit">论坛名称</a><span>今日<a href="">11</a>/总共<a href="">1234</a></span></li>
+      </ul><a class="readMore" href="#">进入频道&gt;&gt;</a>
+  </div>
+</div>
+<a href="#top" class="gotop-btn" id="to-top" data-gaevent="mobile_footer_toTop:footer">
+  <span class="icon-up"></span>回到顶部
+</a>
+<!--底部-->
+<div class="footer clear">
+<div class="linkstyle"><p><a href="">固链</a><a href="">固链</a><a href="">固链</a><a href="">固链</a><a href="">固链</a></p><p><a href="">固链</a><a href="">固链</a><a href="">固链</a><a href="">固链</a><a href="">固链</a></p></div>
+</div><footer id="footer">
+<nav><a href="/wapindex.aspx?siteid=1000&amp;classid=0&amp;sid=-4-0-0-0-320">首页</a><a href="/wapindex.aspx?siteid=1000&amp;classid=324&amp;sid=-4-0-0-0-320">论坛</a><a href="/wapindex.aspx?siteid=1000&amp;classid=353&amp;sid=-4-0-0-0-320">社区</a> <a href="javascript:viod()" onclick="kaiguan('login')">个人中心</a></nav>
+<div class="ver"> <a href="/wapindex.aspx?siteid=1000&classid=0&sid=-2-0-0-0-320">3G版</a><a id="gosimp" href="/wapindex.aspx?siteid=1000&classid=0&sid=-3-0-0-0-320">电脑版</a> <a id="gofull" href="/wapindex.aspx?siteid=1000&classid=0&sid=-4-0-0-0-320">触屏版</a> </div>
+<div class="copyright">爱生活，爱文字，爱素锦！</div>
+<div class="about"><span>http://3ghy.com</span><span class="qqtouch">素锦文学社</span></div>
+</footer>
+<div class="div_bg" id="div_bg"></div>
+<div class="block_index_menu" id="block_index_menu" style="display: none;">
+  <ul class="index_menu_list">
+    <li><a href="#">标签</a></li>
+    <li><a href="#">标签</a></li>
+    <li><a href="#">标签</a></li>
+    <li><a href="#">标签</a></li>
+    <li><a href="#">标签</a></li>
+    <li><a href="#">标签</a></li>
+    <li><a href="#">标签</a></li>
+    <li><a href="#">标签</a></li>
+    <li><a href="#">标签</a></li>
+    <li><a href="#">标签</a></li>
+  </ul>
+  <span class="index_menu_btn" id="index_menu_btn"></span>
+</div>
+<script type="text/javascript">
+	function cityAdd(_city) {
+		if (_city != "") {
+			$("#txtCity").attr("value", _city); //填充内容
+			//关闭
+			$("#div_bg").fadeOut("fast"); //隐藏的效果
+			$("#block_index_menu").hide();
+			$("#block_index_menu").animate({ right: -200 + "px" }, 200);
+			$("#txtCity").focus();
+		}
+	}
+</script>
+<script type="text/javascript" src="js/jquery.scrollTop.js"></script>
+</body>
+ </html>
