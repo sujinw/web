@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+/* CSS Document */
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,li,form,img,dl,dt,dd,table,th,td,blockquote,fieldset,div,strong,label,em{margin:0;padding:0;border:0;}
+ul,ol,li{list-style:none;}
+input,button{margin:0;font-size:12px;vertical-align:middle;}
+body{font-size:12px;font-family:Arial, Helvetica, sans-serif;  text-align:center; margin:0 auto; }
+table{border-collapse:collapse;border-spacing:0;}
+b,em,i{ font-style:normal; font-weight:normal;}
+h1,h2,h3,h4{ font-size:14px;font-style:normal;}
+h5{ font-size:12px;}
+h6{ font-size:12px;font-weight:normal;}
+
+a{color:#333;text-decoration:none;}
+a:hover{ text-decoration:underline; color:#c00;}
+
+.box-163css{ width:558px; position:relative; margin:20px auto;}
+.box-163css .next{ float:right;}
+.piclist{position:relative; -webkit-transition: left 600ms ease-out; width:2232px; left:0;}
+.piclist li{display:table-cell; width:558px; height: 235px; position:relative; float: left; vertical-align: top;}
+.piclist li em{display:block; width:100%;position:absolute; z-index:10;height:32px; background:#333;left:0; top:203px; opacity:0.5;}
+.piclist li strong{ position:absolute;z-index:11; height:32px; left:0; top:203px; padding-left:20px; line-height:32px;  color:#fff;}
+.swipe{margin-bottom:20px;overflow: hidden; visibility: visible; list-style: none; position: relative;width:558px;}
+#slider4 ul{
+	-webkit-transition:left 800ms ease-in 0;
+	-moz-transition:left 800ms ease-in 0;
+	-o-transition:left 800ms ease-in 0;
+	-ms-transition:left 800ms ease-in 0;
+	transition:left 800ms ease-in 0;
+}
+.arrdiv{ position:absolute; top:100px; width:95%; left:2%; z-index:12;}
+.arrdiv b{ display:block; background:url(../images/arrow.png) no-repeat;width:17px; height:28px; cursor:pointer; text-indent:-999em;}
+.arrdiv .pre{ float:left; background-position:-7px 2px; }
+.arrdiv .next{ float:right; background-position:-37px 2px;}
+.page a{margin:0 15px; font-size:18px;}
+.page a.active{color:#f00; }
