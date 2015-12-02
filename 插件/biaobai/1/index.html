@@ -1,0 +1,94 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>屌丝程序员向女神表白专用神器 - 某某人丶我爱你 - 114源码网 www.unn114.com</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link href="default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="garden.js"></script>
+    <script type="text/javascript" src="functions.js"></script>
+</head>
+<body>
+	<div id="mainDiv">
+	  <div id="content">
+			<div id="code">
+				<span class="comments">某某人丶：</span><br />
+				<span class="space"><span class="comments">这个网页送给我爱的你、</span></span><br />
+				<span class="space"/><span class="comments">只有在你的微笑里，我才有呼吸，还贪恋着你的风情，诱惑着你的神秘，埋葬了我的爱情，脉脉之情如一溪春水，快刀难斩断，随着天各一方的时间越来越长，我的思念也越来越深，我很想找一个万籁俱寂的深夜或一个阳光明媚的早晨，把许多心底的惆怅、寂寞向你倾诉。某某人，我们的故事是最感人，最真实的，早安，我永恒的爱人，虽然我尚未起床，但思想已经飞到你的身边来了，不管今世也好来世也好，我所要的只有你。我要与你同坐在有着月光的草坪上，一起遥望着繁星点缀的夜空，讲述那人间古老的爱情神话。人生不止，寂寞不已。寂寞人生爱无休，寂寞是爱永远的主题。</span><br />
+				<span class="space"/><br />
+				<span class="space"/><span class="comments">某某 让我做你的小依赖丶好吗？╭(╯3╰)╮，爱你永远！亲耐的 感谢上天让我遇见了你，让我们从当初的不认识 到认识 然后你就做我女朋友吧~^_^我对你的爱是真心的哦，-</span><br />
+				<span class="space"/><span class="comments">2014.1.5</span><br />
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						某某人丶这是我认识你的第：
+						<div id="elapseClock"></div>
+					</div>
+					<div id="loveu">
+						我是最爱你的丶也是最关心你的。<br/>
+						<div class="signature">- 某某人丶我爱你</div>
+					</div>
+				</div>
+			</div>
+	    </div>
+		<div id="copyright">
+            送给我最爱的某某人丶
+			I LOVE YOU~<br />
+			    114源码网 2013-2014
+	  </div>
+	</div>
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(1990,11,11);
+		together.setHours(0);
+		together.setMinutes(60);
+		together.setSeconds(10);
+		together.setMilliseconds(0);
+		
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "提醒您：IE低版本用户请一边惭愧去吧^_^<br/>"+
+				"推荐使用浏览器 <a href='http://dl.pconline.com.cn/download/51614.html' target='_blank'>Chrome 14+</a>"+
+				"/<a href='http://download.microsoft.com/download/0/4/9/049A037E-B6B4-4303-90BE-BA6CAE979674/IE10-Windows6.1-x86-zh-cn.exe' target='_blank'>IE 9+</a>"+
+				"/<a href='http://download.firefox.com.cn/releases/partners/baidu/webins3.0/zh-CN/Firefox-setup.exe' target='_blank'>Firefox 7+</a>"+
+				"/Safari 4+<br/>请先升级您的浏览器，效果很炫哦~~"; 
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				adjustWordsPosition();
+				startHeartAnimation();
+			}, 5000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+	
+
+
+<!--以下无正文 转载或者使用请注释出自114源码网 www.unn114.com-->
+<div style="width:960px;margin:20px auto; clear:both; text-align:center; font-size:12px; line-height:25px;">
+114<a href="http://www.unn114.com/" target="_blank">源码网</a>发布 更多精彩js代码，请访问<a href="http://www.unn114.com/forum-56-1.html" target="_blank">js特效</a>频道
+</div>
+
+<div style=" width:950px; margin:30px auto 10px">
+<script type="text/javascript" src="http://www.unn114.com/api.php?mod=js&bid=463"></script>
+</div>
+<!--以上无正文 转载或者使用请注释出自114源码网 www.unn114.com-->
+</body>
+</html>
+

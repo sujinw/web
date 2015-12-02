@@ -1,0 +1,17 @@
+
+这里面共3个表白程序，分别是：love,lover,loveyou
+
+演示一（php语言编写)：http//hao8.net/love
+
+演示二：（纯html5写的）http//hao8.net/lover
+
+演示三：（asp语言编写)http//hao8.net/loveyou
+
+喜欢那个把文件夹直接解压到网站任意目录即可，无需数据库
+http://域名/网站目录/
+
+hao8网址导航首页：http://hao8.net
+
+说明下：源码网上收集而来，并非本人编写，我只是略微修改了下，支持原作者！
+
+qq:946779515
