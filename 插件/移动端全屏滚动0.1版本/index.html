@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style"content="black-translucent">
+<meta name="viewport"content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="format-detection" content="telephone=no" />
+		<title></title>
+		<style type="text/css">
+			html {
+				width: 100%;
+				height: 100%;
+				background: #515363;
+			}
+			body {
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+			}
+			* {
+				padding: 0 ;
+				margin: 0;
+			}
+			.container {
+				width: 100%;
+				height: auto;
+				
+				-webkit-transition: all .5s ease-in;
+				-moz-transition: all .5s ease-in;
+				-ms-transition: all .5s ease-in;
+				-o-transition: all .5s ease-in;
+				transition: all .5s ease-in;
+			}
+			
+			.page {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+			}
+			.page1{
+				background: red;
+			}
+			.page2 {
+				background: blue;
+			}
+			.page3 {
+				background: yellow;
+			}
+			.page4 {
+				background: green;
+			}
+		</style>
+	</head>
+	<body>
+		<section class="container" id="container">
+			<div class="page page1" data-index="1">
+				1
+			</div>
+			<div class="page page2" data-index="2">
+				2
+			</div>
+			<div class="page page3" data-index="3">
+				3
+			</div>
+			<div class="page page4" data-index="4">
+				4
+			</div>
+		</section>
+		<script src="js/zepto.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/toucher.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(document).on("touchmove",function(e) {
+				e.preventDefault();
+			})
+			
+			var h = window.innerHeight || window.screen.height;
+			$(".page").css("height",h);  //初始化所有场景页面高度
+			
+			$(".page").each(function(index) {
+				$(this).css("transform",'translate3d(0,'+ index *h +'px,0)');  //遍历所有场景页面给他们赋予正确的Y轴值 
+			})
+			var num = $(".page").length;   //得到所有场景页面的个数
+			
+			var con = document.getElementById("container");
+			var mytouch = util.toucher(con);  //toucher的手势实例化
+			
+			var start = 0;
+			var flag = true;
+			mytouch.on('swipeStart',function(e) {
+				start = e.pageY;
+			})
+			mytouch.on('swipeEnd',function(e) {
+				start = e.pageY - start;
+				//console.log(e.target);
+				if (flag) {
+					flag = false;
+					if (start < 0) {
+						var index = e.target.getAttribute("data-index");  //获取当前被点击的场景页面
+						if (index == num) {   //如果当前是最后一个场景 直接return 
+							flag = true;  // return 要把flag true 否则不能在动了
+							return;
+						} else {    
+							var mY = -h * index;  // 需要位移的距离  屏幕的高度乘以当前下标
+						}
+						console.log(mY);
+						
+						$(".container").css("transform",'translate3d(0,'+ mY +'px,0)');
+						setTimeout(function() {
+							flag = true;
+						},600);   //在动画之后的100ms  避免多次滑动
+						
+					} else if (start > 0) {
+						var index = e.target.getAttribute("data-index");
+						if (index == 1) {
+							flag = true;
+							return;
+						} 
+						//反向移动 需要获取当前的值 然后直接加一个屏幕的高度即可 与正向不同
+						var nowY = $(".container").css("transform").split(',')[1];  
+						var targetY = parseInt(nowY) + h;   //得到最终需要唯一到的值
+						console.log(targetY);
+						
+						$(".container").css("transform",'translate3d(0,'+ targetY +'px,0)');
+						setTimeout(function() {
+							flag = true;
+						},600);
+					}
+				}
+			})
+		</script>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+

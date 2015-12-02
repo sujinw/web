@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Examples</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<link href="" rel="stylesheet">
+</head>
+<style>
+	*{margin:0px;padding: 0;font-family: '微软雅黑';font-size: 12px}
+	body{ padding:10px}
+	div{width: 40px;height: 40px;background: #ccc; text-align: center; line-height: 40px;border-radius: 4px; position: relative;transition:all 0.4s ease;margin: 25px; 
+ 	}
+ 	.pad p{margin-left: 20px;}
+ 	.pad p span{display: inline-block;width: 200px; color: green}
+ 	.pac{ line-height: 25px;}
+ 	.list span{display: inline-block;padding: 2px 5px; background: #db740c; color: #fff;margin-right:8px;margin-bottom: 8px;}
+ 	.cc span{ color: green}
+ 	.con{width: 100%;height: auto;border:2px solid #ccc; display: block;margin:10px 0;}
+ 	.con p{width: 50px; height: 50px;background: red;margin:20px; position: relative; left: 120px}
+</style>
+<body>
+    <div id="div">1</div>
+    <div>2</div>
+    <p>如果你不考虑IE9以下浏览器，而且用原生js开发，不想加载臃肿的jquery的话，但是又想使用jquery便捷的animated动画！可以试试这个,只有10K大小，压缩有8K！！插件使用原生js，css3实现动画效果，具体参数说明如下</p>
+    <br>
+    <p>封装了类似jq的$选择符，选择元素(仅包含 get 和 eq 两个方法用于选择元素)：</p>
+    <sec class="pac">
+	    <p>$('#div').transition({</p>
+	    	<sec class="pad">
+				<p><span>x:100,</span>//translateX，x轴偏移</p>
+				<p><span>y:100,</span>//translateY，y轴偏移</p>
+				<p><span>z:100,</span>//translateZ，z轴偏移 </p>
+				<p><span>rotate:100,</span>//rotate，旋转角度</p>
+				<p><span>rotateX:100,</span>//rotateX，x轴旋转角度</p>
+				<p><span>rotateY:100,</span>//rotateY，y轴旋转角度</p>
+				<p><span>rotateZ:100,</span>//rotateZ，z轴旋转角度</p>
+ 				<p><span>skew:100,</span>//skew，扭曲</p>
+				<p><span>skewX:100,</span>//skewX，x轴扭曲</p>
+				<p><span>skewY:100,</span>//skewY，y轴扭曲</p>
+				<p><span>scale:100,</span>//scale，缩放</p>
+				<p><span>scaleX:100,</span>//scaleX，X轴缩放</p>
+				<p><span>scaleY:100,</span>//scaleY，y轴缩放</p>
+				<p><span>callback:function(){ ... },</span>//回调函数，用于动画结束的时候执行</p>
+				<p><span>delay:1000</span>//延迟函数，用于动画的延迟触发</p>
+			</sec>
+	    <p class="cc">},1000,'ease')  <span>这里的第二个参数是动画所执行的时间可以不写，默认400毫秒，第三个ease是动画执行的效果可以不写，默认是ease，共有30中变化效果</span></p>
+     </sec>
+     <select name="" id="ch">
+     	<option value="ease">ease</option>
+     	<option value="linear">linear</option>
+     	<option value="in">in</option>
+     	<option value="out">out</option>
+     	<option value="in-out">in-out</option>
+     	<option value="snap">snap</option>
+     	<option value="easeInCubic">easeInCubic</option>
+     	<option value="easeOutCubic">easeOutCubic</option>
+     	<option value="easeInOutCubic">easeInOutCubic</option>
+     	<option value="easeInCirc">easeInCirc</option>
+     	<option value="easeOutCirc">easeOutCirc</option>
+     	<option value="easeInOutCirc">easeInOutCirc</option>
+     	<option value="easeInExpo">easeInExpo</option>
+     	<option value="easeOutExpo">easeOutExpo</option>
+     	<option value="easeInOutExpo">easeInOutExpo</option>
+     	<option value="easeInQuad">easeInQuad</option>
+     	<option value="easeOutQuad">easeOutQuad</option>
+     	<option value="easeInOutQuad">easeInOutQuad</option>
+     	<option value="easeInQuart">easeInQuart</option>
+     	<option value="easeOutQuart">easeOutQuart</option>
+     	<option value="easeInOutQuart">easeInOutQuart</option>
+     	<option value="easeInQuint">easeInQuint</option>
+     	<option value="easeOutQuint">easeOutQuint</option>
+     	<option value="easeInOutQuint">easeInOutQuint</option>
+     	<option value="easeInSine">easeInSine</option>
+     	<option value="easeOutSine">easeOutSine</option>
+		<option value="easeInOutSine">easeInOutSine</option>
+		<option value="easeInBack">easeInBack</option>
+		<option value="easeOutBack">easeOutBack</option>
+		<option value="easeInOutBack">easeInOutBack</option>
+     </select> <span>改变，查看效果</span>
+     <sec class="con">
+     	<p id="mm"></p>
+     </sec>
+	<p>以上是css3中的所有动画属性，当然还可以使用left，marinLeft等基本的位置偏移以及background，color等颜色变化属性</p>
+	<p class="list">分别有：<span>left</span><span>top</span><span>right</span><span>bottom</span><span>margin</span><span>marinLeft</span><span>marginRight</span><span>marginTop</span><span>marginBottom</span><span>padding</span><span>paddingLeft</span><span>paddingRight</span><span>paddingTop</span><span>paddingBottom</span><span>borderRadius</span><span>opacity</span><span>background</span><span>color</span></p>
+ 	<p>该插件仅个人爱好开发，如果发现有bug的话，请与我联系</p>
+</body>
+<script src="transition.js"></script>
+<script type="text/javascript">
+	$('#div').transition({
+		x:100,
+ 		borderRadius:20,
+		rotateY:360,
+  		callback:function(){
+			$('div').transition({
+		 		x:150,
+ 		 		scale:1.5,
+ 		 		callback:function(){
+					$(this).transition({
+				 		x:-50,
+				 		delay:500,
+ 				 		callback:function(){
+							$(this).transition({
+						 		x:50,
+						 		background:'red',
+						 		color:'#fff',
+						 		rotateY:360,
+						 		scale:2,
+							})
+						}
+					})
+				}
+			},800)
+		}
+	},1000)
+	$('div').eq(1).transition({
+ 		rotateX:360,
+	},1000)
+
+
+	var c = document.querySelector('#ch');
+	var m = document.querySelector('#mm');
+	c.onchange = function(){
+		m.setAttribute('style','')
+		$(m).transition({
+			x:200,
+			background:'blue'
+		},this.value)
+	}
+</script>
+</html>
