@@ -1,0 +1,279 @@
+@charset "utf-8";
+/* CSS Document */
+
+.replace-2x {
+	font-size: 1px;
+}
+
+@media all and (-webkit-min-device-pixel-ratio:2) { 
+
+	.list-address{			background-image:url(../images/lists/address_32.png);		-webkit-background-size:16px 16px;	 }
+	.list-block{			background-image:url(../images/lists/block_32.png);			-webkit-background-size:16px 16px;	 }
+	.list-bookmark{			background-image:url(../images/lists/bookmark_32.png);		-webkit-background-size:16px 16px;	 }
+	.list-briefcase{		background-image:url(../images/lists/briefcase_32.png);		-webkit-background-size:16px 16px;	 }
+	.list-bubble{			background-image:url(../images/lists/bubble_32.png);		-webkit-background-size:16px 16px;	 }
+	.list-buy{				background-image:url(../images/lists/buy_32.png);			-webkit-background-size:16px 16px;	 }
+	.list-calendar{			background-image:url(../images/lists/calendar_32.png);		-webkit-background-size:16px 16px;	 }
+	.list-clipboard{		background-image:url(../images/lists/clipboard_32.png);		-webkit-background-size:16px 16px;	 }
+	.list-delete{			background-image:url(../images/lists/delete_32.png);		-webkit-background-size:16px 16px;	 }
+	.list-clock{			background-image:url(../images/lists/clock_32.png);			-webkit-background-size:16px 16px;	 }
+	.list-diagram{			background-image:url(../images/lists/diagram_32.png);		-webkit-background-size:16px 16px;	 }
+	.list-document{			background-image:url(../images/lists/document_32.png);		-webkit-background-size:16px 16px;	 }
+	.list-down{				background-image:url(../images/lists/down_32.png);			-webkit-background-size:16px 16px;	 }
+	.list-flag{				background-image:url(../images/lists/flag_32.png);			-webkit-background-size:16px 16px;	 }
+	.list-folder{			background-image:url(../images/lists/folder_32.png);		-webkit-background-size:16px 16px;	 }
+	.list-gear{				background-image:url(../images/lists/gear_32.png);			-webkit-background-size:16px 16px;	 }
+	.list-globe{			background-image:url(../images/lists/globe_32.png);			-webkit-background-size:16px 16px;	 }
+	.list-heart{			background-image:url(../images/lists/heart_32.png);			-webkit-background-size:16px 16px;	 }
+	.list-help{				background-image:url(../images/lists/help_32.png);			-webkit-background-size:16px 16px;	 }
+	.list-home{				background-image:url(../images/lists/home_32.png);			-webkit-background-size:16px 16px;	 }
+	.list-key{				background-image:url(../images/lists/key_32.png);			-webkit-background-size:16px 16px;	 }
+	.list-label{			background-image:url(../images/lists/label_32.png);			-webkit-background-size:16px 16px;	 }
+	.list-left{				background-image:url(../images/lists/left_32.png);			-webkit-background-size:16px 16px;	 }
+	.list-letter{			background-image:url(../images/lists/letter_32.png);		-webkit-background-size:16px 16px;	 }
+	.list-monitor{			background-image:url(../images/lists/monitor_32.png);		-webkit-background-size:16px 16px;	 }
+	.list-pencil{			background-image:url(../images/lists/pencil_32.png);		-webkit-background-size:16px 16px;	 }
+	.list-plus{				background-image:url(../images/lists/plus_32.png);			-webkit-background-size:16px 16px;	 }
+	.list-present{			background-image:url(../images/lists/present_32.png);		-webkit-background-size:16px 16px;	 }
+	.list-print{			background-image:url(../images/lists/print_32.png);			-webkit-background-size:16px 16px;	 }
+	.list-right{			background-image:url(../images/lists/right_32.png);			-webkit-background-size:16px 16px;	 }
+	.list-save{				background-image:url(../images/lists/save_32.png);			-webkit-background-size:16px 16px;	 }
+	.list-shield{			background-image:url(../images/lists/shield_32.png);		-webkit-background-size:16px 16px;	 }
+	.list-statistics{		background-image:url(../images/lists/statistics_32.png);	-webkit-background-size:16px 16px;	 }
+	.list-stop{				background-image:url(../images/lists/stop_32.png);			-webkit-background-size:16px 16px;	 }
+	.list-tick{				background-image:url(../images/lists/tick_32.png);			-webkit-background-size:16px 16px;	 }
+	.list-trash{			background-image:url(../images/lists/trash_32.png);			-webkit-background-size:16px 16px;	 }
+	.list-up{				background-image:url(../images/lists/up_32.png);			-webkit-background-size:16px 16px;   }
+	.list-user{				background-image:url(../images/lists/user_32.png);			-webkit-background-size:16px 16px;	 }
+	.list-walet{			background-image:url(../images/lists/wallet_32.png);		-webkit-background-size:16px 16px;	 }
+	.list-warning{			background-image:url(../images/lists/warning_32.png);		-webkit-background-size:16px 16px;	 }
+	
+	.addressbook{		background-image:url(../images/icons/addressbook@2x.png);	-webkit-background-size:32px 32px;}
+	.iphone{			background-image:url(../images/icons/iphone@2x.png);		-webkit-background-size:32px 32px;}
+	.alert2{			background-image:url(../images/icons/alert2@2x.png);		-webkit-background-size:32px 32px;}
+	.alert3{			background-image:url(../images/icons/alert3@2x.png);		-webkit-background-size:32px 32px;}
+	.android{			background-image:url(../images/icons/android@2x.png);		-webkit-background-size:32px 32px;}
+	.arrow-down{		background-image:url(../images/icons/arrow-down@2x.png);	-webkit-background-size:32px 32px;}
+	.arrow-up{			background-image:url(../images/icons/arrow-up@2x.png);		-webkit-background-size:32px 32px;}
+	.arrow-left{		background-image:url(../images/icons/arrow-left@2x.png);	-webkit-background-size:32px 32px;}
+	.arrow-right{		background-image:url(../images/icons/arrow-right@2x.png);	-webkit-background-size:32px 32px;}
+	.bberry{			background-image:url(../images/icons/bberry@2x.png);		-webkit-background-size:32px 32px;}
+	.bluetooth{			background-image:url(../images/icons/bluetooth@2x.png);		-webkit-background-size:32px 32px;}
+	.cameras{			background-image:url(../images/icons/cameras@2x.png);		-webkit-background-size:32px 32px;}
+	.cart{				background-image:url(../images/icons/cart@2x.png);			-webkit-background-size:32px 32px;}
+	.clip{				background-image:url(../images/icons/clip@2x.png);			-webkit-background-size:32px 32px;}
+	.chalendar{			background-image:url(../images/icons/chalendar@2x.png);		-webkit-background-size:32px 32px;}
+	.chart{				background-image:url(../images/icons/chart@2x.png);			-webkit-background-size:32px 32px;}
+	.clocks{			background-image:url(../images/icons/clocks@2x.png);		-webkit-background-size:32px 32px;}
+	.cloud-down{		background-image:url(../images/icons/cloud-down@2x.png);	-webkit-background-size:32px 32px;}
+	.cloud-up{			background-image:url(../images/icons/cloud-up@2x.png);		-webkit-background-size:32px 32px;}
+	.cog1{				background-image:url(../images/icons/cog1@2x.png);			-webkit-background-size:32px 32px;}
+	.cog2{				background-image:url(../images/icons/cog2@2x.png);			-webkit-background-size:32px 32px;}
+	.columns{			background-image:url(../images/icons/columns@2x.png);		-webkit-background-size:32px 32px;}
+	.comment{			background-image:url(../images/icons/comment@2x.png);		-webkit-background-size:32px 32px;}
+	.delicious{			background-image:url(../images/icons/delicious@2x.png);		-webkit-background-size:32px 32px;}
+	.digg{				background-image:url(../images/icons/digg@2x.png);			-webkit-background-size:32px 32px;}
+	.documents{			background-image:url(../images/icons/documents@2x.png);		-webkit-background-size:32px 32px;}
+	.download{			background-image:url(../images/icons/download@2x.png);		-webkit-background-size:32px 32px;}
+	.dribble{			background-image:url(../images/icons/dribble@2x.png);		-webkit-background-size:32px 32px;}
+	.dropbox{			background-image:url(../images/icons/dropbox@2x.png);		-webkit-background-size:32px 32px;}
+	.female{			background-image:url(../images/icons/female@2x.png);		-webkit-background-size:32px 32px;}
+	.facebook{			background-image:url(../images/icons/facebook@2x.png);		-webkit-background-size:32px 32px;}
+	.film-strip{		background-image:url(../images/icons/film-strip@2x.png);	-webkit-background-size:32px 32px;}
+	.fullscreen{		background-image:url(../images/icons/fullscreen2@2x.png);	-webkit-background-size:32px 32px;}
+	.go-full{			background-image:url(../images/icons/go-full@2x.png);		-webkit-background-size:32px 32px;}
+	.go-normal{			background-image:url(../images/icons/go-normal@2x.png);		-webkit-background-size:32px 32px;}
+	.graph{				background-image:url(../images/icons/graph@2x.png);			-webkit-background-size:32px 32px;}
+	.headset{			background-image:url(../images/icons/headset@2x.png);		-webkit-background-size:32px 32px;}
+	.highdef{			background-image:url(../images/icons/highdef@2x.png);		-webkit-background-size:32px 32px;}
+	.highdef2{			background-image:url(../images/icons/highdef2@2x.png);		-webkit-background-size:32px 32px;}
+	.home{				background-image:url(../images/icons/home@2x.png);			-webkit-background-size:32px 32px;}
+	.href{				background-image:url(../images/icons/href@2x.png);			-webkit-background-size:32px 32px;}
+	.imac{				background-image:url(../images/icons/imac@2x.png);			-webkit-background-size:32px 32px;}
+	.img{				background-image:url(../images/icons/img@2x.png);			-webkit-background-size:32px 32px;}
+	.img2{				background-image:url(../images/icons/img2@2x.png);			-webkit-background-size:32px 32px;}
+	.ipad{				background-image:url(../images/icons/ipad@2x.png);			-webkit-background-size:32px 32px;}
+	.iphone{			background-image:url(../images/icons/iphone@2x.png);		-webkit-background-size:32px 32px;}
+	.ipodc{				background-image:url(../images/icons/ipodc@2x.png);			-webkit-background-size:32px 32px;}
+	.ipodn{				background-image:url(../images/icons/ipodn@2x.png);			-webkit-background-size:32px 32px;}
+	.laptop{			background-image:url(../images/icons/laptop@2x.png);		-webkit-background-size:32px 32px;}
+	.linux{				background-image:url(../images/icons/linux@2x.png);			-webkit-background-size:32px 32px;}
+	.list{				background-image:url(../images/icons/list@2x.png);			-webkit-background-size:32px 32px;}
+	.list-image{		background-image:url(../images/icons/list-image@2x.png);	-webkit-background-size:32px 32px;}
+	.lists{				background-image:url(../images/icons/lists@2x.png);			-webkit-background-size:32px 32px;}
+	.location{			background-image:url(../images/icons/location@2x.png);		-webkit-background-size:32px 32px;}
+	.lowdef{			background-image:url(../images/icons/lowdef@2x.png);		-webkit-background-size:32px 32px;}
+	.lowdef2{			background-image:url(../images/icons/lowdef2@2x.png);		-webkit-background-size:32px 32px;}
+	.magnifier{			background-image:url(../images/icons/magnifier@2x.png);		-webkit-background-size:32px 32px;}
+	.mail{				background-image:url(../images/icons/mail@2x.png);			-webkit-background-size:32px 32px;}
+	.male{				background-image:url(../images/icons/male@2x.png);			-webkit-background-size:32px 32px;}
+	.mic{				background-image:url(../images/icons/mic@2x.png);			-webkit-background-size:32px 32px;}
+	.mobile{			background-image:url(../images/icons/mobile@2x.png);		-webkit-background-size:32px 32px;}
+	.money{				background-image:url(../images/icons/money@2x.png);			-webkit-background-size:32px 32px;}
+	.mouse{				background-image:url(../images/icons/mouse@2x.png);			-webkit-background-size:32px 32px;}
+	.myspace{			background-image:url(../images/icons/myspace@2x.png);		-webkit-background-size:32px 32px;}
+	.osx{				background-image:url(../images/icons/osx@2x.png);			-webkit-background-size:32px 32px;}
+	.paypal{			background-image:url(../images/icons/paypal@2x.png);		-webkit-background-size:32px 32px;}
+	.pdf-doc{			background-image:url(../images/icons/pdf-doc@2x.png);		-webkit-background-size:32px 32px;}
+	.pdf-docs{			background-image:url(../images/icons/pdf-docs.png);			-webkit-background-size:32px 32px;}
+	.phone{				background-image:url(../images/icons/phone@2x.png);			-webkit-background-size:32px 32px;}
+	.price{				background-image:url(../images/icons/price@2x.png);			-webkit-background-size:32px 32px;}
+	.refresh{			background-image:url(../images/icons/refresh@2x.png);		-webkit-background-size:32px 32px;}
+	.refresh2{			background-image:url(../images/icons/refresh2@2x.png);		-webkit-background-size:32px 32px;}
+	.settings{			background-image:url(../images/icons/settings@2x.png);		-webkit-background-size:32px 32px;}
+	.shuffle{			background-image:url(../images/icons/shuffle@2x.png);		-webkit-background-size:32px 32px;}
+	.sign{				background-image:url(../images/icons/sign@2x.png);			-webkit-background-size:32px 32px;}
+	.skype{				background-image:url(../images/icons/skype@2x.png);			-webkit-background-size:32px 32px;}
+	.speach{			background-image:url(../images/icons/speach@2x.png);		-webkit-background-size:32px 32px;}
+	.speach2{			background-image:url(../images/icons/speach2@2x.png);		-webkit-background-size:32px 32px;}
+	.stumble{			background-image:url(../images/icons/stumble@2x.png);		-webkit-background-size:32px 32px;}
+	.tags{				background-image:url(../images/icons/tags@2x.png);			-webkit-background-size:32px 32px;}
+	.tumblr{			background-image:url(../images/icons/tumblr@2x.png);		-webkit-background-size:32px 32px;}
+	.twitter{			background-image:url(../images/icons/twitter@2x.png);		-webkit-background-size:32px 32px;}
+	.upload{			background-image:url(../images/icons/upload@2x.png);		-webkit-background-size:32px 32px;}
+	.user{				background-image:url(../images/icons/user@2x.png);			-webkit-background-size:32px 32px;}
+	.users{				background-image:url(../images/icons/users@2x.png);			-webkit-background-size:32px 32px;}
+	.vimeo{				background-image:url(../images/icons/vimeo@2x.png);			-webkit-background-size:32px 32px;}
+	.volume{			background-image:url(../images/icons/volume@2x.png);		-webkit-background-size:32px 32px;}
+	.wifi{				background-image:url(../images/icons/wifi@2x.png);			-webkit-background-size:32px 32px;}
+	.win{				background-image:url(../images/icons/win@2x.png);			-webkit-background-size:32px 32px;}
+	.wp{				background-image:url(../images/icons/wp@2x.png);			-webkit-background-size:32px 32px;}
+	.youtube{			background-image:url(../images/icons/youtube@2x.png);		-webkit-background-size:32px 32px;}
+	.zip{				background-image:url(../images/icons/zip@2x.png);			-webkit-background-size:32px 32px;}
+	.zips{				background-image:url(../images/icons/zips@2x.png);			-webkit-background-size:32px 32px;}
+	
+	.deploy-nav{
+		background-image:url(../images/nav/menu@2x.png);
+		-webkit-background-size:17px 11px;
+	}
+	
+	.hide-nav{
+		display:none;
+		background-image:url(../images/nav/menu@2x.png);
+		-webkit-background-size:17px 11px;
+	}
+	
+	
+	.contact-icon{
+		background-image:url(../images/nav/mail@2x.png);
+		-webkit-background-size:18px 13px;
+	}
+	
+	
+	.content{
+		background-image:url(../images/bg/content@2x.png);
+		-webkit-background-size:102px 102px;
+	}
+	
+	.header{
+		background-image:url(../images/bg/header@2x.png);
+		-webkit-background-size:33px 50px;
+	}
+	
+	.checkbox{
+		background-image:url(../images/ui/checkbox@2x.png);
+		-webkit-background-size:16px 18px;
+	}
+	
+	.selected-checkbox{
+		background-image:url(../images/ui/checkbox-selected@2x.png);
+		-webkit-background-size:16px 18px;
+	}
+	
+	.checkbox2{
+		background-image:url(../images/ui/checkbox2@2x.png);
+		-webkit-background-size:16px 18px;
+	}
+	
+	.selected-checkbox2{
+		background-image:url(../images/ui/checkbox2-selected@2x.png);
+		-webkit-background-size:16px 18px;
+	}
+	
+	.radiobox{
+		background-image:url(../images/ui/radio@2x.png);
+		-webkit-background-size:16px 18px;
+	}
+	
+	.selected-radiobox{
+		background-image:url(../images/ui/radio-selected@2x.png);	
+		-webkit-background-size:16px 18px;
+	}
+		
+	.radiobox2{
+		background-image:url(../images/ui/radio2@2x.png);
+		-webkit-background-size:16px 18px;
+	}
+	
+	.selected-radiobox2{
+		background-image:url(../images/ui/radio2-selected@2x.png);	
+		-webkit-background-size:16px 18px;
+	}
+		
+	.posted-by{
+		background-image:url(../images/blog/user@2x.png);
+		-webkit-background-size:12px 12px;
+	}
+		
+	.posted-on{
+		background-image:url(../images/blog/time@2x.png);
+		-webkit-background-size:13px 12px;
+	}
+		
+	.posted-tag{
+		background-image:url(../images/blog/tag@2x.png);
+		-webkit-background-size:12px 12px;
+	}	
+		
+	.posted-cat{
+		background-image:url(../images/blog/cat@2x.png);
+		-webkit-background-size:16px 11px;
+	}
+		
+	.posted-more{
+		background-image:url(../images/blog/more@2x.png);
+		-webkit-background-size:17px 12px;
+	}
+	
+	.toggle-deploy{
+		background-image:url(../images/lists/down_32.png);
+		-webkit-background-size:16px 16px;
+	}
+	
+	.toggle-close{
+		background-image:url(../images/lists/up_32.png);
+		-webkit-background-size:16px 16px;
+	}
+	
+	.read-more-share{
+		background-image:url(../images/share-box/more@2x.png);
+		-webkit-background-size:21px 18px;
+	}
+	
+	.facebook-share{
+		background-image:url(../images/share-box/facebook@2x.png);
+		-webkit-background-size:21px 18px;
+
+	}
+	
+	.twitter-share{
+		background-image:url(../images/share-box/twitter@2x.png);
+		-webkit-background-size:21px 18px;
+
+	}
+	
+.home-nav-icon{		background-image:url(../images/icons/home@2x.png);			-webkit-background-size:32px 33px;}
+.about-nav-icon{	background-image:url(../images/icons/cog1@2x.png);			-webkit-background-size:32px 33px;}
+.folio-nav-icon{	background-image:url(../images/icons/img@2x.png);			-webkit-background-size:32px 33px;}
+.gallery-nav-icon{	background-image:url(../images/icons/img2@2x.png);			-webkit-background-size:32px 33px;}
+.video-nav-icon{	background-image:url(../images/icons/film-strip@2x.png);	-webkit-background-size:32px 33px;}
+.blog-nav-icon{		background-image:url(../images/icons/documents@2x.png);		-webkit-background-size:32px 33px;}
+.mail-nav-icon{		background-image:url(../images/icons/mail@2x.png);			-webkit-background-size:32px 33px;}
+.call-nav-icon{		background-image:url(../images/icons/phone@2x.png);			-webkit-background-size:32px 33px;}
+.text-nav-icon{		background-image:url(../images/icons/speach@2x.png);		-webkit-background-size:32px 33px;}
+.fb-nav-icon{		background-image:url(../images/icons/facebook@2x.png);		-webkit-background-size:32px 33px;}
+.tw-nav-icon{		background-image:url(../images/icons/twitter@2x.png);		-webkit-background-size:32px 33px;}
+
+	
+
+}
