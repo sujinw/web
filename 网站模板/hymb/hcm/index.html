@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>个人网站-黄春茂</title>
+    <!-- CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/blog.css" rel="stylesheet">
+        <!-- Js-->
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugin.js"></script>
+    <script src="js/jquery.shCircleLoader-min.js"></script>
+    <script>
+      $('#loader').shCircleLoader();
+      var i = 0;
+      setInterval(function() {
+        $('#loader').shCircleLoader('progress', i + '%');
+        if (++i > 100) i = 0;
+      }, 100);
+    </script>
+  </head>
+  <body>
+    <div class="loading" id="loader"></div>
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="blog-nav">
+          <a class="blog-nav-item active" href="index.html">首页</a>
+          <a class="blog-nav-item" href="#part1">生活</a>
+          <a class="blog-nav-item" href="#part2">旅行</a>
+          <a class="blog-nav-item" href="#part3">技能</a>
+        </nav>
+      </div>
+    </div>
+	<div class="intr">
+    	<span class="avtar animation"></span>
+        <p class="peointr">我叫黄春茂，一名工商管理专业大三的学生。</p>
+        <p class="peointr">爱生活，爱旅行，爱学习。</p>
+    </div>
+    <div class="title" id="part1">爱生活</div>
+    <div class="container">
+    	<div class="pic pic1">
+    		<img src="image/tushuguan.jpg" alt="">
+    		<p>南理-图书馆</p>
+    	</div>
+    	<div class="pic pic2">
+    		<img src="image/yijiao.gif" alt="">
+    		<p>南理-校园一角</p>
+    	</div>
+    	<div class="pic pic3">
+    		<img src="image/xiaoshi.jpg" alt="">
+    		<p>南理-校史馆</p>
+    	</div>
+    </div>
+    <div class="title" id="part2">爱旅行</div>
+    <div class="container">
+    	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                  <img src="image/s1.jpg" alt="">
+                </div>
+                <div class="item">
+                  <img src="image/s2.jpg" alt="">
+                </div>
+				<div class="item">
+                  <img src="image/s3.jpg" alt="">
+                </div>
+              </div>
+              <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+    </div>
+	<div class="title" id="part3">爱学习</div>
+    <div class="container">
+        <ul class="nav nav-tabs" role="tablist">
+          <li class="active"><a href="#home" role="tab" data-toggle="tab">Web前端</a></li>
+          <li><a href="#profile" role="tab" data-toggle="tab">PHP</a></li>
+          <li><a href="#messages" role="tab" data-toggle="tab">some books</a></li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="home">
+          	<p class="text">我喜欢自己沉浸于学习前端的日子</p>
+            <p class="text">精通HTML + css + JavaScript页面布局</p>
+            <p class="text">JavaScript的等多技能正在深入学习中</p>
+          </div>
+          <div class="tab-pane" id="profile">
+          	<p class="text">php是一门学习成本比较低的脚本语言</p>
+            <p class="text">简单入门级别的菜鸟，往大神指点</p>
+            <p class="text">愿今后有精力时间可以继续研究学习它</p>
+          </div>
+          <div class="tab-pane" id="messages">
+          	<p class="text">《第五项修炼》--彼得▪圣吉</p>
+            <p class="text">《JavaScript权威指南》--弗拉纳根</p>
+            <p class="text">《挪威的森林》--村上村树</p>
+            <p class="text">...</p>
+          </div>
+        </div>
+    </div>
+    <div class="blog-footer">
+      <p>by <a href="http://sx.youths.cc">黄春茂</a>.</p>
+    </div>
+    <a href="" class="btt">顶部</a>
+  </body>
+</html>

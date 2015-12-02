@@ -1,0 +1,227 @@
+ /*列表*/
+ .line1 {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-top-color: #CCC;
+	border-right-color: #CCC;
+	border-left-color: #CCC;
+	padding: 5px;
+	background-color: #EFEFEF;
+}
+.line2 {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-top-color: #CCC;
+	border-right-color: #CCC;
+	border-left-color: #CCC;
+	padding: 5px;
+	background-color: #EFEFEF;
+}
+
+ .line1 [title~=总顶]+ a,
+ .line2 [title~=总顶]+ a{
+	color: #FF0F00;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 30px;
+}
+ .line1 [title~=顶]+a,
+ .line2 [title~=顶]+a,
+ .line1 [title~=精]+a,
+ .line2 [title~=精]+a,
+ .line1 [title~=赏]+a,
+ .line2 [title~=赏]+a,
+ .line1 [title~=投]+a,
+ .line2 [title~=投]+a,
+ .line1 [title~=附]+a,
+ .line2 [title~=附]+a,
+ .line1 [title~=礼]+a,
+ .line2 [title~=礼]+a{
+	font-size: 16px;
+	line-height: 30px;
+}
+ .line1 [title~=顶]+a,
+ .line2 [title~=顶]+a{
+	color: #ff9900;
+}
+ .line1 [title~=精]+a,
+ .line2 [title~=精]+a{
+	color: #FD9F02;
+}
+ .line1 [title~=赏]+a,
+ .line2 [title~=赏]+a{
+	color: #00b014;
+}
+ .line1 [title~=投]+a,
+ .line2 [title~=投]+a{
+	color: #0052b0;	
+}
+ .line1 [title~=附]+a,
+ .line2 [title~=附]+a{
+	color: #7800a7;	
+}
+ .line1 [title~=礼]+a,
+ .line2 [title~=礼]+a{
+	color: #0095c1;
+}
+ .line1 [title~=锁]+a,
+ .line2 [title~=锁]+a,
+ .line1 [title~=结]+a,
+ .line2 [title~=结]+a,
+ .line1 [title~=沉]+a,
+ .line2 [title~=沉]+a{
+	color: #999;
+	font-size: 10px;
+}
+
+/*翻页*/
+.showpage{
+padding-right: 10px;padding-left:10px;background-color: #EEEEEE;border-bottom: 1px solid #D6D6D6;border-top: 1px solid #FFFFFF;text-align: right;
+}
+
+.subtitle {
+	background-color: #EEEEEE;border-bottom: 1px solid #D6D6D6;
+	padding-left: 10px;
+	min-height:35px;
+	line-height: 35px;
+}
+
+/*内容*/
+.content {
+	color: #adadad;
+	padding: 10px;
+	line-height: 30px;
+	font-size: 18px;
+	border-right: 1px solid #D6D6D6;
+	overflow:hidden;
+}
+/*下一页*/
+.nexttitle{
+	background: #9d9d9d;
+	min-height: 38px;
+	text-align: right;
+	padding-right: 15px;
+} 
+
+.topre {
+	padding:10px;
+	background: #e0e0e0;
+	font-size: 14px;
+}
+
+/*头部返回-首页模块*/
+.header-nav {
+	clear: both;
+	float: none;
+	height: 40px;
+	background-color: #b50000;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	position: fixed;
+	width: 100%;
+	top: 0px;
+}
+.header-nav ul li {
+	height: 30px;
+	margin-right: 15px;
+	margin-left: 15px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.header-nav ul li a {
+	line-height: 30px;
+	text-align: center;
+	display: block;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	background-color: #FFF;
+	height: 30px;
+	width: 50px;
+}
+.z {
+	float: left;
+}
+.y {
+	float: right;
+}
+/*登录前模块*/
+.login {
+	background-image: linear-gradient(bottom, rgb(255,255,255) 0%, rgb(181,0,0) 50%, rgb(255,255,255) 100%);
+	background-image: -o-linear-gradient(bottom, rgb(255,255,255) 0%, rgb(181,0,0) 50%, rgb(255,255,255) 100%);
+	background-image: -moz-linear-gradient(bottom, rgb(255,255,255) 0%, rgb(181,0,0) 50%, rgb(255,255,255) 100%);
+	background-image: -webkit-linear-gradient(bottom, rgb(255,255,255) 0%, rgb(181,0,0) 50%, rgb(255,255,255) 100%);
+	background-image: -ms-linear-gradient(bottom, rgb(255,255,255) 0%, rgb(181,0,0) 50%, rgb(255,255,255) 100%);
+	background-image: -webkit-gradient( linear, right bottom, right top, color-stop(0, rgb(255,255,255)), color-stop(0.5, rgb(181,0,0)), color-stop(1, rgb(255,255,255)) );
+	margin-top: 50px;
+}
+.login .login-account {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	margin: 10px;
+	background-color: #FFF;
+	border: 1px solid #CCC;
+	padding: 10px;
+}
+.login .login-account input {
+	-webkit-appearance: none;
+	background: none;
+	width: 80%;
+	border: 1 solid #CCC;
+	font-size: 14px;
+	vertical-align: middle;
+	margin: 0;
+	padding-top: 5px;
+	padding-right: 0;
+	padding-bottom: 5px;
+	padding-left: 0;
+}
+.login .login-automatic {
+	height: 30px;
+	line-height: 30px;
+	padding-right: 20px;
+	padding-left: 20px;
+	color: #FFF;
+}
+.login .login-automatic a {
+	color: #FFF;
+	line-height: 30px;
+}
+.login-login {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	height: 25px;
+	margin: 10px;
+	background-color: #0C0;
+}
+.login-login input[type=submit] {
+	height: 28px;
+	width: 100%;
+	display: inline-block;
+	font-size: 16px;
+	color: #fff;
+	font-weight: bold;
+	border: 1px solid #3e6983;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	text-shadow: 0 -1px 1px rgba(0,32,75,0.33);
+	-webkit-box-shadow: 0 1px 1px rgba(255,255,255,0.5);
+	box-shadow: 0 1px 1px rgba(255,255,255,0.5);
+	background-image: linear-gradient(bottom, rgb(121,202,113) 0%, rgb(68,176,59) 50%, rgb(121,202,113) 100%);
+	background-image: -o-linear-gradient(bottom, rgb(121,202,113) 0%, rgb(68,176,59) 50%, rgb(121,202,113) 100%);
+	background-image: -moz-linear-gradient(bottom, rgb(121,202,113) 0%, rgb(68,176,59) 50%, rgb(121,202,113) 100%);
+	background-image: -webkit-linear-gradient(bottom, rgb(121,202,113) 0%, rgb(68,176,59) 50%, rgb(121,202,113) 100%);
+	background-image: -ms-linear-gradient(bottom, rgb(121,202,113) 0%, rgb(68,176,59) 50%, rgb(121,202,113) 100%);
+	background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(121,202,113)), color-stop(0.5, rgb(68,176,59)), color-stop(1, rgb(121,202,113)) );
+}

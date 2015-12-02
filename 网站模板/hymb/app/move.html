@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+	div{
+		position:absolute;
+		left: 0;
+		width:100px;
+		height:100px;
+		padding:20px;
+		border:1px solid #ccc;
+		background:green;
+		color:#fff;
+		margin: 10px;
+		font-size:14px;
+		border:1px solid gray;
+		filter:alpha(opacity=100);
+		opacity:1;
+		line-height:180%;
+	}
+	#div2{
+		width:100px;
+		height:100px;
+		position:absolute;
+		left:500px;
+	}
+	</style>
+	<script type="text/javascript">
+	window.onload=function(){
+		var div1=document.getElementById('div1');
+		div1.onmouseover=function(){
+			move(div1,{'width':300},5,function(){ //宽度变化完成以后的回调函数（紧接着高度变化）
+				move(div1,{'height':300},5,function(){//高度变化完成以后的回调函数（紧接着透明度变化）
+					move(div1,{'opacity':30})
+				})
+			})
+		}
+		//鼠标移出，进行相反的运动
+		div1.onmouseout=function(){
+			move(div1,{'opacity':100},5,function(){ //透明度变化完成以后的回调函数（紧接着高度变化）
+				move(div1,{'height':100},5,function(){//高度变化完成以后的回调函数（紧接宽度着变化）
+					move(div1,{'width':100})
+				})
+			})
+		}
+
+
+		var div2=document.getElementById('div2');
+		div2.onmouseover=function(){
+			move(div2,{'width':300,'height':300,'opacity':40});
+		}
+		div2.onmouseout=function(){
+			move(div2,{'width':100,'height':100,'opacity':100});
+		}
+
+		//任意属性值的运动框架 EXP： move(obj,{width:200,height:200},fnEnd)
+		/*
+			obj：   运动物体
+			json：  运动属性和运动目标值的json集合，{width:200,height:200}
+			sv：    运动的速度，speed-value,值越小速度越大
+			fnEnd： 运动结束后的回调函数	
+		*/
+	function move(obj,json,sv,fnEnd){
+		//取CSS样式值
+		function getStyle(obj,attr){
+			if(obj.currentStyle) {return obj.currentStyle[attr];}
+			else {return getComputedStyle(obj,false)[attr];}
+		}
+		//运动开始			
+		clearInterval(obj.timer);
+		obj.timer=setInterval(function(){
+			var isAllCompleted=true; //假设全部运动都完成了
+			for(attr in json){
+				var attrValue=0;
+				switch(attr){
+					case 'opacity':
+					attrValue=Math.round(parseFloat(getStyle(obj,attr))*100);break;
+					default:
+					attrValue=parseInt(getStyle(obj,attr));
+				}
+				//如果没有传入sv，则为4
+				var speed=(json[attr]-attrValue)/(sv||4); 
+				speed=speed>0?Math.ceil(speed):Math.floor(speed);
+				//如果循环过程中存在尚未结束的运动，isAllCompleted为假
+				if(attrValue!=json[attr]) isAllCompleted=false; 
+				switch(attr){
+					case 'opacity': {
+						obj.style.filter="alpha(opacity="+(attrValue+speed)+")";
+						obj.style.opacity=(attrValue+speed)/100;
+					}; break;
+					default:obj.style[attr]=attrValue+speed+'px';
+				}					
+			}//for in end!
+			//所有循环结束后，只有当全部运动结束后（isAllCompleted=true）时才关闭定时器
+			if(isAllCompleted){ 
+				clearInterval(obj.timer);
+				if(fnEnd) fnEnd();
+			}	
+		},30);
+	}//move() end !
+}//--------- onload end ---------
+
+	</script>
+
+<!--<script type="text/javascript">
+ window.onload=function()
+{
+	function startMove(obj, cur, target, fnSet, fnEnd, type)
+{
+var speed_json={};
+if(!type)type='buffer';
+switch(type)
+{
+case 'elecity':
+for(var i in cur)
+{
+speed_json[i]=0;
+}
+break;
+case 'linear':
+for(var i in cur)
+{
+speed_json[i]=(target[i]-cur[i])/30;
+}
+break;
+}
+
+clearInterval(obj.timer);
+obj.timer=setInterval(function (){
+var bStop=true;
+
+for(var i in target)
+{
+
+switch(type)
+{
+case 'buffer':
+var speed=(target[i]-cur[i])/6;
+speed=speed>0?Math.ceil(speed):Math.floor(speed);
+break;
+case 'linear':
+var speed=speed_json[i];
+break;
+case 'elecity':
+speed_json[i]+=(target[i]-cur[i])/4;
+speed_json[i]*=0.7;
+var speed=speed_json[i];
+break;
+}
+
+if(
+Math.round(cur[i])!=target[i] ||
+(type=='elecity' && Math.abs(speed)>1)
+)
+{
+bStop=false;
+}
+cur[i]+=speed;
+}
+
+fnSet(obj, cur);
+
+if(bStop)
+{
+clearInterval(obj.timer);
+
+fnEnd && fnEnd();
+}
+}, 30);
+}
+
+var backq=document.getElementById('back');
+
+startMove(backq, "width", 500);
+}
+</script>-->
+<style>
+#back{ background:#39C; width:100px; height:100px;}
+
+</style>
+</head>
+
+<body>
+<div id="back">
+
+
+</div>
+<div id="div1">运动中的回调函数fnEnd：我先变宽后变高，再变透明度</div>
+	<div id="div2">多个值一起变化：我的宽度和高度同时缓慢变成300px,同时透明度也缓慢的变化</div>
+
+<!-- page.baidu.com/3ghy.com/4qejs_87rk_i.html Baidu tongji analytics -->
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F4826c5a45fd4bdd3aa8b1463f97318a1' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

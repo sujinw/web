@@ -1,0 +1,42 @@
+/**************************************************************************************
+         *************************自定义基本元素样式清零定义表***************************************************************/
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, del, dfn, em, img, ins, kbd, q, samp, small, strong, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, footer, header, nav, section {margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;} article, aside, details, figcaption, figure, footer, header, menu, nav, section {display:block;}
+a:hover, a:active { outline:none; }
+select, input, textarea, button { font:99% sans-serif; }
+input, select { vertical-align:middle; }
+ul,ol,li{list-style:none;}
+img{ max-width:100%; height:auto;border:none; interpolation-mode: bicubic;}
+html{width: 100%; }
+hr{ display:block; height:1px; border:0; border-top:1px solid #ccc; margin:1em 0; padding:0; }
+table { margin:0; padding:0; clear:left; width:100%; border-collapse:collapse; border-spacing:0; }
+table td { vertical-align:top; margin:0; }
+body {font:13px/1.4 sans-serif; font-size: small;color :#3c3c3c;font-family: 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif; width: 100%; }
+@font-face { font-family: 'fontGqq'; src: url('fontGqq.ttf') format('truetype'); font-weight: normal; font-style: normal }
+[class*="fg-"]:before { display: inline-block; font-family: fontGqq,sans-serif; font-size: 16px; }
+a {color:#333;text-decoration: none;}
+a:hover { color: RGB(17,136,204); font-weight: 500; -webkit-transition: background-color .15s linear .1; transition: background-color .15s linear .1;}
+input {
+  -webkit-appearance: none;
+  border: none;
+  border-radius: 0px;
+}
+input {
+  font-family: "微软雅黑",Helvetica,STHeiti,Droid Sans Fallback;
+}
+input, textarea, keygen, select, button {
+  margin: 0em;
+  font: normal normal normal 13.3333330154419px/normal Arial;
+  text-rendering: auto;
+  color: initial;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+}
+textarea {
+  resize: none;
+  -webkit-appearance: none;
+}

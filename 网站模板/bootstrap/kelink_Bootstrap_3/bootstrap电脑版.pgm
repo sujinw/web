@@ -1,0 +1,814 @@
+forum{PGM:col}<div class="container warp page-idx">
+	<div class="row">
+		<div class="pull-left wrap-left">
+			<div class=" wj-wrap clearfix">
+			<div role="tabpanel">
+				<!-- Nav tabs -->		
+				<ul class="nav nav-tabs" role="tablist">
+					<li role="presentation" class="active">
+						<a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a>
+					</li>
+					<li role="presentation">
+						<a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a>
+					</li>
+					<li role="presentation">
+						<a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a>
+					</li>
+					<li role="presentation">
+						<a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a>
+					</li>
+				</ul>
+				<!-- Tab panes -->		
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="home">
+						<ul class="tab-ul">
+							<li><a href="">此处调用相关栏目的一条相应内容</a></li>
+							<li><a href="">此处调用相关栏目的一条相应内容</a></li>
+							<li><a href="">此处调用相关栏目的一条相应内容</a></li>
+							<li><a href="">此处调用相关栏目的一条相应内容</a></li>
+							<li><a href="">此处调用相关栏目的一条相应内容</a></li>
+						</ul>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="profile">
+						<ul class="tab-ul">
+							<li><a href="">此处调用相关栏目的一条相应内容</a></li>
+							<li><a href="">此处调用相关栏目的一条相应内容</a></li>
+							<li><a href="">此处调用相关栏目的一条相应内容</a></li>
+							<li><a href="">此处调用相关栏目的一条相应内容</a></li>
+							<li><a href="">此处调用相关栏目的一条相应内容</a></li>
+						</ul>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="messages">
+						<ul class="tab-ul">
+							<li><a href="">此处调用相关栏目的一条相应内容</a></li>
+							<li><a href="">此处调用相关栏目的一条相应内容</a></li>
+							<li><a href="">此处调用相关栏目的一条相应内容</a></li>
+							<li><a href="">此处调用相关栏目的一条相应内容</a></li>
+							<li><a href="">此处调用相关栏目的一条相应内容</a></li>
+						</ul>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="settings">
+						<ul class="tab-ul">
+							<li><a href="">此处调用相关栏目的一条相应内容</a></li>
+							<li><a href="">此处调用相关栏目的一条相应内容</a></li>
+							<li><a href="">此处调用相关栏目的一条相应内容</a></li>
+							<li><a href="">此处调用相关栏目的一条相应内容</a></li>
+							<li><a href="">此处调用相关栏目的一条相应内容</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			</div>		
+		</div>
+		<div class="pull-right wrap-right">
+			<div class="box-moder login-cont-warp cmt-box hot-group">
+				<!--登录前-->
+				<div class="before" style="display:none">
+					<p class="login-words">在这里你可以找到自己真正的需要</p>
+					<a href="#" class="login-btn">现在登录</a>
+					<div class="djt-datas">
+						<ul class="djt-datas-lists">
+							<li>
+								<a href="http://djt.qq.com/events">
+									<span class="light-blue">262</span>
+									讲座沙龙
+								</a>
+							</li>
+							<li>
+								<a href="http://djt.qq.com/videos">
+									<span class="light-blue">274</span>
+									讲座视频
+								</a>
+							</li>
+							<li>
+								<a href="http://djt.qq.com/ppts">
+									<span class="light-blue">624</span>
+									讲座PPT
+								</a>
+							</li>
+							<li>
+								<a href="http://djt.qq.com/article/">
+									<span class="light-blue">1079</span>
+									文章
+								</a>
+							</li>
+						</ul>
+					</div>				
+				</div>	
+				<div class="after user-info">
+					<div class="user-info-img">
+					  <img src="static/images/2.jpg" />
+					</div>
+					<ul class="user-info-cont">
+						<li><span class="user-left">左边</span><span class="user-right">右边</span></li>
+						<li><span class="user-left">左边</span><span class="user-right">右边</span></li>
+						<li><span class="user-left">左边</span><span class="user-right">右边</span></li>
+						<li><span class="user-left">左边</span><span class="user-right">右边</span></li>
+					</ul>					
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="wj-wrap clearfix">
+	 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+	 	<div class="panel panel-default">
+	 		<div class="panel-heading" role="tab" id="headingOne">
+	 			<h4 class="panel-title">
+	 				<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">热门论坛</a>
+	 			</h4>
+	 		</div>
+	 		<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+	 			<div class="panel-body">
+	 				<ul class="forum-list">
+	 					<li>
+	 						<div class="forum-list-img">
+	 							<img src="static/forum/png-0018.png" alt="幻影闲聊" />	 			
+	 							<p>幻影闲聊</p>
+	 						</div>
+	 						<div class="forum-list-count">
+	 							<p>
+	 								<span>
+	 									今日主题： <strong>5</strong>
+	 								</span>
+	 								<span>今日回复:5</span>
+	 							</p>
+	 							<p>
+	 								<span>主题：112</span>
+	 								<span>回复：556</span>
+	 							</p>
+	 							<p>
+	 								<a href="">本论坛最新一条帖子调用</a>
+	 								<a href="">本论坛最新一条帖子调用</a>
+	 							</p>
+	 						</div>
+	 					</li>
+	 					<li>
+	 						<div class="forum-list-img">
+	 							<img src="static/forum/png-0077.png" alt="软文发布" />	 			
+	 							<p>软文发布</p>
+	 						</div>
+	 						<div class="forum-list-count">
+	 							<p>
+	 								<span>
+	 									今日主题： <strong>5</strong>
+	 								</span>
+	 								<span>今日回复:5</span>
+	 							</p>
+	 							<p>
+	 								<span>主题：112</span>
+	 								<span>回复：556</span>
+	 							</p>
+	 							<p>
+	 								<a href="">本论坛最新一条帖子调用</a>
+	 							</p>
+	 						</div>
+	 					</li>
+	 				</ul>
+	 			</div>	 		</div>
+	 	</div>
+	 	<div class="panel panel-default">
+	 		<div class="panel-heading" role="tab" id="headingTwo">
+	 			<h4 class="panel-title">
+	 				<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">推荐论坛</a>
+	 			</h4>
+	 		</div>
+	 		<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+	 			<div class="panel-body">
+	 				<ul class="forum-list">
+	 					<li>
+	 						<div class="forum-list-img">
+	 							<img src="static/forum/png-0037.png" alt="TML5/CSS3" />	 			
+	 							<p>HTML5/CSS3</p>
+	 						</div>
+	 						<div class="forum-list-count">
+	 							<p>
+	 								<span>
+	 									今日主题： <strong>5</strong>
+	 								</span>
+	 								<span>今日回复:5</span>
+	 							</p>
+	 							<p>
+	 								<span>主题：112</span>
+	 								<span>回复：556</span>
+	 							</p>
+	 							<p>
+	 								<a href="">本论坛最新一条帖子调用</a>
+	 							</p>
+	 						</div>
+	 					</li>
+	 					<li>
+	 						<div class="forum-list-img">
+	 							<img src="static/forum/png-0276.png" alt="酷站欣赏" />	 			
+	 							<p>酷站欣赏</p>
+	 						</div>
+	 						<div class="forum-list-count">
+	 							<p>
+	 								<span>
+	 									今日主题： <strong>5</strong>
+	 								</span>
+	 								<span>今日回复:5</span>
+	 							</p>
+	 							<p>
+	 								<span>主题：112</span>
+	 								<span>回复：556</span>
+	 							</p>
+	 							<p>
+	 								<a href="">本论坛最新一条帖子调用</a>
+	 							</p>
+	 						</div>
+	 					</li>
+	 					<li>
+	 						<div class="forum-list-img">
+	 							<img src="static/forum/png-1268.png" alt="HTML模板风格" />	 			
+	 							<p>HTML模板风格</p>
+	 						</div>
+	 						<div class="forum-list-count">
+	 							<p>
+	 								<span>
+	 									今日主题：
+	 									<strong>5</strong>
+	 								</span>
+	 								<span>今日回复:5</span>
+	 							</p>
+	 							<p>
+	 								<span>主题：112</span>
+	 								<span>回复：556</span>
+	 							</p>
+	 							<p>
+	 								<a href="">本论坛最新一条帖子调用</a>
+	 							</p>
+	 						</div>
+	 					</li>
+	 					<li>
+	 						<div class="forum-list-img">
+	 							<img src="static/forum/png-0077.png" alt="软文发布" />	 			
+	 							<p>软文发布</p>
+	 						</div>
+	 						<div class="forum-list-count">
+	 							<p>
+	 								<span>
+	 									今日主题：
+	 									<strong>5</strong>
+	 								</span>
+	 								<span>今日回复:5</span>
+	 							</p>
+	 							<p>
+	 								<span>主题：112</span>
+	 								<span>回复：556</span>
+	 							</p>
+	 							<p>
+	 								<a href="">本论坛最新一条帖子调用</a>
+	 							</p>
+	 						</div>
+	 					</li>
+	 				</ul>
+	 			</div>	 		
+	 		</div>
+	 	</div>
+	 	<div class="panel panel-default">
+	 		<div class="panel-heading" role="tab" id="headingThree">
+	 			<h4 class="panel-title">
+	 				<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">日常事务</a>
+	 			</h4>
+	 		</div>
+	 		<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+	 			<div class="panel-body">
+	 				<ul class="forum-list">
+	 					<li>
+	 						<div class="forum-list-img">
+	 							<img src="static/forum/png-1334.png" alt="VIP管理" />	 			
+	 							<p>VIP管理</p>
+	 						</div>
+	 						<div class="forum-list-count">
+	 							<p>
+	 								<span>
+	 									今日主题： <strong>5</strong>
+	 								</span>
+	 								<span>今日回复:5</span>
+	 							</p>
+	 							<p>
+	 								<span>主题：112</span>
+	 								<span>回复：556</span>
+	 							</p>
+	 							<p>
+	 								<a href="">本论坛最新一条帖子调用</a>
+	 							</p>
+	 						</div>
+	 					</li>
+	 					<li>
+	 						<div class="forum-list-img">
+	 							<img src="static/forum/png-1472.png" alt="幻影公告" />	 			
+	 							<p>幻影公告</p>
+	 						</div>
+	 						<div class="forum-list-count">
+	 							<p>
+	 								<span>
+	 									今日主题： <strong>5</strong>
+	 								</span>
+	 								<span>今日回复:5</span>
+	 							</p>
+	 							<p>
+	 								<span>主题：112</span>
+	 								<span>回复：556</span>
+	 							</p>
+	 							<p>
+	 								<a href="">本论坛最新一条帖子调用</a>
+	 							</p>
+	 						</div>
+	 					</li>
+	 					<li>
+	 						<div class="forum-list-img">
+	 							<img src="static/forum/png-1321.png" alt="本站事务" />	 			
+	 							<p>本站事务</p>
+	 						</div>
+	 						<div class="forum-list-count">
+	 							<p>
+	 								<span>
+	 									今日主题：
+	 									<strong>5</strong>
+	 								</span>
+	 								<span>今日回复:5</span>
+	 							</p>
+	 							<p>
+	 								<span>主题：112</span>
+	 								<span>回复：556</span>
+	 							</p>
+	 							<p>
+	 								<a href="">本论坛最新一条帖子调用</a>
+	 							</p>
+	 						</div>
+	 					</li>
+	 					<li>
+	 						<div class="forum-list-img">
+	 							<img src="static/forum/png-1327.png" alt="BUG提交" />	 			
+	 							<p>BUG提交</p>
+	 						</div>
+	 						<div class="forum-list-count">
+	 							<p>
+	 								<span>
+	 									今日主题：
+	 									<strong>5</strong>
+	 								</span>
+	 								<span>今日回复:5</span>
+	 							</p>
+	 							<p>
+	 								<span>主题：112</span>
+	 								<span>回复：556</span>
+	 							</p>
+	 							<p>
+	 								<a href="">本论坛最新一条帖子调用</a>
+	 							</p>
+	 						</div>
+	 					</li>
+	 				</ul>
+	 			</div>
+	 		</div>
+	 	</div>
+	 </div>	</div>
+</div>{PGM:col}2{PGM:col}3{PGM:col}280{PGM:col}{PGM:col}0{PGM:col}{PGM:end}all-footer{PGM:col}<footer class="bs-docs-footer" role="contentinfo">
+	<div class="footer-nav">
+		<div class="container">
+			<ul class="about-ul list-inline clearfix">
+				<li>
+					<a href="/about" target="_blank">关于我们</a>
+				</li>
+				<li>
+					<a href="/joinus" target="_blank">加入我们</a>
+				</li>
+				<li>
+					<a href="/contact" target="_blank">幻影大事记</a>
+				</li>
+				<li>
+					<a href="/help" target="_blank">常见问题解答</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="container mode-idx-link">
+		<h3 class="t-h3">
+			<a href="/links" target="_blank">合作伙伴</a>
+		</h3>
+		<ul class="list-inline">
+			<li>
+				<a href="http://www.aliyun.com/cps/rebate?from_uid=kAzn9AAjfEo1M0LfB0bazhoicscBkFlZ" target="_blank" title="阿里云">阿里云</a>
+			</li>
+			<li>
+				<a href="http://www.mediadreamworks.net" target="_blank" title="传媒梦工场">传媒梦工场</a>
+			</li>
+			<li>
+				<a href="http://www.3wcoffee.com/" target="_blank" title="3W传播">3W传播</a>
+			</li>
+			<li>
+				<a href="http://www.lagou.com/" target="_blank" title="拉勾网">拉勾网</a>
+			</li>
+			<li>
+				<a href="http://www.hui.net" target="_blank" title="会点网">会点网</a>
+			</li>
+			<li>
+				<a href="http://www.liepin.com/" target="_blank" title="猎聘网">猎聘网</a>
+			</li>
+			<li>
+				<a href="http://www.tuicool.com/" target="_blank" title="推酷">推酷</a>
+			</li>
+			<li>
+				<a href="http://www.ingdan.com/" target="_blank" title="硬蛋网">硬蛋网</a>
+			</li>
+			<li>
+				<a href="http://www.iconfans.com" target="_blank" title="Iconfans">Iconfans</a>
+			</li>
+			<li>
+				<a href="http://www.freebuf.com/" target="_blank" title="FreeBuf黑客与极客">FreeBuf黑客与极客</a>
+			</li>
+			<li>
+				<a href="http://www.iceo.com.cn" target="_blank" title="中国企业家">中国企业家</a>
+			</li>
+			<li>
+				<a href="http://www.cnbeta.com" target="_blank" title="cnbeta">cnbeta</a>
+			</li>
+			<li>
+				<a href="http://android.eoe.cn" target="_blank" title="Android开发者社区">Android开发者社区</a>
+			</li>
+			<li>
+				<a href="https://www.upyun.com/?md=huxiu" target="_blank" title="又拍云存储">又拍云存储</a>
+			</li>
+			<li>
+				<a href="http://www.oschina.net/" target="_blank" title="开源中国社区">开源中国社区</a>
+			</li>
+			<li>
+				<a href="http://www.cgkee.com" target="_blank" title="智美时空游戏设计">智美时空游戏设计</a>
+			</li>
+		</ul>
+	</div>
+	<div class="container copy-right">
+		<span>
+			Copyright ©
+			<a href="http://www.huxiu.com">幻影特效网</a>
+			（
+			<a href="http://www.miitbeian.gov.cn/" target="_blank">http://www.3ghy.com</a>
+			)
+		</span>
+		<a href="#">
+			<img src="/Template/kelink_Bootstrap_3/static/img/hyfooter.png" alt="footer.png"></a>
+	</div>
+</footer>
+<div class="modal hx-modal fade lgn-moder-wrap" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">
+					<span aria-hidden="true">×</span>
+					<span class="sr-only">Close</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">用户登录</h4>
+			</div>
+			<div class="modal-body">
+				<div class="lgn-wrap">
+					<div class="form-horizontal lgn-box">
+						<div class="form-group">
+							<div class="col-sm-12">
+								<input class="form-control" type="text" id="lgn_username" placeholder="手机号 / 邮箱 / 虎嗅账号"></div>
+							<div class="error-tip"></div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-12">
+								<input class="form-control" type="password" id="lgn_pwd" placeholder="密码"></div>
+							<div class="error-tip"></div>
+						</div>
+						<div class="form-group forget-pwd">
+							<div class="col-sm-12 text-right">
+								<a href="/user/find_passwd" target="_blank">忘记密码？</a>
+							</div>
+						</div>
+						<div class="form-group group-btm">
+							<div class="col-sm-12">
+								<button type="button" class="btn btn-blue js-moder-lgnbtn">登录</button>
+								<div class="clearfix box-btm">
+									<span class="pull-right btn-reg">
+										没有帐号?
+										<a href="http://www.huxiu.com/user/register" target="_blank">立即注册</a>
+									</span>
+									<div class="checkbox-wrap">
+										<label>
+											<input type="checkbox" id="autologin" checked="checked">2周内自动登录</label>
+									</div>
+								</div>
+								<h4 class="t-h4">第三方登录</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix login-three lgn-three-btnWrap">
+				<a class="btn-weixin" href="/user/auth_login/weixin.html"> <i></i>
+					<span>微信登录</span>
+				</a>
+				<a class="btn-sina" href="/user/auth_login/weibo.html"> <i></i>
+					<span>微博登录</span>
+				</a>
+				<a class="btn-qq" href="/user/auth_login/qq.html">
+					<i></i>
+					<span>QQ登录</span>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<script src="/Template/kelink_Bootstrap_3/js/jQuery-1.9.1.js"></script>
+<script src="/Template/kelink_Bootstrap_3/js/bootstrap.min.js"></script>
+<script>
+$('.carousel').carousel({"autoplay":false})
+$(function() {
+  $(window).scroll(function() {
+    if($(this).scrollTop() != 0) {
+      $("#go-top-btn").fadeIn(); 
+    } else {
+      $("#go-top-btn").fadeOut();
+    }
+  });
+  $("body").append("<div class=\"go-top js-go-top\" id=\"go-top-btn\" style=\"bottom: 40px; left: 1174.5px; display: block;\">	</div>");
+  $("#go-top-btn").click(function() {
+    $("body,html").animate({scrollTop:0},800);
+  });
+ $("#carousel-idx .list6").attr("id","pic-idx-1");
+  $("#pic-idx-1 ul").addClass("carousel-inner").attr("role","listbox")
+  $("#pic-idx-1 .carousel-inner li").addClass("item");
+  $("#pic-idx-1 .carousel-inner li").eq(1).addClass("active");
+  $('.carousel').carousel();
+});
+$('#myTab a').click(function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
+</script>
+</body>
+</html>{PGM:col}3{PGM:col}3{PGM:col}{PGM:col}{PGM:col}0{PGM:col}{PGM:end}all-header{PGM:col}<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+        <meta name="keywords" content=" 幻影特效网,手机上的前端学习平台,HTML、CSS、javascript基础学习,手机前端特效" />
+        <meta name="description" content=" 幻影特效网-手机上的前端学习平台，旨在为更多的初涉前端编程的人提供一个免费、高效、明了的学习平台 " />
+        <meta name="author" content="Slade" /> 
+        <meta name="baidu-tc-verification" content="00a49c7285c9cc01386135a7fe523ed2" />
+	<title>幻影特效网-手机上的前端学习平台</title>
+	<link href="/Template/kelink_Bootstrap_3/style/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="/Template/kelink_Bootstrap_3/style/css/mycommon.css" rel="stylesheet" />
+</head>
+<body>
+<div class="top navbar-inverse">
+	<div class="container">
+		<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+			<ul class="nav navbar-nav navbar-right manuscript">
+				<li class="active">
+					<span class="s-btn dropdown-toggle js-btn-taogao" data-toggle="dropdown">投稿</span>
+				</li>
+				<li>
+					<a class="moder-lgn-box" href="javascript:void(0);">登录</a>
+				</li>
+				<li>
+					<a class="moder-lgn-box" href="user/login.html" data-toggle="modal" data-target="#myModal">登录</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</div>
+<header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
+	<div class="container">
+		<div class="navbar-header">
+			<a href="/" class="navbar-brand">
+				<img src="/Template/kelink_Bootstrap_3/static/img/logo.png" alt="logo.png"></a>
+		</div>
+		<nav class="collapse navbar-collapse " role="navigation">
+			<form class="navbar-form navbar-right" role="search" method="get" action="/search.html">
+				<div class="form-group">
+					<input type="text" name="s" class="form-control js-input-search" placeholder="请输入查询内容" value="">
+					<button type="submit" class=""></button>
+				</div>
+			</form>
+						<ul class="nav navbar-nav navbar-right">
+				<li class="nav-news ">
+					<a href="/">推荐</a>
+					<ul class="nav-menu2">
+						<li>
+							<a href="/wapindex.aspx?siteid=1000&classid=281">
+								模板
+								<i></i>
+							</a>
+							<ul class="nav-menu3">
+								<li><a href="/wapindex-1000-331.html">单页模板</a></li>
+								<li><a href="/wapindex-1000-332.html">整站模板</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="/wapindex.aspx?siteid=1000&classid=282">
+								特效
+								<i></i>
+							</a>
+							<ul class="nav-menu3">
+								<li><a href="/wapindex-1000-316.html">焦点图</a></li>
+								<li><a href="/wapindex-1000-325.html">TAB选项卡</a></li>
+								<li><a href="/wapindex-1000-326.html">日期特效</a></li>
+								<li><a href="/wapindex-1000-327.html">文字特效</a></li>
+							</ul>							
+						</li>
+						<li>
+							<a href="/wapindex-1000-288.html">
+								素材
+								<i></i>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="/wapindex-1000-285.html" target="_blank">作品</a>
+				</li>
+				<li>
+					<a href="/wapindex-1000-280.html" target="_blank">论坛</a>
+				</li>
+				<li class="nav-news ">
+					<a href="/active">教程</a>
+					<ul class="nav-menu2">
+						<li>
+							<a href="/wapindex-1000-304.html">
+								JS实例教程
+							</a>							
+						</li>												
+						<li>
+							<a href="/wapindex-1000-305.html" target="_blank">
+								CSS实例教程
+								<i></i>
+							</a>
+						</li>
+						<li>
+							<a href="/wapindex-1000-306.html" target="_blank">
+								HTML教程
+								<i></i>
+							</a>
+						</li>
+						<li>
+							<a href="/wapindex-1000-328.html" target="_blank">
+								SEO教程
+								<i></i>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="/wapindex-1000-310.html" target="_blank">导航</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</header>{PGM:col}1{PGM:col}3{PGM:col}{PGM:col}{PGM:col}0{PGM:col}{PGM:end}content-idx{PGM:col}<div class="container warp page-idx">
+	<div class="row">
+		<div class="pull-left wrap-left">
+			<div id="carousel-idx" class="slide-idx carousel slide" data-ride="carousel">
+				<!-- Indicators -->
+				<ol class="carousel-indicators">
+					<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="3"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="4"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="5"></li>
+				</ol>
+				[article=0_6_5_0_6]
+
+				<!-- Controls -->
+				<a class="left carousel-control" href="#carousel-idx" role="button" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="right carousel-control" href="#carousel-idx" role="button" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
+			</div>
+		</div>
+		<div class="pull-right wrap-right">
+			<div class="box-moder mod-hx-regular">
+				<ul class="clearfix">
+					<li class="tool-tip dropdown li-weixin" title="" data-original-title="微信公众号">
+						<span data-toggle="dropdown"> <i class="i-icon icon-regul-weixin"></i>
+						</span>
+						<div class="j-top dropdown-menu app-qrcode">
+							<img src="/Template/kelink_Bootstrap_3/static/img/weixin_erweima.png"></div>
+					</li>
+					<li class="tool-tip li-weibo" title="" data-original-title="微博">
+						<a href="http://weibo.com/ihuxiu" target="_blank"> <i class="i-icon icon-regul-weibo"></i>
+						</a>
+					</li>
+					<li class="tool-tip dropdown li-ios" title="" data-original-title="iOS客户端">
+						<span data-toggle="dropdown">
+							<i class="i-icon icon-regul-iOS"></i>
+						</span>
+						<div class="j-top dropdown-menu app-qrcode">
+							<img src="/Template/kelink_Bootstrap_3/static/img/app_erweima.png"></div>
+					</li>
+					<li class="tool-tip li-idx-Android dropdown li-android" title="" data-original-title="Android客户端">
+						<span data-toggle="dropdown">
+							<i class="i-icon icon-regul-Android"></i>
+						</span>
+						<div class="j-top dropdown-menu app-qrcode">
+							<img src="/Template/kelink_Bootstrap_3/static/img/app_erweima.png"></div>
+					</li>
+					<li class="tool-tip li-inter" title="" data-original-title="国际站">
+						<a href="http://en.huxiu.com" target="_blank">
+							<i class="i-icon icon-regul-inter "></i>
+						</a>
+					</li>
+					<li class="tool-tip regular-email li-email" title="" data-original-title="订阅虎嗅">
+						<a class="js-icon-regul-email" href="javascript:void(0);">
+							<i class="i-icon icon-regul-email"></i>
+						</a>
+					</li>
+					<li class="tool-tip li-tqq" title="" data-original-title="腾讯微博">
+						<a href="http://t.qq.com/ihuxiu" target="_blank">
+							<i class="i-icon icon-regul-tqq"></i>
+						</a>
+					</li>
+					<!--<li class="tool-tip dropdown" title="关注搜狐新闻的虎嗅">	
+					<span data-toggle="dropdown">
+						<i class="i-icon icon-regul-phone"></i>
+					</span>
+					<div class="j-top dropdown-menu app-qrcode">
+						<img src="/Template/kelink_Bootstrap_3/static/img/sohu_erweima.png"></div>
+				</li>
+				<li class="tool-tip dropdown"  title="加入手机浏览器收藏夹">
+					<span data-toggle="dropdown">
+						<i class="i-icon icon-regul-browsers"></i>
+					</span>
+					<div class="j-top dropdown-menu app-qrcode">
+						<img src="/Template/kelink_Bootstrap_3/static/img/qqllq_erweima.png"></div>
+				</li>
+				-->
+					<li class="tool-tip li-idx-rss li-rss" title="" data-original-title="RSS订阅">
+						<a href="/rss" target="_blank">
+							<i class="i-icon icon-regul-rss"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="box-moder cmt-box hot-group">
+				<div class="l-t clearfix">
+					<h3>
+						<i class="i-icon icon-point"></i>
+						幻影公告
+					</h3>
+				</div>
+				[ul=gonggao-idx][bbs=299_5_1_15_2][/ul]			
+				</div>
+			</div>
+		</div>
+	<div class="wj-wrap clearfix">
+		<div class="l-t" style="border-bottom: 1px solid #cacaca;">
+			<h3>
+				<a class="h3-a-link555" href="#">最新更新</a>
+			</h3>
+			<div class="s-t pull-right">more >></div>
+		</div>
+		<div class="lanmu-warp">
+			<div class="lanmu-list-idx-4">
+				<div class="lanmu-article-pic">
+					[article=331|332_1_1_50_12]		
+				</div>
+				[ul=lanmu-article-list][article=331|332_7_1_15_2][/ul]
+				<div class="lanmu-name lanmu1">模板</div>
+			</div>
+			<div class="lanmu-list-idx-4">
+				<div class="lanmu-article-pic">
+					[article=304|305|306|328_1_1_50_12]		
+				</div>
+				[ul=lanmu-article-list][article=304|305|306|328_7_1_15_2][/ul]
+				<div class="lanmu-name lanmu2">特效</div>
+			</div>
+			<div class="lanmu-list-idx-4">
+				<div class="lanmu-article-pic">
+					[article=316|325|326|327_1_1_50_12]		
+				</div>
+				[ul=lanmu-article-list][article=316|325|326|327_7_1_15_2][/ul]
+				<div class="lanmu-name lanmu3">教程</div>
+			</div>
+			<div class="lanmu-list-idx-4">
+				<div class="lanmu-article-pic">
+					[article=312|313|314|315_1_1_50_12]		
+				</div>
+				[ul=lanmu-article-list][article=312|313|314|315_7_1_15_2][/ul]
+				<div class="lanmu-name lanmu4">插件</div>
+			</div>
+		</div>
+	</div>
+	<div class="wj-wrap clearfix">
+		<div class="l-t" style="border-bottom: 1px solid #cacaca;">
+			<h3>
+				<a class="h3-a-link555" href="#">热门文章</a>
+			</h3>
+			<div class="s-t pull-right">more >></div>
+		</div>
+		<div class="article-list-idx-1">
+			[article=0_10_2_50_12]
+		</div>
+	</div>
+</div>{PGM:col}2{PGM:col}3{PGM:col}0{PGM:col}{PGM:col}2{PGM:col}{PGM:end}

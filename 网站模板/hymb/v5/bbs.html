@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    <title>首页效果</title>
+    <link rel="stylesheet" type="text/css" href="style/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="style/css/animations.css"/>
+    <link rel="stylesheet" type="text/css" href="style/css/animate.css"/>
+    <link rel="stylesheet" type="text/css" href="style/icon/style.css" />
+    <!--[if lt IE 8]><!-->
+    <link rel="stylesheet" type="text/css" href="style/icon/ie7/ie7.css" />
+    <!--<![endif]-->
+    <link rel="stylesheet" type="text/css" href="style/css/dault.css" />
+    <script src="js/zepto.min.js"></script>
+    <script src="js/iscroll.js"></script>
+    <script src="js/core/gmu.js"></script>
+    <script src="js/zepto_extend.js"></script>
+    <script src="js/gmu_extend.js"></script>
+    <script src="js/pace.min.js"></script>
+    <script>
+        paceOptions = {
+            document: false,
+            element: {
+                selectors: ['.all-elements']
+            },
+            restartonRequestAfter: false
+        };
+    </script>
+</head>
+<body>
+<div class="all-elements">
+    <div id="perspective" class="perspective effect-airbnb">
+        <header class="header">
+            <div class="head">
+                <div class="head_nav icon" id="showMenu"><i class="icon-grid2"></i></div>
+                <div class="head_logo"><img src="images/logo.png" /> </div>
+                <div class="head_seach icon"><i class="icon-user2"></i><i class="icon-search"></i> </div>
+            </div>
+        </header>
+        <div class="outer-nav">
+            <div class="inner-nav icon">
+                <div class="nav-item">
+                    <a href="index.html" class="active-item">
+                        <i class="icon-home3"></i>
+                        首页
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="#" class="deploy-nav-sub-item">
+                        <i class="icon-weibo"></i>
+                        微博
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="#" class="deploy-nav-sub-item">
+                        <i class="icon-envelope-o"></i>
+                        信息
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="#" class="deploy-nav-sub-item">
+                        <i class="icon-people"></i>
+                        好友
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="#" class="deploy-nav-sub-item">
+                        <i class="icon-paper-clip"></i>
+                        收藏
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="contact.html">
+                        <i class="icon-link"></i>
+                        联盟
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a id="closeMenu" href="#">
+                        <i class="icon-cross"></i>
+                        关闭
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="perspective_container">
+            <div class="header-clear icon"><i class="icon-cross"></i></div>
+            <div class="wrapper" style="top: 0;">
+                <div id="wrap">
+                    <div id="nav">
+                        <ul>
+                            <li><a href="#test1">首页</a></li>
+                            <li><a href="#test1">要闻</a></li>
+                            <li><a href="javascript:;">国内</a></li>
+                            <li><a href="#test2">国际</a></li>
+                            <li><a href="#test3">军事</a></li>
+                            <li><a href="#test4">社会</a></li>
+                            <li><a href="#test5">娱乐</a></li>
+                            <li><a href="#test6">女人</a></li>
+                            <li><a href="#">体育</a></li>
+                            <li><a href="#test7">科技</a></li>
+                            <li><a href="#test8">互联网</a></li>
+                            <li><a href="#test9">教育</a></li>
+                            <li><a href="#">财经</a></li>
+                            <li><a href="#test11">房产</a></li>
+                            <li><a href="#test12">汽车</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <section>
+                    <div class="bbs_quick">
+                        <ul class="icon">
+                            <li><i class="icon-sign-in"></i><p>每日任务</p> </li>
+                            <li><i class="icon-write"></i><p>每日签到</p> </li>
+                            <li><i class="icon-chat3"></i><p>广播</p> </li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <div class="bbs_hot" id="bbs_tabs">
+                        <ul class="bbs_hot_title bbs_hot_active" id="bbs_hotornew_title">
+                            <li data-url="http://3ghy.com/hot"><a href="#conten1"> <h2 class="hot_h2">热帖</h2></a></li>
+                            <li data-url="http://3ghy.com/new"><a href="#conten2"> <h2 class="new_h2"> 新帖</h2></a></li>
+                        </ul>
+                        <ul class="bbs_hot_contents" id="conten1">
+                            <li><a href="#">这是一条热门帖子</a> </li>
+                            <li><a href="#">这是一条热门帖子</a> </li>
+                            <li><a href="#">这是一条热门帖子</a> </li>
+                            <li><a href="#">这是一条热门帖子</a> </li>
+                            <li><a href="#">这是一条热门帖子</a> </li>
+                            <li><a href="#">这是一条热门帖子</a> </li>
+                        </ul>
+                        <ul class="bbs_hot_contents" id="conten2">
+                            <li><a href="#">这是一条新帖子</a> </li>
+                            <li><a href="#">这是一条热门帖子</a> </li>
+                            <li><a href="#">这是一条热门帖子</a> </li>
+                            <li><a href="#">这是一条热门帖子</a> </li>
+                            <li><a href="#">这是一条热门帖子</a> </li>
+                            <li><a href="#">这是一条热门帖子</a> </li>
+                        </ul>
+                    </div>
+                    <div class="more_btn" id="bbs_hotornew_more"><a href="#"></a> </div>
+                </section>
+                <div class="add_box" style="margin-top: 10px;">
+                    <div class="ad_title icon"><i class="icon-bars-alt"></i>广告 </div>
+                    <p class="icon">幻影特效网<i class="icon-angle-right"></i> </p>
+                </div>
+                <section>
+                    <div class="bbs_items icon">
+                        <ul class="bbs_items_ul">
+                            <p>热门论坛 <i class="icon-keyboard-arrow-down"></i> </p>
+                            <div id="bbs_items_ul_1">
+                            <li>
+                                <div class="bbs_items_img"><i class="icon-html5"></i><p>论坛名称</p></div>
+                                <div class="bbs_items_new"><a href="##">这是本论坛最新一条帖子</a> </div>
+                                <div class="bbs_items_count"><span>6</span><i>2434</i></div>
+                            </li>
+                            <li>
+                                <div class="bbs_items_img"><i class="icon-yelp"></i><p>论坛名称</p></div>
+                                <div class="bbs_items_new"><a href="##">这是本论坛最新一条帖子</a> </div>
+                                <div class="bbs_items_count"><span>6</span><i>2434</i></div>
+                            </li>
+                            </div>
+                        </ul>
+                        <ul class="bbs_items_ul">
+                            <p>热门论坛 <i class="icon-keyboard-arrow-down"></i> </p>
+                            <div id="bbs_items_ul_2">
+                                <li>
+                                    <div class="bbs_items_img"><i class="icon-html5"></i><p>论坛名称</p></div>
+                                    <div class="bbs_items_new"><a href="##">这是本论坛最新一条帖子</a> </div>
+                                    <div class="bbs_items_count"><span>6</span><i>2434</i></div>
+                                </li>
+                                <li>
+                                    <div class="bbs_items_img"><i class="icon-yelp"></i><p>论坛名称</p></div>
+                                    <div class="bbs_items_new"><a href="##">这是本论坛最新一条帖子</a> </div>
+                                    <div class="bbs_items_count"><span>6</span><i>2434</i></div>
+                                </li>
+                            </div>
+                        </ul>
+                        <ul class="bbs_items_ul">
+                            <p>热门论坛 <i class="icon-keyboard-arrow-down"></i> </p>
+                            <div id="bbs_items_ul_3">
+                                <li>
+                                    <div class="bbs_items_img"><i class="icon-html5"></i><p>论坛名称</p></div>
+                                    <div class="bbs_items_new"><a href="##">这是本论坛最新一条帖子</a> </div>
+                                    <div class="bbs_items_count"><span>6</span><i>2434</i></div>
+                                </li>
+                                <li>
+                                    <div class="bbs_items_img"><i class="icon-yelp"></i><p>论坛名称</p></div>
+                                    <div class="bbs_items_new"><a href="##">这是本论坛最新一条帖子</a> </div>
+                                    <div class="bbs_items_count"><span>6</span><i>2434</i></div>
+                                </li>
+                            </div>
+                        </ul>
+                        <ul class="bbs_items_ul">
+                            <p>热门论坛 <i class="icon-keyboard-arrow-down"></i> </p>
+                            <div id="bbs_items_ul_4">
+                                <li>
+                                    <div class="bbs_items_img"><i class="icon-html5"></i><p>论坛名称</p></div>
+                                    <div class="bbs_items_new"><a href="##">这是本论坛最新一条帖子</a> </div>
+                                    <div class="bbs_items_count"><span>6</span><i>2434</i></div>
+                                </li>
+                                <li>
+                                    <div class="bbs_items_img"><i class="icon-yelp"></i><p>论坛名称</p></div>
+                                    <div class="bbs_items_new"><a href="##">这是本论坛最新一条帖子</a> </div>
+                                    <div class="bbs_items_count"><span>6</span><i>2434</i></div>
+                                </li>
+                            </div>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <div class="bbs_useraction">
+                        <div class="bbs_useraction_title">
+                            <h2>会员新动态</h2>
+                        </div>
+                        <ul class="bbs_useraction_contents">
+                            <li><a href="#">游客007</a>1秒前正在浏览<a href="#"> 社区 社区 社区 社区 社区</a> </li>
+                            <li><a href="#">游客007</a>1秒前正在浏览<a href="#"> 社区 社区 社区 社区 社区</a> </li>
+                            <li><a href="#">游客007</a>1秒前正在浏览<a href="#"> 社区 社区 社区 社区 社区</a> </li>
+                            <li><a href="#">游客007</a>1秒前正在浏览<a href="#"> 社区 社区 社区 社区 社区</a> </li>
+                            <li><a href="#">游客007</a>1秒前正在浏览<a href="#"> 社区 社区 社区 社区 社区</a> </li>
+                            <li><a href="#">游客007</a>1秒前正在浏览<a href="#"> 社区 社区 社区 社区 社区</a> </li>
+                        </ul>
+                    </div>
+                </section>
+                <footer class="footer icon">
+                    <div class="foot_nav">
+                        <a href="#">免责声明</a>|
+                        <a href="#">本站服务</a>|
+                        <a href="#">意见反馈</a>
+                    </div>
+                    <div class="ves">
+                        <a href="#">电脑版</a>
+                        <a href="#" class="this_ves">触屏版</a>
+                    </div>
+                    <p><i class="icon-copyright"></i><a href="http://3ghy.com">http://3ghy.com</a> 幻影特效网</p>
+                </footer>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="gotop icon" id="gotop" ><i class="icon-keyboard-capslock"></i> </div>
+<script src="js/menu.js"></script>
+<script src="js/common.js"></script>
+<script>
+    $(document).ready(function(){
+
+        bbs_hotornew_active();
+        bbs_items_ul();
+
+        $(".icon-search").click(function(){
+            if(document.getElementById("slade_search").style.display == "none"){
+                $("#slade_search").css("display","block")
+            }else{
+                $("#slade_search").css("display","none")
+            }
+        });
+
+        $("#bbs_tabs").on("swipe",function(e){
+            bbs_hotornew_active();
+        });
+        $("#bbs_tabs").on("tap",function(e){
+            bbs_hotornew_active();
+        });
+    });
+</script>
+
+</body>
+</html>

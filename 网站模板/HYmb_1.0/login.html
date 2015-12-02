@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<title>幻影模板首页模板 v1.0</title>
+	<script src="js/common.js"></script>
+
+</head>
+<body>
+	<!-- page start -->
+
+	<!-- header -->
+	<header class="uk-hidden-small hy-header mb-a" id="header" data-uk-sticky>
+		<nav class="uk-navbar">
+			<a class="uk-navbar-brand uk-hidden-small hy-logo" data-uk-tooltip="{pos:'bottom',animation:true,offset:-10}" title="幻影模板v1.0" href="index.html">
+				<img src="images/logo.png" alt="LOGO">
+				<img src="images/logo.gif" alt="LOGO"></a>
+			<ul class="uk-navbar-nav hy-nav">
+				<li class="uk-active">
+					<a href="##">导航</a>
+				</li>
+				<li>
+					<a href="##">导航</a>
+				</li>
+				<li>
+					<a href="##">导航</a>
+				</li>
+				<li>
+					<a href="##">导航</a>
+				</li>
+				<li>
+					<a href="##">导航</a>
+				</li>
+				<li>
+					<a href="##">导航</a>
+				</li>
+			</ul>
+			<a href="#offcanvas" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas></a>
+			<div class="uk-navbar-brand uk-navbar-center uk-visible-small">导航</div>
+		</nav>
+	</header>
+	<div class="head_bottom uk-hidden-small nprogress-custom-parent" id="hb1">
+		&nbsp;
+		<div id="nprogress">
+			<div class="bar" role="bar" style="transform: translate3d(0%, 0px, 0px); transition: all 600ms ease;">
+				<div class="peg"></div>
+			</div>
+			<div class="spinner" role="spinner">
+				<div class="spinner-icon"></div>
+			</div>
+		</div>
+	</div>
+	<div class="uk-container uk-visible-small touch-nav">
+		<div class="uk-grid">
+			<div class="uk-width-4-6">
+				<div class="uk-navbar-brand uk-navbar-center uk-float-left" id="touch_brand">
+					<a class="w1" href="index.html"> <i class="uk-icon-home"></i>
+						幻影设计网
+					</a>
+				</div>
+			</div>
+			<div class="uk-width-2-6">
+				<nav class="uk-navbar">
+					<a href="#offcanvas" class="uk-navbar-toggle uk-float-right w1" data-uk-offcanvas></a>
+				</nav>
+			</div>
+		</div>
+	</div>
+	<!-- 内容容器 -->
+	<link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/uikit/2.16.2/css/components/form-advanced.almost-flat.min.css">
+	<link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/uikit/2.16.2/css/components/form-password.almost-flat.min.css">
+	<script src="http://cdn.bootcss.com/uikit/2.16.2/js/components/form-password.min.js"></script>
+	<div class="uk-container uk-container-center uk-margin-top uk-margin-large-bottom" id="login_container">
+			<div class="uk-grid">
+				<div class="uk-width-1-1">
+					<div class="uk-panel uk-panel-box">
+						<div class="uk-grid uk-grid-divider" data-uk-grid-margin="">
+							<div class="uk-width-medium-1-2">
+								<div class="uk-grid">
+									<div class="uk-width-1-5"></div>
+									<div class="uk-width-3-5">
+										<div class="uk-panel">
+											<div class="b35"></div>
+											<h1 class="list_cat">
+												<a href="" class="b"> <i class="uk-icon-user mb-a"></i>
+													会员登录
+												</a>
+											</h1>
+											<form class="uk-form" method="post" action="login.php">
+												<div class="uk-form-row">
+													<div class="uk-form-icon">
+														<i class="uk-icon-user"></i>
+														<input data-uk-tooltip="{pos:'right',animation:true}"onkeyup="value=value.replace(/[^a-z0-9_\-]/g,'')" maxlength="20" class="uk-form-width-large uk-form-large" name="username" type="text" id="username" value="" placeholder="请输入账号" title="4-20个字符，只能使用小写字母(a-z)、数字(0-9)、下划线(_)、中划线(-)，且以字母或数字开头和结尾"></div>
+												</div>
+												<div class="uk-form-row">
+													<div class="uk-form-icon uk-form-password">
+														<i class="uk-icon-lock"></i>
+														<input data-uk-tooltip="{pos:'right',animation:true}" maxlength="20" class="uk-form-width-large uk-form-large" name="password" id="password" type="password" value="" placeholder="请输入密码" title="6-20个字符，区分大小写">
+														<a tabindex="-1" class="uk-form-password-toggle" data-uk-form-password="{lblShow:'显示', lblHide:'隐藏'}">
+															<i class="uk-icon-eye"></i>
+														</a>
+													</div>
+												</div>
+												<div class="uk-form-row">
+													<div class="uk-form-icon">
+														<i class="uk-icon-question-circle" id="dcaptcha"></i>
+														<input autocomplete="off" maxlength="4" onkeyup="value=value.replace(/[^a-z0-9A-Z]/g,'')" class="uk-form-width-small uk-form-large" name="captcha" type="text" id="captcha" onfocus="showcaptcha(1);" placeholder="输入验证码" onblur="checkcaptcha(this.value);">
+														&nbsp;
+														<img src="images/yzm.png" height="25" width="100" data-uk-tooltip="{pos:'right',animation:true}" title="验证码,看不清楚?请点击刷新<br/>
+														字母不区分大小写" alt="" align="absmiddle" id="captchapng" onclick="reloadcaptcha();" style="cursor: pointer; height: 40px;">
+													</div>
+												</div>
+												<div class="uk-form-row">
+													<input type="submit" name="submit" value="立 即 登 录" class="uk-button uk-form-width-large uk-button-primary border_radius3 uk-form-large width-100"></div>
+												<div class="uk-form-row uk-text-small uk-margin-small-top">
+													<label class="uk-float-left" data-uk-tooltip="{pos:'left',animation:true}" title="选中后，一月内不用再次登录，网吧或公共计算机请勿选">
+														<input type="checkbox" name="cookietime" value="1" id="cookietime" checked="">记住我</label>
+													<a class="uk-float-right uk-link uk-link-muted" href="send.php">忘记密码?</a>
+												</div>
+												<div class="b20"></div>
+												<div class="uk-form-row uk-text-center">
+													<a class="mb-as uk-icon-button uk-icon-hover uk-icon-qq" href="" data-uk-tooltip="{pos:'bottom',animation:true}" title="QQ登录"></a>
+													&nbsp;
+													<a class="mb-as uk-icon-button uk-icon-hover uk-icon-paw" href="" data-uk-tooltip="{pos:'bottom',animation:true}" title="百度登录"></a>
+													&nbsp;
+												</div>
+											</form>
+										</div>
+									</div>
+									<div class="uk-width-1-5"></div>
+								</div>
+							</div>
+							<div class="uk-width-medium-1-2">
+								<div class="uk-grid">
+									<div class="uk-width-1-6"></div>
+									<div class="uk-width-4-6 register">
+										<div class="uk-panel">
+											<div class="b35"></div>
+											<h1 class="uk-text-center">
+												<a href="" class="b">没有账号？立即注册</a>
+											</h1>
+											<button class="uk-button uk-button-large uk-button-success uk-width-1-1" data-uk-toggle="{target:'.register', animation:'uk-animation-slide-top, uk-animation-slide-right'}">立 即 注 册</button>
+											<div class="b20"></div>
+											<div class="uk-form-row uk-text-center">
+												<a href="">
+													<img src="images/register-reg-4.png" alt=""></a>
+											</div>
+										</div>
+									</div>
+									<div class="uk-width-3-5 uk-hidden register">
+										<div class="uk-panel">
+											<div class="b35"></div>
+											<h1>
+												<a href="" class="b list_cat"> <i class="uk-icon-user mb-a"></i>
+													会员注册
+												</a>
+											</h1>
+											<form class="uk-form" action="register.php" method="post" target="send">
+												<div class="uk-form-row">
+													<div class="uk-form-icon"> <i class="uk-icon-user" id="dusername"></i>
+														<input data-uk-tooltip="{pos:'right',animation:true}" maxlength="20" onkeyup="value=value.replace(/[^a-z0-9_\-]/g,'')" title="4-20个字符，只能使用小写字母(a-z)、数字(0-9)、下划线(_)、中划线(-)，且以字母或数字开头和结尾" class="uk-form-width-large uk-form-large" name="username" id="username" type="text" placeholder="请输入账号"></div>
+												</div>
+												<div class="uk-form-row">
+													<div class="uk-form-icon">
+														<i class="uk-icon-envelope" id="demail"></i>
+														<input data-uk-tooltip="{pos:'right',animation:true}" title="系统设置了邮件验证注册，请确保当前的邮件地址真实有效，请使用常用邮箱地址" class="uk-form-width-large uk-form-large" onkeyup="value=value.replace(/[^a-zA-Z0-9_\-\.\@]/g,'')" name="email" id="email" type="text" placeholder="请输入邮箱"></div>
+												</div>
+												<div class="uk-form-row">
+													<div class="uk-form-icon uk-form-password">
+														<i class="uk-icon-lock" id="dpassword"></i>
+														<input data-uk-tooltip="{pos:'right',animation:true}" maxlength="20" title="6-20个字符，区分大小写，推荐使用数字、字母和特殊符号组合" class="uk-form-width-large uk-form-large" name="post[password]" id="password" type="password" value="" placeholder="请输入密码">									
+														<a tabindex="-1" class="uk-form-password-toggle" data-uk-form-password="{lblShow:'显示', lblHide:'隐藏'}">
+															<i class="uk-icon-eye"></i>
+														</a>
+													</div>
+												</div>
+												<div class="uk-form-row">
+													<div class="uk-form-icon uk-form-password">
+														<i class="uk-icon-unlock-alt" id="dcpassword"></i>
+														<input data-uk-tooltip="{pos:'right',animation:true}" maxlength="20" title="6-20个字符，区分大小写，推荐使用数字、字母和特殊符号组合" class="uk-form-width-large uk-form-large" name="post[cpassword]" id="cpassword" type="password" value="" placeholder="请再次输入密码">									
+														<a tabindex="-1" class="uk-form-password-toggle" data-uk-form-password="{lblShow:'显示', lblHide:'隐藏'}">
+															<i class="uk-icon-eye"></i>
+														</a>
+													</div>
+												</div>
+												<div class="uk-form-row">
+													<div class="uk-form-icon"> <i class="uk-icon-question-circle" id="dcaptcha"></i>
+														<input autocomplete="off" maxlength="4" onkeyup="value=value.replace(/[^a-z0-9A-Z]/g,'')" class="uk-form-width-small uk-form-large" name="captcha" type="text" id="captcha" onfocus="showcaptcha(1);" placeholder="输入验证码" onblur="checkcaptcha(this.value);">												
+														&nbsp;
+														<img src="" data-uk-tooltip="{pos:'right',animation:true}" title="" alt="" align="absmiddle" id="captchapng" onclick="reloadcaptcha();" style="cursor: pointer; height: 40px;" data-cached-title="验证码,看不清楚?请点击刷新<br/>字母不区分大小写">
+													</div>
+												</div>
+												<div class="uk-form-row uk-text-small">
+													<label class="uk-float-left" data-uk-tooltip="{pos:'left',animation:true}" title="和谐社会,文明上网!">
+														<input type="checkbox" id="view_des_btn">									
+														阅读并已同意
+														<a class="uk-link" target="_blank" href="#xiexi" data-uk-modal>《用户协议》</a>
+													</label>
+												</div>
+												<div class="uk-modal" id="xiexi">\
+
+													<div class="uk-modal-dialog">
+														<a href="javascript:;" class="uk-modal-close uk-close uk-close-alt"></a>
+														<script src="js/xiexi.js"></script>	
+														<div class="uk-modal-footer">
+															<button class="uk-button uk-button-primary uk-modal-close" type="button" data-uk-button>已阅读并同意协议</button>
+														</div>
+													</div>
+												</div>
+												<div class="uk-form-row">
+													<input type="submit" name="submit" value="立 即 注 册" class="uk-button uk-form-width-large uk-button-primary border_radius3 uk-form-large width-100"></div>
+												<div class="b35"></div>
+											</form>
+										</div>
+									</div>
+									<div class="uk-width-1-6"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	<!-- footer -->
+	<div class="footer" data-uk-grid-margin="">
+		<div class="uk-progress uk-progress-striped uk-active border_radius0">
+			<div class="uk-progress-bar width-100"></div>
+		</div>
+		<div class="uk-container uk-container-center uk-grid-margin">
+			<h6 class="uk-text-center">
+				<a class="b" target="_blank" href="http://www.mooban.cn/about/contact.html">联系方式</a>
+				|
+				<a href="http://www.mooban.cn/sitemap/" class="b" target="_blank">网站地图</a>
+				|
+				<a href="http://www.mooban.cn/link/" class="b" target="_blank">友情链接</a>
+				|
+				<a href="http://www.mooban.cn/guestbook/" class="b" target="_blank">网站留言</a>
+				|
+				<p class="uk-margin-small">© 2014 - 2015 3ghy.Com All Rights Reserved</p>
+				
+			</h6>
+		</div>
+	</div>
+	<!-- go To Top -->
+	<div id="hm_t_undefined" class="hm-t-container">
+		<div class="hm-t-go-top" style="display: none; " data-uk-smooth-scroll>返回顶部</div>
+	</div>
+
+	<!-- 侧边栏 -->
+	<div id="offcanvas" class="uk-offcanvas">
+		<div class="uk-offcanvas-bar uk-offcanvas-bar-flip">
+			<ul class="uk-nav uk-nav-offcanvas">
+				<li class="uk-active">
+					<a href="##">频道名称</a>
+				</li>
+				<li>
+					<a href="##">频道名称</a>
+				</li>
+				<li>
+					<a href="##">频道名称</a>
+				</li>
+				<li>
+					<a href="##">频道名称</a>
+				</li>
+				<li>
+					<a href="##">频道名称</a>
+				</li>
+				<li>
+					<a href="##">频道名称</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript">
+var style = "<style>html #hm_t_undefined .hm-t-go-top {position:fixed;right:2px;bottom:2px;z-index:99998;cursor:pointer;width:40px;height:37px!important;text-align:center;white-space:normal;font-size:14px;line-height:17px;padding-top:3px;color:#fff;background:#404040;</style>";
+$("head").append(style);
+$(".hm-t-go-top").mouseover(function(){
+	$(this).css({"background-color":"rgb(64,64,64)", "background-position":"-100px 0"})
+}).mouseout(function(){
+	$(this).css({"background-color":"rgb(102,102,102)","background-position":"-42px 50%"})
+});
+$(window).scroll(function(){
+	if($(document).scrollTop() > 88){
+		$("#header").addClass("fixed_menu uk-animation-scale")
+	}else{
+		$("#header").removeClass("fixed_menu uk-animation-scale")
+	}
+	console.log($(document).scrollTop())
+
+	if($(document).scrollTop() > $(window).height()){
+		$("#hm_t_undefined").addClass("uk-animation-fade");
+		$(".hm-t-go-top").show();
+	}else{
+		$(".hm-t-go-top").hide();
+	}
+})
+if ($('html').hasClass('uk-touch')) {
+	$('#login_container').removeClass('uk-container uk-container-center uk-margin-top uk-margin-large-bottom')
+};
+
+</script>
+</body>
+</html>
