@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Custom Login Form Styling</title>	
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<!--[if lte IE 7]><style>.main{display:none;} .support-note .note-ie{display:block;}</style><![endif]-->
+<style>	
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700|Handlee);
+body {
+	background: #eedfcc url(images/bg3.jpg) no-repeat center top;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+	<nav class="codrops-demos">
+		<a href="index.html">Demo 1</a>
+		<a href="index2.html">Demo 2</a>
+		<a href="index3.html">Demo 3</a>
+		<a href="index4.html">Demo 4</a>
+		<a class="current-demo" href="index5.html">Demo 5</a>
+	</nav>
+
+<section class="main">
+	<form class="form-5 clearfix">
+		<p>
+			<input type="text" id="login" name="login" placeholder="Username">
+			<input type="password" name="password" id="password" placeholder="Password"> 
+		</p>
+		<button type="submit" name="submit">
+			<i class="icon-arrow-right"></i>
+			<span>Sign in</span>
+		</button>     
+	</form>​​​​
+</section>
+
+</div>
+<!-- jQuery if needed -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.placeholder.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('input, textarea').placeholder();
+});
+</script>
+</body>
+</html>
