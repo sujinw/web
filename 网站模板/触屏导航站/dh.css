@@ -1,0 +1,48 @@
+@charset "utf-8";
+/* CSS Document */
+.dh .header{background:url(login_bg.jpg) repeat-x center;height:120px;	text-align:center;}
+.dh .dh_logo{
+	background:url(/wap_style/images/logo.png) no-repeat left;width:210px;padding-left:150px;height:40px;text-align:left;line-height:60px;color:#FFF;margin:0px 0px 20px 0px;}
+.dh .dh_search{padding:0px;height:36px;text-align:center;}
+.dh .dh_search_inp{border: 1px solid #FF8C00;border-radius: 6px;color: #d2691e; height:35px;
+	padding-left:3px;width:70%;float:left;margin-left:5%;text-shadow: 0px 1px 1px #ffc4e4;background: -webkit-gradient(linear, left top, left bottom,color-stop(0%,rgba(239,248,255,1)),color-stop(100%,rgba(221,238,250,1)));box-shadow: 0px 2px 1px #fff, inset 0px 1px rgba(255, 255, 255, 0.8);}
+.dh .dh_search_btn{	background:url(sousou.png) no-repeat center #EBEBEB;border: 1px solid #FFE180;border-radius: 6px;color:#f40;height:35px;width:19%;margin-right:4%;text-align: center;	text-shadow: 0px 1px 1px #fff;box-shadow: 0px 2px 1px #fff, inset 0px 1px rgba(255, 255, 255, 0.8);}
+.dh .dh_head2{background:#D8D8D8;border-bottom:1px solid #ACACAC;height:40px;line-height:40px;padding-left:8px;position:relative;}
+.dh .dh_head2 li{	float:left;	display:inline;padding-left:2%;width:16%;}
+.dh .dh_tips{float:right;margin-right:18px;}
+.dh #tipsbox{position:absolute;	display:none;top:160px;background:#D8D8D8;}
+.dh #tipsbox li{border-bottom: 1px dashed #ACACAC;border-right:1px double #ACACAC;border-left:1px double #ACACAC;	-webkit-box-sizing: border-box;-moz-box-sizing: border-box;text-align:center;height:46px;line-height:46px;width:100px;}
+.dh .dh_title{ clear:both;color:#ACACAC;font-size:16px;	background:#DFDFDF;	height:34px;line-height:34px;}
+.dh .dh_title .dd{width:24px;height:28px;color:#39f;background:#39F;margin-left:8px;margin-right:5px;border-radius:5px;overflow:hidden;}
+.dh .dh_title .ad{float:right;margin-right:8px;}
+.dh .ad a{ color:red;}
+.dh .dh_list ul{clear:both;	float:none;	text-align:center;height: 46px;line-height: 46px;	font-size: 15px;-webkit-box-sizing: border-box;	-moz-box-sizing: border-box;-webkit-box-pack: justify;list-style: none;width: 100%;}
+.dh .dh_list a:last-child {border: none;}
+.dh .dh_list li,.dh .dh_list2 a{border-bottom: 1px dashed #ACACAC;	float:left;	border-right: 1px dashed #ACACAC;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;text-align:center;}
+.dh .dh_list2 li{width:100%; height:auto;}
+.dh .dh_list2 a{line-height: 46px;text-align: center;height: 46px;width: 25%;box-sizing: border-box;-webkit-box-sizing: border-box;display: table-cell;-moz-box-sizing: border-box;border-right-width: 1px;border-bottom-width:1px;border-right-style: dashed;border-bottom-style: dashed;border-right-color: #ACACAC;border-bottom-color: #ACACAC;float: left;}
+.dh .dh_list2 a:nth-child(4n+0){border-right-style: none;}
+.dh .dh_list2 a:nth-child(9){border-bottom-style: none;}
+.dh .dh_list2 a:nth-child(10){border-bottom-style: none;}
+.dh .dh_list2 a:nth-child(11){border-bottom-style: none;}
+.dh .dh_list2 a:nth-child(12){border-bottom-style: none;}
+.dh .dh_list1 li{width: 20%;}
+.dh_btn{text-align:center;}
+.dh_title ul li{float:left;	width:25%}
+.dh .dh_active{ background:#99F; color:#000}
+.dh .dh_list_FL ol{height:46px;line-height:46px;background: url(img/a.png) no-repeat right;	width:97%;	border-bottom:1px double #D8D8D8;text-align:center;padding-right:8px;}
+.dh .dh_list_FL a{width:18%;display: inline-block;}
+.dh .fl_A{	color:#36F;	font-size:18px;	font-family:"宋体";font-weight:800;	text-decoration: underline;	display:inline;	border-right:1px #d8d8d8 double;}
+.dh .dh_all_fl {background:#ACACAC;	padding-top:8px;font-size:14px;}
+.dh .dh_all_fl ul{margin-top:8px 0;	height:46px;text-align:center;}
+.dh .dh_all_fl li{	float:left;	height:32px;line-height:32px;	width:22%;	margin-left:2%;	background:#DFDFDF;	border:1px solid #D8D8D8;border-radius:10px;}
+.dh .dh_foot{text-align:center;	background:#C2C2C2;}
+.dh .dh_foot .dh_copyright{	height:50px;line-height:50px;}
+.dh .dh_foot .dh_time{font-size:14px;}	
+.clear{
+	float:none;
+	clear:both;}	
+	
+	
+	
+	

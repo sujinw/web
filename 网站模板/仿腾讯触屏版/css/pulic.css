@@ -1,0 +1,20 @@
+@charset "utf-8";
+/*作者：雪月青
+/*地址：http://3ghy.com
+/*copyright 2014
+/*公用部分，用来清零，全局部分，公用样式等
+/* reset */
+html { background: #F5F5F5; color: #000; }
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { margin: 0; padding: 0; }
+body, input, select, textarea, button { font: 16px/1.5 STHeiti, \5FAE\8F6F\96C5\9ED1, Arial; }
+header, section, footer, img {display: block;margin: 0;padding: 0;}
+a {color: black;text-decoration: none;}
+img {display: block;margin: 0;padding: 0;}
+img[Attributes Style] {width: 14px;height: 14px;}
+body, p, input, h1, h2, h3, h4, h5, h6, ul, li, dl, dt, dd, form {margin: 0;padding: 0;list-style: none;vertical-align: middle;}
+.logo, .member-link, .channel-link, .tips::after, .stock-up::after, .stock-down::after, .recommend-mod::after, .stock-up::after, .stock-down::after, .v-link::before, .img-link::before, .test-link::before, .cmt-num::after, .test-ad::before, .i-image::before, .page-nav, .page-nav span, .to-index::after {
+background-image: url(img/sprites.svg);background-repeat: no-repeat;-webkit-background-size: 160px auto;}
+.logowrapper, nav.more .app-link::before, footer nav a, .version, footer, .topic-info {position: static;}
+.fl{float:left; display:inline;}
+.fr{ float:right;}
+.clear{ float:none; clear:both; overflow:hidden;}

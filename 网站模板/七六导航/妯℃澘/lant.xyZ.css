@@ -1,0 +1,67 @@
+body { background-color: #F1F1F1; padding: 0px; margin: auto; border: thin solid #06A520; */ font-family: "宋体"; color: #666666; font-size: 16px; min-width: 300px; max-width: 640px; margin: 0px auto; }
+a { color: #141414; text-decoration: none; }
+ul, li { padding: 0px; margin: 0px; list-style-type: none; }
+br { display: inline; }
+.scon { background-color: #fff; overflow: hidden; }
+.scon li { box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; }
+.scon li { width: 25%; float: left; line-height: 40px; overflow: hidden; text-align: center; display: table-cell; border-bottom: 1px solid #e2e8ec; border-right: 1px solid #e2e8ec; }
+.scon a { color: #333333; display: inline-block; width: 99%; height: 40px; font-size: 15px; }
+.scon li { float: left; line-height: 40px; overflow: hidden; text-align: center; display: table-cell; border-bottom: 1px solid #e2e8ec; border-right: 1px solid #e2e8ec; }
+.box-1 li { width: 25%; }
+.box-1 li:nth-child(4n+0) { border-right-style: none; }
+.box-2 li { width: 50%; }
+.box-2 li:nth-child(2n+0) { border-right-style: none; }
+.box-3 ul { overflow: hidden; clear: both; float: none; }
+.box-3 li { width: 20%; }
+.box-3 li:nth-child(5n+0) { border-right-style: none; }
+.box-3 li span a { font-size: 16px; font-weight: bold; color: #30b5f3; }
+.tit-1, .t1 { height: 35px; background: #00CC66; }
+.tit-1 h3 { font-size: 18px; font-weight: normal; border-left: solid 4px #3ba354; padding-left: 11px; line-height: 35px; color: #FFFFFF; }
+.t1 { padding-left: 10px; }
+.t1, .t1 a { line-height: 35px; color: #FFFFFF; }
+.footer { padding: 20px; background: #FF9900; text-align: center; clear: both; float: none; }
+.footer .navs { height: 30px; }
+.footer .navs a { color: #fff; display: inline-block; font-size: 15px; margin-left: 12px; line-height: 30px; }
+.footer .navs a.a { background-color: rgba(0,0,0,.2); border-radius: 2px; color: white; height: 30px; line-height: 30px; width: 67px; }
+.footer p { color: rgba(255,255,255,.77); font-size: 12px; height: 22px; line-height: 22px; padding: 0 12px; }
+.footer p a { color: #FFFFFF; }
+.hot { margin: 13px auto }
+.hot ul { border: 1px solid #d4d4d4; border-radius: 10px 10px 0 0; background: #fff }
+.hot li { height: 40px; line-height: 40px; margin: 0 10px; border-top: 1px solid #e6e6e6 }
+.hot li a { display: block; padding: 0 20px 0 10px; color: #91979f; font-size: 15px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis }
+.hot li a:before { content: ""; float: right; width: 10px; height: 10px; margin-top: 20px; margin-right: -20px; border-top: 2px solid #ccc; border-right: 2px solid #ccc; -webkit-transform: rotate(45deg); transform: rotate(45deg); -webkit-transform-origin: right top; transform-origin: right top }
+.hot li:first-child { position: relative; border-top: 0 }
+.hot li:first-child:before { content: ""; position: absolute; left: 0; top: -3px; height: 45px; width: 30px; background: url("http://76dh.cn/images/hot.png") no-repeat; background-size: 30px 45px }
+.hot li:first-child a { padding-left: 40px; color: #da5555 }
+.hot i { display: block; height: 2px; margin: 0 3px; border: 1px solid #ccc; border-top: 0; background: #fafafa }
+.hot i+i { margin: 0 5px 2px; background: #f1f1f1; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) }
+.logo { height: 35px; background: #13A329; padding: 5px; }
+.logo img { width: 120px; height: 35px; }
+#top { bottom: 5%; position: fixed; right: 5%; z-index: 100; display: none; }
+#top+script+br { display: none; }
+#top+script+br+img { display: none; }
+.wrap { position: relative; }
+.wrap .login { position: absolute; top: 5px; right: 5px; height: 30px; }
+.wrap .login a { line-height: 30px; color: #FFFFFF; padding: 5px; margin: 0px 5px; background: rgba(255,255,255,0.2); }
+.line1 { background: rgba(255,255,255,1); padding: 10px; border-top: 1px solid #e6e6e6; }
+.line1 a { color: #0A926C; font-size: 16px; line-height: 30px; }
+.formBox { background: #D5D5D5; padding: 10px; }
+.forum { background: #FFFFFF; padding: 5px; }
+.forum ul li { height: 35px; line-height: 35px; border-bottom: solid 1px #E2E2E2; position: relative; }
+.forum ul li .bk a { font-size: 16px; font-weight: bold; }
+.forum ul li .xintie a { color: #A3A3A3; font-size: 12px; }
+.forum ul li .xintie .a { font-size: 10px; color: #FF0000; }
+.forum ul li .tj { position: absolute; top: 0px; right: 0px; height: 25px; width: 50px; text-align: center; border-radius: 25px; ; line-height: 25px; margin: 5px; background: #00CC10; color: #FFFFFF; font-size: 12px; }
+.forum ul li .xintie, .forum ul li .tj { display: none; }
+.tabBox{ margin-bottom:10px;}
+.tabBox .hd { height: 40px; line-height: 40px; padding: 0 10px; font-size: 20px; background: #FFFFFF; border-bottom: 1px solid#147C18; position: relative; }
+.tabBox .hd ul { position: absolute; height: 41px; top: 0; overflow: hidden; }
+.tabBox .hd ul li { float: left; padding: 0 10px; color: #666; }
+.tabBox .hd ul .on { border: 2px solid #147C18; border-bottom-color: #fff; background: #fff; color: #CF7F21; }
+.tabBox .hd ul .on a { display: block; }
+.tabBox .bd{ background: #FFFFFF; overflow:hidden;}
+.tabBox .bd li { height: 35px; line-height: 35px; margin-left:10px; border-top:solid 1px #E2E2E2;}
+.tabBox .bd li:nth-of-type(1){ border-top:none;}
+.tabBox .bd li:last-of-type,.tabBox .bd li br{ display:none;}
+.tabBox .bd li a {color: #161616; }
+.tabBox .bd li a { -webkit-tap-highlight-color: rgba(0,0,0,0); }

@@ -1,0 +1,118 @@
+<div class='login'>
+[nologin]<a href='/waplogin.asp'>登录</a><a href='/wapreg.asp?'>注册</a>[/nologin]
+[login]<a href='/index.asp?classid=69&sid=[sid]'>进入论坛</a>[/login]
+</div>
+<div class='hot'>
+  <ul>
+    <li><a href='/admin/reg.asp?siteid=1&sid=[sid]'>立即免费注册您的手机网站！</a></li>
+   <li><a href='http://t89.co'>特47赔|时时彩|赛车|百.家乐</a></li>
+   <li><a href='http://doubleclick.googleadservices.LXi.Scs1.wap1.pbebp1.2X-SC.IN/count.php?channel=29136&aid=24'>猛男1夜3次,少妇夜夜爽到虚脱!</a></li>
+   </ul>
+   </div>
+<div class='tit-1'><h3>名站推荐</h3></div>
+<div class='scon box-1'>
+  <ul>
+    [link=0_8_3_2_1_<li>]
+  </ul>
+</div>
+<div class='tit-1'><h3>酷站推荐</h3></div>
+<div class='scon box-2'> <ul>[link=0_10_1_0_1_<li>] </ul>
+</div>
+<div class='tit-1'><h3>网站大全</h3></div>
+<div class='scon box-3'>
+  <ul>
+    <li><span><a href='/index.asp?classid=71&sid=[sid]'>综合</a></span></li>[link=71_4_1_2_1_<li>]
+  </ul>
+    <ul>
+    <li><span><a href='/index.asp?classid=73&sid=[sid]'>社区</a></span></li>[link=73_4_1_2_1_<li>]
+  </ul>
+    <ul>
+    <li><span><a href='/index.asp?classid=75&sid=[sid]'>导航</a></span></li>[link=75_4_1_2_1_<li>]
+  </ul>
+    <ul>
+    <li><span><a href='/index.asp?classid=77&sid=[sid]'>商城</a></span></li>[link=77_4_1_2_1_<li>]
+  </ul>
+    <ul>
+    <li><span><a href='/index.asp?classid=79&sid=[sid]'>建站</a></span></li>[link=79_4_1_2_1_<li>]
+  </ul>
+      <ul>
+    <li><span><a href='/index.asp?classid=81&sid=[sid]'>图片</a></span></li>[link=81_4_1_2_1_<li>]
+  </ul>
+      <ul>
+    <li><span><a href='/index.asp?classid=85&sid=[sid]'>文学</a></span></li>[link=85_4_1_2_1_<li>]
+  </ul>
+      <ul>
+    <li><span><a href='/index.asp?classid=175&sid=[sid]'>软游</a></span></li>[link=175_4_1_2_1_<li>]
+  </ul>
+      <ul>
+    <li><span><a href='/index.asp?classid=177&sid=[sid]'>其他</a></span></li>[link=177_4_1_2_1_<li>]
+  </ul>
+</div>
+<div class='tit-1'><h3>最新加盟</h3></div>
+<div class='scon box-1'>
+  <ul>
+    [link=0_16_2_2_1_<li>]
+  </ul>
+</div>
+<div class='tit-1'><h3>兄弟固链</h3></div>
+<div class='scon box-1'>
+  <ul>
+    <li><a href='http://3g.1us.cn/hk.asp?xg=liu92'>学生</a></li>
+    <li><a href='http://fjsidc.com'>网馨</a></li>
+    <li><a href='http://m.fang.com/?sf_source=bd_m.76dh'>搜房</a></li>
+    <li><a href='http://yu24.cn/hk.asp?xg=qiliu'>鱼儿</a></li>
+    <li><a href='http://ylltd.cn/hk.asp?hk=337'>招商</a></li>
+    <li><a href='http://mfdhw.cn/hk.asp?xg=14566'>黑客</a></li>
+    <li><a href='http://wap2.56kx.net/hk.asp?xg=liuqi'>玩酷</a></li>
+    <li><a href='http://sl.ai/'>思龙</a></li>
+  </ul>
+</div>
+<div class='scon box-1'>
+<ul>
+<li><a href='http://3gwap.wap.ai/link/gourl.aspx?id=129920 0_147975'>小安</a></li>
+    <li><a href='http://a3w.cn'>A3</a></li>
+    <li><a href='http://wapkt.com'>学生</a></li>
+    <li><a href='http://wap.ai/link/gourl.aspx?id=1000_147982'>娃派</a></li>
+    <li><a href='http://ailiw.cn/comeurl.php?id=212'>艾黎</a></li>
+    <li><a href='http://mzmzw.com/link/gourl.aspx?id=1000_118'>米卓</a></li>
+    <li><a href='http://ixk.cc/link/gourl.aspx?id=1000_159'>讯客</a></li>
+    <li><a href='http://wapbs.cn'>百事</a></li>
+  </ul>
+</div>
+<div class='footer'>
+  <div class='navs'>
+  <a href='/jiameng.asp?classid=63&sid=[sid]'>友链申请</a>
+  <a href='/top.asp?classid=64&sid=[sid]'>友链排行</a>
+</div>
+<div class='navs'>
+  <a href='/liuyan/index.asp?classid=65&sid=[sid]'>给我留言</a>
+  <a href='/index.asp?classid=66&sid=[sid]'>联系我们</a>
+  <a href='/index.asp?classid=241&sid=[sid]'>广告服务</a>
+  </div>
+  <p>报时:[month]月[day]日([weekday]) [hour]:[minute]</p>
+  <p>模仿只会让七六自助更强大</p>
+</div>
+<div id='top' onclick='scrollTo(0,0)' style='display: block;'> <img src='/images/top.png' alt='返回顶部'> </div>
+<script type='text/javascript'>
+
+window.onscroll = function() {
+
+
+
+	var sCurPadTop = document.documentElement.scrollTop || document.body.scrollTop;
+
+	var oTop = document.getElementById('top');
+
+	if (sCurPadTop > (window.screen.availHeight % 2)) {
+
+		oTop.style.display = 'block';
+
+	} else {
+
+		oTop.style.display = 'none';
+
+	}
+
+}
+</script>
+

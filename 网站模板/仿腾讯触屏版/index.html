@@ -1,0 +1,464 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+<meta name="MobileOptimized" content="320">
+<link href="css/common.css" rel="stylesheet" type="text/css" />
+<link href="css/pulic.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/common.js" ></script>
+<script type="text/javascript" src="js/TouchSlide.1.1.js" ></script>
+<script type="text/javascript" src="js/move.js" ></script>
+</head>
+<body>
+<header id="header">
+ <div class="header_woper">
+  <div id="logo"></div>
+  <ul class="header_right">
+    <li id="user_login" onclick="oc('login_box')"></li>
+    <li id="header_nav" onclick="oc('nav_pop')"></li>
+  </ul>
+ </div>
+  <nav class="main_nav">
+  	<div class="main_nav_list">
+    <a href="##">标签</a>
+    <a href="##">标签</a>
+    <a href="##">标签</a>
+    <a href="##">标签</a>
+    <a href="##">标签</a>
+    <a href="##">标签</a>
+    </div>
+  	<div class="main_nav_list">
+    <a href="##">标签</a>
+    <a href="##">标签</a>
+    <a href="##">标签</a>
+    <a href="##">标签</a>
+    <a href="##">标签</a>
+    <a href="##">标签</a>
+    </div>
+  </nav>
+</header>
+<!--首页顶部弹出层-->
+<div id="login_box" style="display:none;">
+  <div id="cmbox" class="cmbox">
+    <h2>登 录</h2>
+    <fieldset class="main">
+     <p>
+      <label>帐号</label>
+      <input type="text" pattern=".*" id="cmbox-acct" placeholder="请输入QQ号" oninput="pt_inp('cmbox-acct','pt_inp_t',this)"/>
+      <a class="pt_inp_empty" id="pt_inp_t" style="display: none;">清除 </a></p>
+     <p><label>密码</label><input type="password" id="cmbox-pwd" placeholder="QQ密码" oninput="pt_inp('cmbox-pwd','pt_inp_w',this)" />
+     <a class="pt_inp_empty" id="pt_inp_w" style="display: none;">清除 </a></p>
+   </fieldset>
+   <div class="bar">
+   <input type="button" id="cmbox-submit" class="login fl" value="登   录" />
+   <input type="button" id="cmbox-cancel" class="cancel fr" onclick="oc('login_box')" value="取   消" />
+  </div>
+ </div>
+</div>
+<div class="ptmask" id="ptmask" style="display:none; opacity: 0.7;"></div>
+<div id="nav_pop" class="close" style="display:none;" onclick="oc('nav_pop')">
+	<div id="nav-pop-pnl" class="nav-top  new-nav-top close">
+	  <div class="nav-box">
+		<h3> <span>频道</span> 
+        <a href="/">网站导航</a> </h3>
+		<div class="channel-list">
+		<a href="/">新闻</a>
+		<a href="/">娱乐</a>
+		<a href="/">体育</a>
+		<a href="">财经</a>
+		<a href="">股票</a>
+		<a href="">科技</a>
+		<a href="">军事</a>
+		<a href="/">汽车</a>
+		<a href="2">手机</a>
+		<a href="/">数码</a>
+		<a href="/">女性</a>
+		<a href="/">星座</a>
+		<a href="/">情感</a>
+		<a href="/">校园</a>
+		<a href="/">笑话</a>
+		</div>
+	  </div>
+	  <div class="nav-box">
+		<h3><span>网页应用</span></h3>
+		<div class="app-list">
+			<a href="">NBA</a>
+			<a href="">悦图</a>
+			<a href="h">爱星座</a>
+			<a href="">爱电影</a>
+			<a href="">悦读</a>
+			<a href="">车典</a>
+			<a href="">秀车</a>  
+			<a href="">爱直播</a>
+			<a href="">自选股</a>
+		</div>
+	  </div>
+	</div>
+<div id="nav-pop-mask" class="pop-layer  new-pop-layer"></div>
+</div>
+<!--热点栏目开始-->
+<section class="topic">
+<div id="slideBox" class="slideBox">
+    <div class="bd">
+        <ul>
+            <li>
+                <a class="pic" href="#"><img src="images/139175228599751181.jpg" /></a>
+                <a class="tit" href="#">汤唯新片大卖请剧组吃回锅肉</a>
+            </li>
+            <li>
+                <a class="pic" href="#"><img src="images/139175228599751181.jpg" /></a>
+                <a class="tit" href="#">范冰冰黄晓明亲密无间</a>
+            </li>
+            <li>
+                <a class="pic" href="#"><img src="images/139175228599751181.jpg" /></a>
+                <a class="tit" href="#">一周体育快报</a>
+            </li>
+            <li>
+                <a class="pic" href="#"><img src="images/139175228599751181.jpg" /></a>
+                <a class="tit" href="#">一周体育快报</a>
+            </li>
+        </ul>
+    </div>
+    <div class="hd">
+        <span class="prev"><img src="css/img/prev.png"/></span>
+        <span class="next"><img src="css/img/nxet.png"/></span>
+        <span class="pageState"></span>
+    </div>
+
+</div>
+			<script type="text/javascript">
+				TouchSlide({ slideCell:"#slideBox", mainCell:".bd ul",pageStateCell:".pageState",autoPlay:true, 
+				interTime:5000,effect:"leftLoop" });
+			</script>
+  <div id="headline">
+    <div class="top">
+      <h2> 
+      <a href="">张艺谋一次缴清748万超生罚款</a>
+      </h2>
+      <p>
+      <a href="">[专题:张艺谋超生事件]</a><a href="">[近百趟高铁晚点]</a>
+      </p>
+      <h2>
+      <a href="">高铁因雪降速网友提议退差价</a>
+      </h2>
+      <p>
+      <a href="">[郑州机场问询处被砸]</a><a href="">[近百趟高铁晚点]</a>
+    </div>
+      </div>	
+  </div>
+</section>
+<div id="mod_important" class="module jryw">
+    <h3>今日要闻</h3>
+		    <div id="weather" class="wealth" data-href="">
+		<span class="wealth-city">南昌</span><span><img src="images/s_a8.png" alt="南昌" class="wealth-img" width="14" height="14">4 ℃</span>
+			</div>
+  <div id="tab">
+	<div style="z-index: 0; opacity: 1;" class="time-nav-mod" data-name="now">
+      <nav class="list-mod">
+        <ul class="cont-list">
+          <li><a href="ss">三亚整治公共海滩裸泳裸晒</a></li>
+          <li><a href="dd">湖北男童遭婶婶割双耳砍下巴</a></li>
+          <li><a href="22">库里34+9勇士擒公牛.马刺负网</a></li>
+        </ul>
+        <ul class="cont-list">
+          <li><a href="">恒大签下意大利国脚迪亚曼蒂</a></li>
+          <li><a href="">云南除夕杀人者策划半年作案</a></li>
+          <li><a href="">沪机场老外掌掴中国男孩被拘</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="time-nav-mod" data-name="past" style="z-index: 0; opacity: 1;">
+      <nav class="list-mod">
+        <ul class="cont-list">
+          <li><a href="">中国土豪生活令英国保姆震惊</a></li>
+          <li><a href="">香港跑马地战时炸弹已移走</a></li>
+          <li><a href="">美要求中方说明南海九段线</a></li>
+        </ul>
+        <ul class="cont-list">
+          <li><a href="">中国富人投资移民居世界第一</a></li>
+          <li><a href="">解放军今年首次参加美泰军演</a></li>
+          <li><a href="">鲍卡斯成美国第11任驻华大使</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="time-nav-mod" data-name="ago" style="opacity: 1; z-index: 3;">
+      <nav class="list-mod">
+        <ul class="cont-list">
+          <li><a href="a">香港发现二战炸弹 千人被撤离</a></li>
+          <li><a href="x">农民工用李克强所赠年货请客</a></li>
+          <li><a href="">民众：当官姐夫家送礼的少了</a></li>
+        </ul>
+        <ul class="cont-list">
+          <li><a href="ss">网友晒单:没万元难过年如遭劫</a></li>
+          <li><a href="s">骑友网上直播在罗浮山上涂鸦</a></li>
+          <li><a href="sss">假冒伪劣食品横行农村市场</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+    <nav id="time-nav" class="jryw-nav">
+     <a href="javascript:void(0);" data-type="1">现在</a>
+      <a href="javascript:void(0);" data-type="2">刚刚</a>
+       <a href="javascript:void(0);" data-type="3" class="active">较早</a>
+    </nav>
+  </div>
+<div class="module txtj">
+    <h3>独家策划</h3>
+    <div id="news-recomm" class="module-c">
+      <div class="list-mod">
+        <ul class="cont-list">
+          <li><a href="" class="">[节操新闻]冬奥有什么可看的?<span class="dujia-icon">新闻</span></a></li>
+          <li><a href="" class="">雷语:习主席让索契倍感温暖!<span class="dujia-icon">体育</span></a></li>
+        </ul>
+        <ul class="cont-list">
+          <li><a href="" class="">中国地产大佬们热衷美国买房<span class="dujia-icon">股票</span></a></li>
+          <li><a href="" class="">剧乐部:猜《星星》大结局赢QQ<span class="dujia-icon">娱乐</span></a></li>
+        </ul></div>
+        <ul class="cont-lists">
+          <li><a href="" class='i-video'><img src="images/139182846249519247.jpg" alt="90后厕所产子 掐死刚出生男婴" /><span data-stitle="未婚90后掐死亲儿子"  data-ltitle="90后厕所产子 掐死刚出生男婴"  class="img-tit">90后厕所产子 掐死刚出生男婴</span></a></li>
+          <li><a href="" class=''><img src="images/139176331532362668.jpg"alt="2014值得期待华语片" /><span data-stitle="2014值得期待华语片"  data-ltitle="2014值得期待华语片"  class="img-tit">2014值得期待华语片</span></a></li>
+        </ul>
+      </div>
+  </div>
+ <div class="search">
+	  <form id="search-form" method="POST" action="" class="search-form">
+		<div id="search-hidden-params">
+			<input type="hidden" />
+			<input type="hidden" />
+		</div>
+		<input id="search-word" type="text" class="search-input" value="习近平会晤普京"/>
+		<input  id="search-reset" type="reset" value="" class="search-reset" style="display:none"/>
+		<button type="submit" class="search-btn"></button>
+	  </form>
+  </div>
+ </div>
+  <!--广告模块-->
+ 	<div id="text-ad-soso" class="txt-ad"><a href="" target="_blank"  class=current>普莱达T9+:5寸4核安卓机特价促</a></div>
+  <!--新闻模块-->
+<div id="mod-news" class="module">
+
+ <div class="module-t">
+ <h3><a href="">新闻</a></h3>
+ <nav class="more">
+ <a href="">社会</a><a href="">军事</a><a class="app-link"  href="">悦读</a></nav></div>
+ <div class="module-c">
+ <h4><a href="">南方雨雪持续局地有暴雪冻雨</a></h4>
+ <div class="list-mod">
+ <ul class="cont-list">
+ <li><a href="" class="">男子将比亚迪改装奔驰扣12分<span class="cmt-num">1291</span></a></li>
+ <li><a href="" class="v-link">辽宁反贪局长进夜总会被停职<span class="cmt-num">1080</span></a></li>
+ <li><a href="" class="">5旬男子和3任女友同住一屋<span class="cmt-num">4471</span></a></li>
+ <li><a href="" class="img-link">广州公园留菜地 市民偷菜成风<span class="cmt-num">817</span></a></li>
+ </ul>
+ <ul class="cont-list">
+ <li><a href="" class="v-link">武汉官员遭情妇举报艳照外泄<span class="cmt-num">1467</span></a></li>
+ <li><a href="" class="">美军爆特大贪腐丑闻涉上千人<span class="cmt-num">1340</span></a></li>
+ <li><a href="" class="img-link">台湾反日游行拒&quot;皇民化教育&quot;<span class="cmt-num">3875</span></a></li>
+ <li><a href="" class="">少年因被嘲笑杀害两名6岁女童<span class="cmt-num">6551</span></a></li>
+ </ul></div>
+ <div class="channel-ad">
+ <h3 class="channel-ad-logo"><a href=""><img src="images/138961032204814680.jpg" alt="" class="channel-ad-img" /></a></h3>
+ <a href="" class="channel-ad-link">特刊:春晚吐槽,草根狂欢</a></div>
+ <a href="" class="news-more more-btn channel-go" data-ids="" data-mod="news" data-p="1" data-title="新闻">进入新闻频道</a>
+  <div id="text-ad-news" class="txt-ad"><a href="" target="_blank"  class=current>买卖宝商城特供:女款春装上新!</a></div>
+ </div>
+ </div>
+<div id="mod-finance" class="module">
+ <div class="module-t">
+ <h3><a href="">财经</a></h3>
+ <nav class="more">
+ <a href="">股票</a><a href="">理财</a><a class="app-link"  href="">自选股</a></nav></div>
+ <div class="module-c">
+ <h4><a href="">南方雨雪持续局地有暴雪冻雨</a></h4>
+ <div class="list-mod">
+ <ul class="cont-list">
+ <li><a href="" class="">男子将比亚迪改装奔驰扣12分<span class="cmt-num">1291</span></a></li>
+ <li><a href="" class="v-link">辽宁反贪局长进夜总会被停职<span class="cmt-num">1080</span></a></li>
+ <li><a href="" class="">5旬男子和3任女友同住一屋<span class="cmt-num">4471</span></a></li>
+ <li><a href="" class="img-link">广州公园留菜地 市民偷菜成风<span class="cmt-num">817</span></a></li>
+ </ul>
+ <ul class="cont-list">
+ <li><a href="" class="v-link">武汉官员遭情妇举报艳照外泄<span class="cmt-num">1467</span></a></li>
+ <li><a href="" class="">美军爆特大贪腐丑闻涉上千人<span class="cmt-num">1340</span></a></li>
+ <li><a href="" class="img-link">台湾反日游行拒&quot;皇民化教育&quot;<span class="cmt-num">3875</span></a></li>
+ <li><a href="" class="">少年因被嘲笑杀害两名6岁女童<span class="cmt-num">6551</span></a></li>
+ </ul></div>
+ <a href="" class="news-more more-btn channel-go" data-ids="" data-mod="news" data-p="1" data-title="新闻">进入新闻频道</a>
+  <div id="text-ad-news" class="txt-ad"><a href="" target="_blank"  class=current>买卖宝商城特供:女款春装上新!</a></div>
+ </div>
+</div>
+<div id="mod-sports" class="module">
+ <div class="module-t">
+ <h3><a href="">体育</a></h3>
+ <nav class="more">
+ <a href="">NBA</a><a href="">足球</a><a class="app-link"  href="">直播间</a></nav></div>
+ <div class="module-c">
+ <h4><a href="">南方雨雪持续局地有暴雪冻雨</a></h4>
+ <div class="list-mod">
+ <ul class="cont-list">
+ <li><a href="" class="">男子将比亚迪改装奔驰扣12分<span class="cmt-num">1291</span></a></li>
+ <li><a href="" class="v-link">辽宁反贪局长进夜总会被停职<span class="cmt-num">1080</span></a></li>
+ <li><a href="" class="">5旬男子和3任女友同住一屋<span class="cmt-num">4471</span></a></li>
+ <li><a href="" class="img-link">广州公园留菜地 市民偷菜成风<span class="cmt-num">817</span></a></li>
+ </ul>
+ <ul class="cont-list">
+ <li><a href="" class="v-link">武汉官员遭情妇举报艳照外泄<span class="cmt-num">1467</span></a></li>
+ <li><a href="" class="">美军爆特大贪腐丑闻涉上千人<span class="cmt-num">1340</span></a></li>
+ <li><a href="" class="img-link">台湾反日游行拒&quot;皇民化教育&quot;<span class="cmt-num">3875</span></a></li>
+ <li><a href="" class="">少年因被嘲笑杀害两名6岁女童<span class="cmt-num">6551</span></a></li>
+ </ul></div>
+ <a href="" class="news-more more-btn channel-go" data-ids="" data-mod="news" data-p="1" data-title="新闻">进入新闻频道</a>
+  <div id="text-ad-news" class="txt-ad"><a href="" target="_blank"  class=current>买卖宝商城特供:女款春装上新!</a></div>
+ </div>
+</div>
+<div id="mod-ent" class="module">
+ <div class="module-t">
+ <h3><a href="">娱乐</a></h3>
+ <nav class="more">
+ <a href="d">明星</a><a href="a">辣图</a><a class="app-link"  href="s">爱电影</a></nav></div>
+ <div class="module-c">
+ <h4><a href="">南方雨雪持续局地有暴雪冻雨</a></h4>
+ <div class="list-mod">
+ <ul class="cont-list">
+ <li><a href="" class="">男子将比亚迪改装奔驰扣12分<span class="cmt-num">1291</span></a></li>
+ <li><a href="" class="v-link">辽宁反贪局长进夜总会被停职<span class="cmt-num">1080</span></a></li>
+ <li><a href="" class="">5旬男子和3任女友同住一屋<span class="cmt-num">4471</span></a></li>
+ <li><a href="" class="img-link">广州公园留菜地 市民偷菜成风<span class="cmt-num">817</span></a></li>
+ </ul>
+ <ul class="cont-list">
+ <li><a href="" class="v-link">武汉官员遭情妇举报艳照外泄<span class="cmt-num">1467</span></a></li>
+ <li><a href="" class="">美军爆特大贪腐丑闻涉上千人<span class="cmt-num">1340</span></a></li>
+ <li><a href="" class="img-link">台湾反日游行拒&quot;皇民化教育&quot;<span class="cmt-num">3875</span></a></li>
+ <li><a href="" class="">少年因被嘲笑杀害两名6岁女童<span class="cmt-num">6551</span></a></li>
+ </ul></div>
+ <a href="" class="news-more more-btn channel-go" data-ids="" data-mod="news" data-p="1" data-title="新闻">进入新闻频道</a>
+  <div id="text-ad-news" class="txt-ad"><a href="" target="_blank"  class=current>买卖宝商城特供:女款春装上新!</a></div>
+ </div>
+</div>
+
+<div class="expand-mod">
+  <div class="expand-mod-t">
+    <h3>媒体悦读</h3>
+  </div>
+  <div class="expand-mod-c">
+    <ul class="media-list">
+    <li>
+        <a href="" class="media-logo">
+            <img orgsrc="" width="36" height="36" alt="">
+        </a>
+        <a href="">话题：男童被割双耳，歹毒伯母怎频现</a>
+    </li>
+    
+    <li>
+        <a href="" class="media-logo">
+            <img orgsrc="" width="36" height="36" alt="">
+        </a>
+        <a href="">宋丹丹：和《乡村爱情》对打，好玩！</a>
+    </li>
+    
+    <li>
+        <a href="" class="media-logo">
+            <img orgsrc="" width="36" height="36" alt="">
+        </a>
+        <a href="">历史：林彪摔死前夕给毛泽东的密信</a>
+    </li>
+    
+    </ul>
+  </div>
+</div>
+<div class="expand-mod">
+  <div class="expand-mod-t">
+    <h3>媒体悦读</h3>
+  </div>
+  <div class="expand-mod-c">
+    <ul class="media-list">
+    <li>
+        <a href="" class="media-logo">
+            <img orgsrc="" width="36" height="36" alt="">
+        </a>
+        <a href="">话题：男童被割双耳，歹毒伯母怎频现</a>
+    </li>
+    
+    <li>
+        <a href="" class="media-logo">
+            <img orgsrc="" width="36" height="36" alt="">
+        </a>
+        <a href="">宋丹丹：和《乡村爱情》对打，好玩！</a>
+    </li>
+    
+    <li>
+        <a href="" class="media-logo">
+            <img orgsrc="" width="36" height="36" alt="">
+        </a>
+        <a href="">历史：林彪摔死前夕给毛泽东的密信</a>
+    </li>
+    
+    </ul>
+  </div>
+</div>
+<div class="expand-mod">
+  <div class="expand-mod-t">
+    <h3>媒体悦读</h3>
+  </div>
+  <div class="expand-mod-c">
+    <ul class="media-list">
+    <li>
+        <a href="" class="media-logo">
+            <img orgsrc="" width="36" height="36" alt="">
+        </a>
+        <a href="">话题：男童被割双耳，歹毒伯母怎频现</a>
+    </li>
+    
+    <li>
+        <a href="" class="media-logo">
+            <img orgsrc="" width="36" height="36" alt="">
+        </a>
+        <a href="">宋丹丹：和《乡村爱情》对打，好玩！</a>
+    </li>
+    
+    <li>
+        <a href="" class="media-logo">
+            <img orgsrc="" width="36" height="36" alt="">
+        </a>
+        <a href="">历史：林彪摔死前夕给毛泽东的密信</a>
+    </li>
+    
+    </ul>
+  </div>
+</div>
+<div class="expand-mod">
+    <div class="expand-mod-c">
+      <ul class="more-list">
+        <li><a href="http://mobile.qq.com/touch/index.html?tag=wwwqq">QQ</a><a href="http://19302.mmb.cn/wap/touch/column.do?columnId=27">购物</a><a href="http://book.soso.com/page#!/bookshelf/0211">小说</a><a href="http://res.3g.qq.com/g/s?aid=nr_index&amp;g_f=990275&amp;sid=ARFB3gSjn-_RCDQMcRKQRtiA">下载</a><a href="http://mdc.html5.qq.com/mh?channel_id=10274">浏览器</a></li>
+        <li><a href="http://chong.qq.com/tws/entra/getpanel?id=297&amp;vb2ctag=4_2032_3_1340&amp;width=320&amp;height=48">便民</a><a href="http://music31.3g.qq.com/s?sid=ARFB3gSjn-_RCDQMcRKQRtiA&amp;aid=mu_index&amp;s_it=1&amp;g_f=1800">音乐</a><a href="http://w.mail.qq.com/cgi-bin/login">邮箱</a><a href="http://house60.3g.qq.com/touch/index.jsp?sid=ARFB3gSjn-_RCDQMcRKQRtiA&amp;g_ut=3&amp;g_f=15125#house/home">家园</a><a href="/g/s?sid=ARFB3gSjn-_RCDQMcRKQRtiA&amp;aid=template&amp;tid=sports_lottery&amp;i_f=141">彩票</a></li>
+      </ul>
+    </div>
+</div>
+<footer>
+    <nav><a href="">反馈</a>
+	
+	<a id="footer-login" href="javascript:void(0);" onclick="oc('login_box')">登录</a>
+	
+	</nav>
+
+    <div class="version" id="version">
+	  
+	  <a id="gofull" href="javascript:void(0);" class="current">触屏版</a> 
+      <a id="gosimp" href="javascript:void(0);" class="">极速版</a>
+	 
+      <a href="">3G版</a> 
+	  </div>
+    <div class="copyright">©2014 Tencent 粤B2-20090028 </div>
+</footer>
+<div id="fixed-title" class="module-t module-t-fixed" style="display:none;">
+ <h3><a href="">新闻</a></h3>
+ <nav class="more">
+ <a href="">社会</a><a href="">军事</a><a class="app-link"  href="">悦读</a></nav></div>
+<div id="jumphelper" style="display: block;">
+<a onclick="javascript:void 0;" id="gotop">∧</a>
+<a onclick="javascript:void 0;" id="gobot">∨</a></div> 
+<div id="tips" class="switch-tips" style="display:none; bottom: -30px; -webkit-transition: bottom 400ms linear; transition: bottom 400ms linear;">【触屏版】，我们为品质代言</div>
+</body>
+</html>

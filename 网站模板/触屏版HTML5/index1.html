@@ -1,0 +1,141 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=2.0">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>触屏版HTML5导航</title>
+<style type="text/css">
+.top2 h2:first-child{font-size: 16px;font-weight: normal;margin:1px;white-space: nowrap;display: block;}
+.top2 h2::before {content: "公告";
+background-color: #43CD80;
+-webkit-border-radius: 2px;
+color: white;
+display: inline;
+font-size: 12px;
+padding-left: 6px;
+padding-right: 6px;
+margin-right: 4px;
+text-align: center;
+vertical-align: 2px;
+background-color: #5F87B9;
+white-space: nowrap;
+text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
+padding-bottom: 5px;
+padding-top: 5px;}
+.top2 h3 {font-size:16px;font-weight: normal;margin:1px;white-space: nowrap;}
+.top2 h3::before {content: "推荐";
+background-color: #43CD80;
+-webkit-border-radius: 2px;
+color: white;
+display: inline;
+font-size: 12px;
+padding-left: 6px;
+padding-right: 6px;
+margin-right: 4px;
+text-align: center;
+vertical-align: 2px;
+background-color: #D59B20;
+white-space: nowrap;
+text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
+padding-bottom: 5px;
+padding-top: 5px;}
+
+.top2{border-bottom: 1px solid #EBEBEB;
+font-size: 16px;
+overflow: hidden;
+padding-bottom: 5px;
+padding-top: 5px;
+padding-left: 5px;
+line-height: 25px;
+}
+
+.top2>h2 a {color: #d53830;text-decoration: none;text-overflow: ellipsis;
+white-space: nowrap;}
+.top2>h3 a {color: #d53830;text-decoration: none;text-overflow: ellipsis;
+white-space: nowrap;}
+
+.top2 p {display: inline;}
+.top2>p a {font-family:??????,sans-serif;padding-right: 5px;text-decoration: none;}
+.top2>p a {color: #666;font-size: 14px;white-space: nowrap;text-decoration: none;}
+.top2>p a:last-child {margin-right: 0;}
+.container {
+padding: 5px 0 3px 22px;
+width: 100%;
+text-align: center;
+}
+</style>
+</head>
+<body>
+<link href="moabc/moabc.css" rel="stylesheet" type="text/css">
+<!--<script type="text/javascript" src="moabc/db.js"></script>
+--><script type="text/javascript">
+(function() {
+    var $backToTopTxt = "回顶部", $backToTopEle = $('<div class="backToTop"></div>').appendTo($("body"))
+        .text($backToTopTxt).attr("title", $backToTopTxt).click(function() {
+            $("html, body").animate({ scrollTop: 0 }, 120);
+    }), $backToTopFun = function() {
+        var st = $(document).scrollTop(), winh = $(window).height();
+        (st > 0)? $backToTopEle.show(): $backToTopEle.hide();
+        //IE6下的定位
+        if (!window.XMLHttpRequest) {
+            $backToTopEle.css("top", st + winh - 166);
+        }
+    };
+    $(window).bind("scroll", $backToTopFun);
+    $(function() { $backToTopFun(); });
+})();
+</script>
+
+
+<header><div class="content"><div class="logo"><img src="moabc/logo.png" width="140" alt="霸看-bakan.com.cn" title="logo"></div>
+<div class="scon forum-search" style="border-top:none;">
+  <div id="search-con" class="search-con">
+    <div id="keyword-here" class="keyword-here">站内</div>
+    <ul id="keyword-list" class="keyword-list" name="type">
+      <li><a href="javascript:;" rel="1">站内</a></li>
+      <li><a href="javascript:;" rel="100">百度</a></li>
+      <li><a href="javascript:;" rel="102">易查</a></li>
+    </ul>
+    <form id="scbar_form" class="widget-search" action="http://18yh.cn/Plus/Search/" method="post">
+      <input type="hidden" name="sid" value="2">
+      <input type="hidden" name="cid" value="0">
+      <input type="hidden" name="classid" value="0">
+      <div class="input-con">
+        <input name="key" class="input-forum" type="text" placeholder="请输入搜索关键字">
+      </div>
+      <input name="" value="" class="search-btn" type="submit">
+      <div class="icon-clear"></div>
+    </form>
+  </div>
+  <script src="moabc/search.js" type="text/javascript"></script> 
+</div></div></header>
+<div class="main">
+<div class="lmBox"><div class="lm"><a class="cur">百度</a> <a href="#">搜狐</a> <a href="#">网易</a> <a href="#">乐讯</a> <a href="#">3 G</a><a class="cur">九游</a> <a href="#">当乐</a> <a href="#">霸看</a> <a href="#">魔网</a> <a href="#">移动</a></div></div>
+<div class="top2">
+<h2> <a href="#">网站公告展示信息条</a>
+</h2>
+<h3>
+ <a href="#">广告公告展示信息条</a>
+</h3>
+</div>
+<div class="title"><i></i><a class="">酷站分类</a><v><a href="#">魔网</a>  <a href="#">霸看</a></v></div>
+<div class="flBox"><div class="fl"><a href="#">[名站]</a> <a href="#">搜狐</a> <a href="#">当乐</a><a href="#">网易</a> <a href="#">乐讯</a> <a href="#">3 G</a></div>
+<div class="fl"><a href="#">[游戏]</a><a href="#">当乐</a> <a href="#">当乐</a> <a href="#">霸看</a> <a href="#">魔网</a> <a href="#">移动</a></div>
+<div class="fl"><a href="#">[游戏]</a><a href="#">当乐</a> <a href="#">当乐</a> <a href="#">霸看</a> <a href="#">魔网</a> <a href="#">移动</a></div>
+<div class="fl"><a href="#">[游戏]</a><a href="#">当乐</a> <a href="#">当乐</a> <a href="#">霸看</a> <a href="#">魔网</a> <a href="#">移动</a></div>
+<div class="fl"><a href="#">[游戏]</a><a href="#">当乐</a> <a href="#">当乐</a> <a href="#">霸看</a> <a href="#">魔网</a> <a href="#">移动</a></div>
+<div class="fl"><a href="#">[游戏]</a><a href="#">当乐</a> <a href="#">当乐</a> <a href="#">霸看</a> <a href="#">魔网</a> <a href="#">移动</a></div>
+</div>
+<div class="title2"><i></i><a class="">最新链入</a><v><a href="#">魔网</a>  <a href="#">霸看</a></v></div>
+<div class="lrBox"><div class="lr"><a href="#">名站</a> <a href="#">搜狐</a> <a href="#">当乐</a><a href="#">网易</a> <a href="#">乐讯</a> <a href="#">3 G</a><a href="#">搜狐</a> <a href="#">当乐</a><a href="#">网易</a> <a href="#">乐讯</a> <a href="#">3 G</a> </div></div>
+<div class="gdBox"><div class="titles"><i></i><a class="">更多分类</a></div><div class="gd"><a href="#">名站</a> <a href="#">搜狐</a> <a href="#">当乐</a><a href="#">网易</a> <a href="#">乐讯</a> <a href="#">3 G</a><a href="#">搜狐</a> <a href="#">当乐</a><a href="#">网易</a> <a href="#">乐讯</a> <a href="#">3 G</a><a href="#">搜狐</a> </div></div>
+<div class="title3"><i></i><a class="">合作伙伴</a><v><a href="#">申请加盟>></a></v></div></div>
+
+<footer>
+<div class="footer_s"><a href="http://wapzz.cn">wapzz</a><a href="http://5hqq.cn">天天</a><a href="http://wapcc.cn">安机</a><a href="http://www.tt588.cn">中华</a><a href="http://5e8e.cn">东海</a><br><a href="http://yixiw.cn">忆汐</a><a href="http://99wz.cn">网智</a><a href="http://3gmq.com">文章</a>
+<a href="http://hongjian.pw">红笺</a><a href="http://lyxym.cn/">轩乐</a></div>
+<div class="footer_x">霸看小说网 所有内容均来自网络不负任何责任<p>Copyright © 2012 - 2014 bakan.com.cn</p></div></footer>
+
+</body>
+</html>
