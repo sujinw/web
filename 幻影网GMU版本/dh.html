@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    <title>首页效果</title>
+    <link rel="stylesheet" type="text/css" href="style/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="style/css/animations.css"/>
+    <link rel="stylesheet" type="text/css" href="style/css/animate.css"/>
+    <link rel="stylesheet" type="text/css" href="style/icon/style.css" />
+    <!--[if lt IE 8]><!-->
+    <link rel="stylesheet" type="text/css" href="style/icon/ie7/ie7.css" />
+    <!--<![endif]-->
+    <link rel="stylesheet" type="text/css" href="style/css/dault.css" />
+    <script src="js/zepto.min.js"></script>
+    <script src="js/iscroll.js"></script>
+    <script src="js/core/gmu.js"></script>
+    <script src="js/zepto_extend.js"></script>
+    <script src="js/gmu_extend.js"></script>
+    <script src="js/pace.min.js"></script>
+    <script>
+        paceOptions = {
+            document: false,
+            element: {
+                selectors: ['.all-elements']
+            },
+            restartonRequestAfter: false
+        };
+    </script>
+</head>
+<body>
+<div class="all-elements">
+    <div id="perspective" class="perspective effect-airbnb">
+        <header class="header">
+            <div class="head">
+                <div class="head_nav icon" id="showMenu"><i class="icon-grid2"></i></div>
+                <div class="head_logo"><img src="images/logo.png" /> </div>
+                <div class="head_seach icon"><i class="icon-user2"></i><i class="icon-search"></i> </div>
+            </div>
+        </header>
+        <div class="outer-nav">
+            <div class="inner-nav icon">
+                <div class="nav-item">
+                    <a href="index.html" class="active-item">
+                        <i class="icon-home3"></i>
+                        首页
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="#" class="deploy-nav-sub-item">
+                        <i class="icon-weibo"></i>
+                        微博
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="#" class="deploy-nav-sub-item">
+                        <i class="icon-envelope-o"></i>
+                        信息
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="#" class="deploy-nav-sub-item">
+                        <i class="icon-people"></i>
+                        好友
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="#" class="deploy-nav-sub-item">
+                        <i class="icon-paper-clip"></i>
+                        收藏
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="contact.html">
+                        <i class="icon-link"></i>
+                        联盟
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a id="closeMenu" href="#">
+                        <i class="icon-cross"></i>
+                        关闭
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="perspective_container">
+            <div class="header-clear icon"><i class="icon-cross"></i></div>
+            <div class="wrapper" style="top: 0;">
+                <div id="wrap">
+                    <div id="nav">
+                        <ul>
+                            <li><a href="#test1">首页</a></li>
+                            <li><a href="#test1">要闻</a></li>
+                            <li><a href="javascript:;">国内</a></li>
+                            <li><a href="#test2">国际</a></li>
+                            <li><a href="#test3">军事</a></li>
+                            <li><a href="#test4">社会</a></li>
+                            <li><a href="#test5">娱乐</a></li>
+                            <li><a href="#test6">女人</a></li>
+                            <li><a href="#">体育</a></li>
+                            <li><a href="#test7">科技</a></li>
+                            <li><a href="#test8">互联网</a></li>
+                            <li><a href="#test9">教育</a></li>
+                            <li><a href="#">财经</a></li>
+                            <li><a href="#test11">房产</a></li>
+                            <li><a href="#test12">汽车</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <section>
+                    <div class="dh">
+                        <div class="boxShadow " id="famousArea">
+                            <ul class="ullist">
+                                <li>
+                                    <a data-id="524" href="#">标签</a>
+                                </li>
+                                <li>
+                                    <a data-id="797" href="#">标签</a>
+                                </li>
+                                <li>
+                                    <a data-id="526" href="#">标签</a>
+                                </li>
+                                <li>
+                                    <a data-id="529" href="#">标签</a>
+                                </li>
+                                <li>
+                                    <a data-id="137" href="#">标签</a>
+                                </li>
+                                <li>
+                                    <a data-id="528" href="#">标签</a>
+                                </li>
+                                <li>
+                                    <a data-id="1785" href="#">标签</a>
+                                </li>
+                                <li>
+                                    <a data-id="533" href="#">标签</a>
+                                </li>
+                                <li>
+                                    <a data-id="5029" href="#">标签</a>
+                                </li>
+                                <li>
+                                    <a data-id="525" href="#">标签</a>
+                                </li>
+                                <li>
+                                    <a data-id="43" href="#">标签</a>
+                                </li>
+                                <li>
+                                    <a data-id="7" href="#">标签</a>
+                                </li>
+                            </ul>
+                        </div>                        
+                        <div class="category">
+                            <nav class="title"> <strong>热点分类</strong> <em></em></nav>
+                            <div class="catebox">
+                                <div class="subcate">
+                                    <a href="/class/sub/id/19/vs/touch">小说</a>
+                                </div>
+                                <div class="threecate">
+                                    <ul class="catelist">
+                                        <li>
+                                            <a data-id="4981" href="/go/4981">书旗</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="4523" href="/go/4523">书城</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="11" href="/go/11">红袖</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="16" href="/go/16">17K</a>
+                                        </li>
+                                        <li>
+                                            <a id="catalog19" class="goshow" onclick="showmore(this)"></a>
+                                        </li>
+                                    </ul>
+                                    <ul class="catelist" id="morelink-catalog19" style="display:none">
+                                        <li>
+                                            <a data-id="4204" href="/go/4204">潇湘</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="8435" href="/go/8435">宜搜</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="8433" href="/go/8433">易查</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="4555" href="/go/4555">儒豹</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="4673" href="/go/4673">晋江</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="13" href="/go/13">泡书</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="2508" href="/go/2508">塔读</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="4203" href="/go/4203">小阅</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="4074" href="/go/4074">新浪</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="7" href="/go/7">起点</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="catebox">
+                                <div class="subcate">
+                                    <a href="/class/sub/id/21/vs/touch">图片</a>
+                                </div>
+                                <div class="threecate">
+                                    <ul class="catelist">
+                                        <li>
+                                            <a data-id="313" href="/go/313">图乐</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="2423" href="/go/2423">靓图</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="7119" href="/go/7119">美图</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="7115" href="/go/7115">辣图</a>
+                                        </li>
+                                        <li>
+                                            <a id="catalog21" class="goshow" onclick="showmore(this)"></a>
+                                        </li>
+                                    </ul>
+                                    <ul class="catelist" id="morelink-catalog21" style="display:none">
+                                        <li>
+                                            <a data-id="4260" href="/go/4260">美女</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="5291" href="/go/5291">亿万</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="4207" href="/go/4207">堆糖</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="4208" href="/go/4208">壁纸</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="3644" href="/go/3644">3G图</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="3645" href="/go/3645">搜狐</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="3647" href="/go/3647">poco</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="3648" href="/go/3648">凤凰</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="3649" href="/go/3649">百度</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="3650" href="/go/3650">动漫</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="catebox">
+                                <div class="subcate">
+                                    <a href="/class/sub/id/2/vs/touch">购物</a>
+                                </div>
+                                <div class="threecate">
+                                    <ul class="catelist">
+                                        <li>
+                                            <a data-id="4202" href="/go/4202">京东</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="4076" href="/go/4076">亚马逊</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="5765" href="/go/5765">苏宁</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="5317" href="/go/5317">买卖宝</a>
+                                        </li>
+                                        <li>
+                                            <a id="catalog2" class="goshow" onclick="showmore(this)"></a>
+                                        </li>
+                                    </ul>
+                                    <ul class="catelist" id="morelink-catalog2" style="display:none">
+                                        <li>
+                                            <a data-id="5769" href="/go/5769">唯品会</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="4691" href="/go/4691">一号店</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="3639" href="/go/3639">当当</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="4689" href="/go/4689">拍拍</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="3642" href="/go/3642">天猫</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="4679" href="/go/4679">美丽说</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="43" href="/go/43">淘宝</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="5845" href="/go/5845">糯米</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="3641" href="/go/3641">凡客</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="5771" href="/go/5771">拉手</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="catebox">
+                                <div class="subcate">
+                                    <a href="/class/sub/id/16/vs/touch">游戏</a>
+                                </div>
+                                <div class="threecate">
+                                    <ul class="catelist">
+                                        <li>
+                                            <a data-id="948" href="/go/948">九游</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="3758" href="/go/3758">乐玩</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="74" href="/go/74">当乐</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="4875" href="/go/4875">QQ游</a>
+                                        </li>
+                                        <li>
+                                            <a id="catalog16" class="goshow" onclick="showmore(this)"></a>
+                                        </li>
+                                    </ul>
+                                    <ul class="catelist" id="morelink-catalog16" style="display:none">
+                                        <li>
+                                            <a data-id="153" href="/go/153">新浪</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="7097" href="/go/7097">任玩堂</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="4194" href="/go/4194">百度</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="7071" href="/go/7071">游戏狗</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="7073" href="/go/7073">360</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="7075" href="/go/7075">4399</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="4879" href="/go/4879">电玩</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="7083" href="/go/7083">木蚂蚁</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="7095" href="/go/7095">超好玩</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="7067" href="/go/7067">移动</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="catebox">
+                                <div class="subcate">
+                                    <a href="/class/sub/id/17/vs/touch">影视</a>
+                                </div>
+                                <div class="threecate">
+                                    <ul class="catelist">
+                                        <li>
+                                            <a data-id="4677" href="/go/4677">奇艺</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="4665" href="/go/4665">乐视</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="1784" href="/go/1784">土豆</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="4779" href="/go/4779">PPTV</a>
+                                        </li>
+                                        <li>
+                                            <a id="catalog17" class="goshow" onclick="showmore(this)"></a>
+                                        </li>
+                                    </ul>
+                                    <ul class="catelist" id="morelink-catalog17" style="display:none">
+                                        <li>
+                                            <a data-id="4667" href="/go/4667">搜狐</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="1785" href="/go/1785">优酷</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="1899" href="/go/1899">56网</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="3289" href="/go/3289">电影</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="7819" href="/go/7819">风行</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="4191" href="/go/4191">激动</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="4781" href="/go/4781">酷6</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="7649" href="/go/7649">云帆</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="1056" href="/go/1056">凤视</a>
+                                        </li>
+                                        <li>
+                                            <a data-id="168" href="/go/168">宽频</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dh_add"><a href="#">我要加盟本站</a></div> 
+                    </div>               
+                </section>
+                <footer class="footer icon">
+                    <div class="foot_nav">
+                        <a href="#">免责声明</a>|
+                        <a href="#">本站服务</a>|
+                        <a href="#">意见反馈</a>
+                    </div>
+                    <div class="ves">
+                        <a href="#">电脑版</a>
+                        <a href="#" class="this_ves">触屏版</a>
+                    </div>
+                    <p><i class="icon-copyright"></i><a href="http://3ghy.com">http://3ghy.com</a> 幻影特效网</p>
+                </footer>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="gotop icon" id="gotop" ><i class="icon-keyboard-capslock"></i> </div>
+<script src="js/menu.js"></script>
+<script src="js/common.js"></script>
+<script>
+    $(document).ready(function() {
+        $(".icon-search").click(function () {
+            if (document.getElementById("slade_search").style.display == "none") {
+                $("#slade_search").css("display", "block")
+            } else {
+                $("#slade_search").css("display", "none")
+            }
+        });
+    });
+    function showmore(obj) {
+    el = document.getElementById('morelink-'+obj.id);
+    if (el.style.display == 'none') {
+        el.style.display = '';
+        obj.className = 'gohide'
+    } else {
+        el.style.display = 'none';
+        obj.className = 'goshow'
+    }
+}
+
+</script>
+
+</body>
+</html>
