@@ -1,0 +1,253 @@
+
+
+
+/** 主要style **/
+.container{
+	width:900px;
+	height:500px;
+	border:1px solid #dedede;
+	margin:0 auto;
+	position:relative;
+}
+.b1{
+	height:200px;
+	background:#00B050;
+}
+.b2{
+	height:300px;
+	background:#CCE8CF;
+}
+.b3{
+	background:#00B050;
+	height:20px;
+}
+.single3{
+  position:absolute;
+  top: 110px;
+  left: 50%;
+  margin-left: -164px;
+}
+.single3 .single{
+	position:relative;
+}
+.single3 .s{
+	height:1px;
+	border:0;
+	background:#00B0CD;
+	width:300px;
+	position:absolute;
+}
+.single3 .s1{
+	transform: rotate(60deg);
+	-o-transform: rotate(60deg);
+	-webkit-transform: rotate(60deg);
+	-moz-transform: rotate(60deg);
+    left: -76px;
+    top: 130px;
+}
+.single3 .s3{
+	transform: rotate(-60deg);
+	-o-transform: rotate(-60deg);
+	-webkit-transform: rotate(-60deg);
+	-moz-transform: rotate(-60deg);
+    left: 75px;
+    top: 131px;
+}
+.line-warrp{
+	left: 28px;
+    top: 111px;
+    position: absolute;
+}
+.line{
+	height:1px;
+	background:#00B050;
+	border:0;
+	width:260px;
+	position:absolute;
+	transform: rotate(25deg);
+	-o-transform: rotate(25deg);
+	-moz-transform: rotate(25deg);
+	-webkit-transform: rotate(25deg);
+}
+.l1,.l2{
+	background:#fefefe;
+}
+.l1{
+	transform: rotate(25deg);
+	-o-transform: rotate(25deg);
+	-moz-transform: rotate(25deg);
+	-webkit-transform: rotate(25deg);
+}
+.l2{
+    top: 24px;
+    left: 23px;
+}
+.l3{
+	top: 200px;
+    left: 512px;
+}
+.l4{
+	top: 220px;
+    left: 522px;
+}
+.text{
+	width: 100%;
+    position: absolute;
+    top: 160px;
+    left: 50%;
+    margin-left: -25%;
+    font-family: '微软雅黑';
+    font-size: 54px;
+    font-weight: bold;
+    color: #00B050;
+	background:rgba(0,0,0,0);
+}
+.text:before{
+	content: '无比帅气黄埔小二班';
+    color: #fefefe;
+    width: 900px;
+    height: 39px;
+    top: 0px;
+    position: absolute;
+    overflow: hidden;
+}
+.start{
+	position: absolute;
+    right: 50px;
+    top: 50px;
+}
+.start-waarp{
+	position:relative;
+}
+.start-1{
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    background-color: transparent;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: #fefefe;
+    border-left-color: transparent;
+    border-top-width: 0px;
+    border-bottom-width: 30px;
+    border-left-width: 3px;
+    border-right-width: 3px;
+    
+	position: absolute;
+}
+.start-2{
+	width: 0px;
+    height: 0px;
+    border-style: solid;
+    background-color: transparent;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: blue;
+    border-left-color: transparent;
+    border-top-width: 0px;
+    border-bottom-width: 30px;
+    border-left-width: 3px;
+    border-right-width: 3px;
+	transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+
+	position: absolute;
+    left: 17px;
+    top: 14px;
+}
+.start-3{
+	width: 0px;
+    height: 0px;
+    border-style: solid;
+    background-color: transparent;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: blue;
+    border-left-color: transparent;
+    border-top-width: 0px;
+    border-bottom-width: 30px;
+    border-left-width: 3px;
+    border-right-width: 3px;
+	transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+
+	position: absolute;
+    top: 30px;
+}
+.start-4{
+	width: 0px;
+    height: 0px;
+    border-style: solid;
+    background-color: transparent;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: blue;
+    border-left-color: transparent;
+    border-top-width: 0px;
+    border-bottom-width: 30px;
+    border-left-width: 3px;
+    border-right-width: 3px;
+	transform: rotate(270deg);
+	-o-transform: rotate(270deg);
+	-moz-transform: rotate(270deg);
+	-webkit-transform: rotate(270deg);
+
+	position: absolute;
+    left: -17px;
+    top: 14px;
+}
+
+ #star-five{
+width: 0;
+height: 0;
+color: red;
+margin: 50px 0;
+position: relative;
+display: block;
+border-left: 100px solid transparent;
+border-right: 100px solid transparent;
+border-bottom: 70px solid red;
+-moz-transform:rotate(35deg);
+-webkit-transform:rotate(35deg);
+-ms-transform:rotate(35deg);
+-o-transform:rotate(35deg);
+}
+
+#star-five:before{
+width: 0;
+height: 0;
+border-left: 30px solid transparent;
+border-right: 30px solid transparent;
+border-bottom: 80px solid red;
+position: absolute;
+top: -45px;
+left: -65px;
+color: white;
+display: block;
+content: "";
+-moz-transform:rotate(-35deg);
+-webkit-transform:rotate(-35deg);
+-ms-transform:rotate(-35deg);
+-o-transform:rotate(-35deg); 
+}
+#star-five:after{
+width: 0;
+height: 0;
+display: block;
+position: absolute;
+color: red;
+top: 3px;
+left: -105px;
+border-left: 100px solid transparent;
+border-right: 100px solid transparent;
+border-bottom: 70px solid red;
+content: "";
+-moz-transform:rotate(-70deg);
+-webkit-transform:rotate(-70deg);
+-ms-transform:rotate(-70deg);
+-o-transform:rotate(-70deg);
+}
