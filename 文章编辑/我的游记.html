@@ -1,0 +1,807 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>发表游记</title>
+    <link rel="stylesheet" href="css/weui.min.css"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta content="email=no" name="format-detection" />
+    <meta content="url=no" name="format-detection" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+    <script>var vid='24002';</script>
+<body ontouchstart class="bodyDiv">
+
+    <div class="container js_container">
+        <div class="page">
+
+            <div class="title" title="标题区域">
+                <div id="a_title" class="txtarea" contenteditable="true">我的游记</div>
+                <div class="title_other">
+                    <div  class="musicdiv" style="width:150px;float:left;overflow:hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">
+                        <span class="icon icon-music" style="color:#FFF;font-size:13px;"></span>
+                        <span class="musicName">未设置背景音乐</span>
+                    </div>
+                    <div class="delmusic" style="width:40px;float:left;height:30px;display: none">
+                        <span class="icon icon-shanchu" style="color:#FFF;font-size:13px;"></span>
+                    </div>
+                    <div style="float:right" class="mainPic">
+                        <span class="iconfont0 icon-huanyihuan" style="color:#FFF;font-size:18px;"></span>
+                    </div>
+                </div>
+                <audio loop="loop" src="" id="media" autoplay="autoplay" preload></audio>
+
+            </div>
+            <div title="正文区域" id="content"></div>
+            <div title="设置背景音乐" class="music" style="display:none;">
+                <div class="mask_div" style="overflow-y: auto;-webkit-overflow-scrolling: touch;">
+                    <div class="searchMusic">
+                        <form id="musicform" onSubmit="musicsearch();return false">
+                            <input type="search"  placeholder="输入关键字搜索在线音乐" id="music_keyword" maxlength="15">
+                            <div class="ok no" onClick="choose_music_ok(this)">选择这首作为背景音乐</div>
+                        </form>
+                    </div>
+                    <div class="KeyWord_">
+                        <div class="searchico_"></div>
+                        搜索
+                        <span id="key_word_"></span>
+                    </div>
+                    <div class="_list">
+                        <div onClick="chooseMusic(this)" class="musiclist" data-mp3="http://www.079n.com/3294136837747241.mp3" data-name="带着梦想去旅行" data-author="庄心妍">
+                            <div class="_info">
+                                <div style="width:230px;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;white-space:nowrap; height:20px;overflow:hide">带着梦想去旅行</div>
+                                <span>庄心妍</span>
+                            </div>
+                        </div>
+                        <div onClick="chooseMusic(this)" class="musiclist" data-mp3="http://m2.music.126.net/O7texJggO3TBhNzvnNszNw==/3294136837747241.mp3" data-name="夏洛特烦恼" data-author="金志文">
+                            <div class="_info">
+                                <div style="width:230px;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;white-space:nowrap; height:20px;overflow:hide">夏洛特烦恼</div>
+                                <span>金志文</span>
+                            </div>
+                        </div>
+                        <div onClick="chooseMusic(this)" class="musiclist" data-mp3="http://m2.music.126.net/BzhdRzJjliLrxJ0lJBRoyw==/7972558814853034.mp3" data-name="大梦想家" data-author="TFBOYS">
+                            <div class="_info">
+                                <div style="width:230px;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;white-space:nowrap; height:20px;overflow:hide">大梦想家</div>
+                                <span>TFBOYS</span>
+                            </div>
+                        </div>
+                        <div onClick="chooseMusic(this)" class="musiclist" data-mp3="http://m2.music.126.net/1mcydkJn4EzcruyNJGynzQ==/6044015418338974.mp3" data-name="小苹果" data-author="筷子兄弟">
+                            <div class="_info">
+                                <div style="width:230px;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;white-space:nowrap; height:20px;overflow:hide">小苹果</div>
+                                <span>筷子兄弟</span>
+                            </div>
+                        </div>
+                        <div onClick="chooseMusic(this)" class="musiclist" data-mp3="http://m2.music.126.net/Fb72WXkpMgemAG7pU2bDzw==/5940661325305096.mp3" data-name="青春修炼手册" data-author="TFBOYS">
+                            <div class="_info">
+                                <div style="width:230px;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;white-space:nowrap; height:20px;overflow:hide">青春修炼手册</div>
+                                <span>TFBOYS</span>
+                            </div>
+                        </div>
+                        <div onClick="chooseMusic(this)" class="musiclist" data-mp3="http://m2.music.126.net/j1NImdvTsx2o3DYbmpT9Lg==/7835119860630728.mp3" data-name="红豆" data-author="王菲">
+                            <div class="_info">
+                                <div style="width:230px;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;white-space:nowrap; height:20px;overflow:hide">红豆</div>
+                                <span>王菲</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div title="更换背景图片" class="changebackground" style="display:none">
+                <div class="mask_div">
+                    <dl class="img_list"></dl>
+                    <div class="btn_div" style="padding-top: 5px;clear:both;">
+                        <div class="cancle" onClick="$('.changebackground').hide();location.hash='';">更换封面图片</div>
+                    </div>
+                </div>
+            </div>
+            <script type="text" id="example_add">
+<div class="add" title="增加按钮区域">
+    <span class="iconfont0 icon-xuexi add_btn" style="color:#999;font-weight: bold;line-height:45px;font-size:18px" onclick="show_annu(this)">添加内容</span>
+    <div class="add_btn_group">
+    <div class="addico">
+        <div class="addimg_btn" onclick="add_img(this)">
+        <span class="iconfont0 icon-icon17 " style="color:#F60;" ></span><br>图片</div>
+        <div class="addtxt_btn" onclick="add_txt(this)">
+        <span class="iconfont0 icon-comiiswenzimoshi " style="font-size:20px;color:#F60;font-weight: bold;"></span><br>文字</div>
+        <div class="addlink_btn" onclick="add_link(this)"><span class="iconfont0 icon-wenzilianjie " style="color:#F60;"></span><br>链接</div>
+    </div>
+    </div>
+</div>
+</script>
+            <script type="text" id="example_img">
+<div class="newimg item" title="增加图片区域" data-type="img">
+    <img src="$IMG$" class="upload_img no_upload_img">
+    <div class="del" onclick="del(this)"></div><div class="up" onclick="up(this)"></div><div class="down" onclick="down(this)"></div>
+</div>
+</script>
+            <script type="text" id="example_text">
+<div class="newtext item" title="增加文字区域" data-type="text">
+    <p class="p" onclick="opentextdiv(this)"></p>
+    <div style="position:absolute;width:80px;height:80px;right:0;top:0;filter:alpha(opacity=10); -moz-opacity:0.1; -khtml-opacity: 0.1; opacity: 0.1; "><span class="iconfont0 icon-comiiswenzimoshi " style="color:#333;font-size:80px;line-height:80px"></span></div>
+    <div class="del" onclick="del(this)"></div><div class="up" onclick="up(this)"></div><div class="down" onclick="down(this)"></div>
+</div>
+</script>
+            <script type="text" id="example_link">
+<div class="newlink item" title="增加链接区域" data-type="link">
+    <p class="p" onclick="openlinkdiv(this)"></p>
+    <div style="position:absolute;width:80px;height:80px;right:0;top:0;filter:alpha(opacity=10); -moz-opacity:0.1; -khtml-opacity: 0.1; opacity: 0.1; "><span class="iconfont0 icon-wenzilianjie " style="color:#333;font-size:80px;line-height:80px"></span></div>
+    <div class="del" onclick="del(this)"></div><div class="up" onclick="up(this)"></div><div class="down" onclick="down(this)"></div>
+</div> 
+</script>
+            <script type="text" id="example_url_input">
+<div title="弹出链接框" class="url_input_div">
+    <div class="mask_div">
+    <div><br><input type="text" placeholder="添加网址(如：http://www.baidu.com)" id="url"></div><div><input type="text" placeholder="显示的文字(如：百度)" id="url_txt"></div>
+    <div class="btn_div">
+        <div class="cancle" onclick="cancle(this)">取消</div>
+        <div class="ok" onclick="link_ok(this)">确定</div>
+    </div>
+    </div>
+</div>
+</script>
+            <script type="text" id="example_txt_input">
+<div title="弹出文字输入框" class="txt_input_div" style="display:block">
+    <div class="mask_div">
+    <br><div class="input_txt_div" contenteditable="true"></div>
+    <div class="toolbar">
+        <dd><span ontouchstart="txt_bold(this)" class="iconfont0 icon-bold" style="font-size:20px"></span></dd>
+        <dd><span ontouchstart="txt_size(this)" class="iconfont0 icon-ziti" ></span></dd>
+        <dd><span ontouchstart="txt_align(this)" class="iconfont0 icon-center" ></span></dd>
+        <dd><span ontouchstart="txt_color(this)" class="iconfont0 icon-color" ></span></dd>
+        <div class="color_group">
+        <dt ontouchstart="changeColor(this)"><span style="color:#000">■</span></dt>
+        <dt ontouchstart="changeColor(this)"><span style="color:#808080">■</span></dt>
+        <dt ontouchstart="changeColor(this)"><span style="color:#EE2207">■</span></dt>
+        <dt ontouchstart="changeColor(this)"><span style="color:#FF8900">■</span></dt>
+        <dt ontouchstart="changeColor(this)"><span style="color:#37B549">■</span></dt>
+        <dt ontouchstart="changeColor(this)"><span style="color:#157FF7">■</span></dt>
+        <dt ontouchstart="changeColor(this)"><span style="color:#B14EBB">■</span></dt>
+        </div>
+    </div>
+    <div class="btn_div" style="padding-top: 5px">
+        <div class="cancle" onclick="cancle(this)">取消</div>
+        <div class="ok" onclick="input_txt_ok(this)">确定</div>
+    </div>
+    </div>
+</div>
+</script>
+            <script type="text" id="dialog_confirm">
+    <div class="weui_dialog_confirm" id="dialog1">
+        <div class="weui_mask"></div>
+        <div class="weui_dialog">
+            <div class="weui_dialog_hd"><strong class="weui_dialog_title">删除提醒</strong></div>
+            <div class="weui_dialog_bd">确定删除此内容吗？</div>
+            <div class="weui_dialog_ft">
+                <a href="javascript:location.hash='';$('#dialog1').remove();" class="weui_btn_dialog default">取消</a>
+                <a href="javascript:del_ok(this);" class="weui_btn_dialog primary">确定</a>
+            </div>
+        </div>
+    </div>
+</script>
+            <div class="weui_dialog_confirm" id="dialog2" style="display: none">
+                <div class="weui_mask"></div>
+                <div class="weui_dialog">
+                    <div class="weui_dialog_hd"> <strong class="weui_dialog_title">删除提醒</strong>
+                    </div>
+                    <div class="weui_dialog_bd">确定删除背景音乐吗？</div>
+                    <div class="weui_dialog_ft">
+                        <a href="javascript:$('#dialog2').hide();location.hash='';" class="weui_btn_dialog default">取消</a>
+                        <a class="weui_btn_dialog primary ok" onClick="delmusic_ok()">确定</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btn_div" style="padding-top: 25px;width:260px;">
+            <div class="cancle submit_btn" data-save="0">保存草稿</div>
+            <div class="ok submit_btn" data-save="1">确定发布</div>
+        </div>
+        <div style="height:50px"></div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jweixin-1.0.0.js"></script>
+    <script>
+
+var appid='wx25deccb89d6615cd';
+            var timestamp='1469153964';
+            var nonceStr='bmixnTE4OZG0SiD7';
+            var signature='549dea123cf72ed2039dd6684b0d4b3120780927';
+wx.config({
+    debug: false,
+    appId: appid,
+    timestamp: timestamp,
+    nonceStr: nonceStr,
+    signature: signature,
+    jsApiList: [
+        'chooseImage',
+        'previewImage',
+        'uploadImage',
+        'downloadImage',
+      ]
+  });
+var images = {
+    localId: [],
+    serverId: []
+  };
+wx.error(function(res){
+    // config信息验证失败会执行error函数，如签名过期导致验证失败，具体错误信息可以打开config的debug模式查看，也可以在返回的res参数中查看，对于SPA可以在这里更新签名。
+    location.href=location.href;
+}); 
+   var submiting = 0 ; //发布中
+
+wx.ready(function(){
+
+
+    $("#addimg").on('click',function(){
+        wx.chooseImage({
+      success: function (res) {     
+        for (var i=0; i < res.localIds.length; i++) {
+         $(".title").attr( "style","background:url('" + res.localIds[i] + "')");
+           addimg(res.localIds[i]);
+        }
+        getLocalId(); //重构images.localId
+     }
+    });
+       
+    })
+
+ // 5.3 上传图片
+  //document.querySelector('.submit_btn').onclick = 
+  $('.submit_btn').on('click', function () {
+    if(submiting == 1){return false;}
+    submiting = 1;
+    //保存草稿还是直接发布
+    var isPublic = $(this).data("save");
+
+   if ($("#a_title").text()==""){callTips("请输入标题");return false}
+       
+    if (images.localId.length > 0) {    
+    var i = 0, length = images.localId.length;
+    images.serverId = [];
+    function upload() {
+      wx.uploadImage({
+        localId: images.localId[i],
+        success: function (res) {
+          i++;
+          //alert('已上传：' + i + '/' + length);
+          images.serverId.push(res.serverId);
+          if (i < length) {
+            upload();
+          }else{fabu(isPublic);}
+        },
+        fail: function (res) {
+          alert(JSON.stringify(res));
+        }
+      });
+    }
+    upload(); }
+    if(i==length){fabu(isPublic);}
+  });
+
+
+    // config信息验证后会执行ready方法，所有接口调用都必须在config接口获得结果之后，config是一个客户端的异步操作，所以如果需要在页面加载时就调用相关接口，则须把相关接口放在ready函数中调用来确保正确执行。对于用户触发时才调用的接口，则可以直接调用，不需要放在ready函数中。
+});
+    var mainPic;
+    var musicurl;
+    var scrollTop;//当前滚动条位置
+    var searching = 0; //是否正在搜索音乐 
+
+    //获取当前位置与跳转
+    function scrollAc(e){
+    if(e==1){
+        scrollTop = window.pageYOffset|| document.documentElement.scrollTop || document.body.scrollTop; 
+        console.log(scrollTop);
+        return false;
+        }else{
+            $('html,body').animate({scrollTop:scrollTop}, 0);
+        }
+       
+    }
+    //重构images.localId:添加新图片，移动位置时都要更新
+    function getLocalId(){
+        images.localId = [] ;
+        var img = $(".no_upload_img");
+         for (var i=0; i < img.length; i++) {
+            images.localId.push( $(img[i]).attr("src") ); 
+         }
+    }
+
+//$(document).ready(function(){
+
+    var example_add = $("#example_add").html();
+    var example_img = $("#example_img").html();
+    var example_text = $("#example_text").html();
+    var example_link = $("#example_link").html();
+    var example_url_input = $("#example_url_input").html(); //弹出url层
+    var example_txt_input = $("#example_txt_input").html(); //弹出text层
+    var mainpage = location.href;
+    var mainPic = '';
+    var music_temp='';
+
+    $(window).on('hashchange', function (e) {
+        var url = location.hash.indexOf('#') === 0 ? location.hash : '#';
+        console.log(url);
+        //如果是弹出，则关闭
+        if(url=='' || url=='#'){
+        if($(".music"))$(".music").hide();
+        if($(".url_input_div"))$(".url_input_div").hide();
+        if($(".txt_input_div"))$(".txt_input_div").hide();
+        if($(".changebackground"))$(".changebackground").hide();
+        if($('#dialog1'))$('#dialog1').remove();
+        if($('#dialog2'))$('#dialog2').hide();
+        scrollAc(0);
+        return false;
+        }
+    })
+
+
+
+
+    //音乐关键字变化
+    $("#music_keyword").bind('input', function() { 
+         if($("#music_keyword").val()!=''){
+            $("#key_word_").text($("#music_keyword").val());
+            $(".KeyWord_").show();
+            $("._list").html('') ;
+         }else{$(".KeyWord_").hide();}
+    });  
+    //音乐搜索
+
+    $(".KeyWord_").on("click",function(){
+        musicsearch();return false; 
+    })
+        
+    //点击更换封面
+    $('.mainPic').on('click',  function () { 
+        var choose_img = $(".upload_img");
+        var dd_html= '';
+        for (var i=0; i < choose_img.length; i++) {
+            if($(choose_img[i]).attr("src")==mainPic){
+            dd_html += "<dd style='background:url("+ $(choose_img[i]).attr("src") +") center center no-repeat;  -webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;' data-src='"+$(choose_img[i]).attr("src")+"'><div class=border><div class='choosed'><span class='iconfont0 icon-dui' style='font-size:16px;line-height:16px;color:#FFF'></span></div></div></dd>";    
+            }else{
+            dd_html += "<dd style='background:url("+ $(choose_img[i]).attr("src") +") center center no-repeat;  -webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;' data-src='"+$(choose_img[i]).attr("src")+"' onclick='changebackground(this)'><div class=border></div></dd>";
+        }
+
+        }
+        if(choose_img.length==0){dd_html="<div style='text-align:center;color:gray;line-height:110px'>您还没有加入图片</div>";}
+        $(".img_list").html(dd_html);
+        $(".changebackground").show();
+        location.hash="#open";scrollAc(1);
+    })
+    //点击弹出音乐搜索
+    $('.musicdiv').on('click',  function () {
+        $('.music').show();
+        location.hash="#open";scrollAc(1);
+    })
+    //点击音乐开始试听播放
+     function chooseMusic(o) { 
+        $(".music .ok").removeClass("no");
+        musicurl = {audio:$(o).data("mp3"),name:$(o).data("name"),author:$(o).data("author")}; //音乐临时缓存
+         if(musicurl!=''){$(".musicName").text(musicurl.name+" "+musicurl.author); $(".delmusic").show();}
+       $('.trysong').remove();
+        $(o).append('<div class="trysong" style="color:#f60"><span class="iconfont0 icon-dui " style="font-size:18px;line-height:18px;color:#f60"></span></div>');
+        $("#media").attr("src",$(o).data("mp3"));
+    }
+    //点击音乐的确定动作
+    function choose_music_ok(o){
+        
+        //musicurl=music_temp; 
+        if(musicurl!=''){$(".musicName").text(musicurl.name+" "+musicurl.author); $(".delmusic").show();}
+        $(".music").hide(); 
+        location.hash='';
+    }
+    //删除音乐
+    $('.delmusic').on('click', function(){
+        $("#dialog2").show();
+        location.hash="#open"; scrollAc(1);
+    })
+    function delmusic_ok(){
+        $(".musicName").text("未设置背景音乐");
+        musicurl='';
+         $(".musicurl").val(musicurl);
+         $(".delmusic").hide();
+         $("#dialog2").hide();
+         location.hash="";
+         $("#media").attr("src",'');
+         callTips("背景音乐已删除");
+    }
+    //点击图片 更换mainPic
+    function changebackground(o) {
+        $('.choosed').remove();
+        $(o).append("<div class='choosed'><span class='iconfont0 icon-dui' style='font-size:16px;line-height:16px;color:#FFF'></span></div>");
+        mainPic = $(o).data("src");
+        $(".title").attr( "style","background:url('" + $(o).data("src") + "');background-size:cover");
+        //setTimeout(function () {$(".changebackground").hide();}, 500);
+    }
+    //插入第1个add按钮栏
+    $("#content").html("<div class='group_item'>"+example_add+"</div>");
+    var  jinzhi = 1;
+    //屏幕禁止滚动
+    document.addEventListener("touchmove",function(e){
+        if(jinzhi==0){
+        e.preventDefault();
+        e.stopPropagation();
+        }
+        },false);
+    //点击添加按钮，出现三个子按钮
+    function show_annu(o) {
+        $(o).hide();
+        $(o).parent().children(".add_btn_group").show();
+        menu = $(o).parent();
+    }
+    //点击添加图片框
+   function add_img(o){
+    var obj=$(o).parent().parent().parent().parent();
+    console.log(obj)
+    var imghtml='';
+     wx.chooseImage({
+      success: function (res) {     
+        for (var i=0; i < res.localIds.length; i++) {
+            if(mainPic=='' && i==0){
+                $(".title").css( "background","url('" + res.localIds[i] + "')");
+                $(".title").css( "background-size","cover");
+                mainPic=res.localIds[i]; $(".mainPic").show();
+            }
+            imghtml += "<div class='group_item'>"+example_img.replace("$IMG$", res.localIds[i])+example_add+"</div>";           
+        }
+        if(imghtml!='')obj.after(imghtml);              
+        getLocalId(); //重构images.localId
+     }
+    });
+    }
+    //点击添加文本框
+   function add_txt(o){
+    var timestamp = Date.parse(new Date()); //时间戳
+       $(o).parent().parent().parent().parent().after("<div class='group_item'>"+example_text+example_add+example_txt_input+"</div>");
+       location.hash="#open";scrollAc(1);
+
+    }
+    //点击添加链接框
+    function add_link(o){
+    var timestamp = Date.parse(new Date()); //时间戳
+       $(o).parent().parent().parent().parent().after("<div class='group_item'>"+example_link+example_add+example_url_input+"</div>");
+       location.hash="#open";scrollAc(1);
+    }    
+    //点其它地方隐藏三个子按钮
+    var menu = $('.add');
+    document.addEventListener('click',function(e) { 
+       if(!(e.target == menu[0] || $.contains(menu[0], e.target))) {
+            $(".add_btn_group").hide();
+            $(".add_btn").show();
+        }
+    });
+
+    //点击添加链接框出现输入链接框
+    function openlinkdiv(o){
+        $(o).parent().parent().children(".url_input_div").show();
+        location.hash="#open";scrollAc(1);
+        jinzhi = 0 ;
+    }
+    //链接框“取消”
+     function cancle(o){
+        $(o).parent().parent().parent().hide();
+        location.hash="";
+        jinzhi = 1 ;
+    }    
+    //链接框“确定”
+    function link_ok(o){
+        //判断条件
+        var url=$(o).parent().parent().find("#url").val().toLowerCase();
+        var url_txt=$(o).parent().parent().find("#url_txt").val();
+        var reg = /^([hH][tT]{2}[pP]:\/\/|[hH][tT]{2}[pP][sS]:\/\/)+/;   
+        if(!reg.test(url)){callTips("网址不正确");return false;}
+        if(url_txt==''){callTips("请输入文字");return false;}
+        $(o).parent().parent().parent().parent().find(".p").html("<div class='url_txt'>"+url_txt+"</div><div class='url'>"+url+"</div>");
+        $(o).parent().parent().parent().hide();
+        location.hash="";
+        jinzhi = 1 ;
+    }    
+    //点击添加文本框出现输入框
+    function opentextdiv(o){
+        $(o).parent().parent().children(".txt_input_div").show();
+        location.hash="#open";scrollAc(1);
+    }
+    //文本框“取消”
+    $(document).on('click', '.txt_input_div .cancle',function(){
+        location.hash="";scrollAc(0);
+        $(".txt_input_div").hide();
+    })    
+    //文本框“确定”
+    function input_txt_ok(o){
+        //判断条件
+        var input_txt_div=$(o).parent().parent().children(".input_txt_div").text();
+        if(input_txt_div==''){callTips("请输入文字！");return false;}
+        $(".txt_input_div").hide();
+        location.hash="";scrollAc(0);
+        var the_txt = $(o).parent().parent().parent().parent().children(".newtext").children(".p");
+        //获取样式
+        var style = $(o).parent().parent().children(".input_txt_div").attr("style");
+        the_txt.attr("style",style);
+        the_txt.html($(o).parent().parent().children(".input_txt_div").html());
+        jinzhi = 1 ;
+    }
+    //文本框工具
+  
+    function txt_bold(o){
+        var bold = $(o).css("color"); 
+        if(bold=='rgb(255, 102, 0)'){ //取消
+            $(o).css("color","rgb(131,131,131)");
+            $(o).parent().parent().parent().children('.input_txt_div').css("font-weight","normal");
+        }else{ //应用
+            $(o).css("color","rgb(255, 102, 0)");
+             $(o).parent().parent().parent().children('.input_txt_div').css("font-weight","bold");
+       }
+        }   
+    function txt_size(o){ //文字大小
+        var ziti = $(o).css("color"); 
+        if(ziti=='rgb(255, 102, 0)'){
+            $(o).css("color","rgb(131,131,131)");
+            $(o).parent().parent().parent().children('.input_txt_div').css("font-size","14px");
+       }else{
+            $(o).css("color","rgb(255, 102, 0)");
+             $(o).parent().parent().parent().children('.input_txt_div').css("font-size","16px");
+       }
+    }
+    function txt_align(o){ //文字对齐
+        var center = $(o).css("color"); 
+        if(center=='rgb(255, 102, 0)'){
+            $(o).css("color","rgb(131,131,131)");
+            $(o).parent().parent().parent().children('.input_txt_div').css("text-align","left");
+        }else{
+            $(o).css("color","rgb(255, 102, 0)");
+            $(o).parent().parent().parent().children('.input_txt_div').css("text-align","center");
+       }
+    } 
+    function txt_color(o){ //文字颜色
+        var color = $(o).css("color"); 
+        $(o).parent().parent().children(".color_group").toggle();
+    } 
+    function changeColor(o){ //选择文字颜色
+        var color = $(o).children("span").css("color"); 
+        //改变色盘的颜色
+        $(o).parent().parent().find(".icon-color").css("color",color);
+        $(o).parent().parent().parent().children('.input_txt_div').css("color",color);
+    }
+
+
+//})
+    //增加图片框
+   function addimg(thisimgval,obj){
+        var addnewstr = example_img.replace("$IMG$", thisimgval);
+       $(obj).after("<div class='group_item'>"+example_text+example_add+"</div>");
+    }
+    //音乐搜索
+    function musicsearch(){
+        $("#key_word_").text("努力搜索中……");
+        if(searching == 1){callTips("正在搜索请稍候");return false;}
+        searching = 1 ;
+        $.ajax({ 
+           type: "get",
+           async:false,
+            url: "http://s.music.163.com/search/get/", 
+            data: {
+            'type': 1,
+            's': $("#music_keyword").val(),
+            'limit': 20
+            },
+            dataType: "jsonp", 
+            success: function (data) { 
+            searching = 0; 
+            var music_="";
+            var songs = data["result"]["songs"];
+            $.each(songs, function (n, value) {
+                if(songs[n].audio!='')music_ += '<div onclick="chooseMusic(this)" class="musiclist" data-mp3="'+songs[n].audio+'" data-name="'+songs[n].name+'" data-author="'+songs[n].artists[0].name+'"><div class="_info"><div style="width:230px;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;white-space:nowrap; height:20px;overflow:hide">'+songs[n].name+'</div><span>'+songs[n].artists[0].name+'</span></div></div>';
+            })  
+             $("._list").html(music_) ; $(".KeyWord_").hide(); 
+            }, 
+            error: function (XMLHttpRequest, textStatus, errorThrown) { 
+            } 
+            });
+    }
+
+
+  var travel_id=""; //保存成功的文章 更新此id
+  function fabu(isPublic){
+
+       var title=$("#a_title").text();
+       if(title==''){title="我的游记";$("#a_title").text(title)}
+       var content=[]; 
+            var trArr = $("#content").children(".group_item").children(".item");
+            console.log(trArr.length);
+             trArr.each(function(index,n){
+                switch($(n).data("type"))
+                {
+                case "text": //文本框，获取文本内容和样式
+                  content.push({"type":"text","css":{
+                    "font-weight":$(n).children(".p").css("font-weight"),
+                    "font-size":$(n).children(".p").css("font-size"),
+                    "text-align":$(n).children(".p").css("text-align"),
+                    "color":$(n).children(".p").css("color")
+                },"text":HtmlUtil.htmlEncodeByRegExp($(n).children(".p").html())});
+                  break;
+                case "link": //链接框，获取文本内容和URL
+                  content.push({"type":"link","url_txt":$(n).children(".p").children(".url_txt").text(),"url":$(n).children(".p").children(".url").text()});
+                  break;
+                default:
+                  content.push({"type":"img","src":$(n).children(".upload_img").attr("src")});
+                }
+                
+             })
+
+         // alert(JSON.stringify(content));return false;
+           //showload("请稍等");
+           console.log(JSON.stringify(content));
+        $.ajax({
+        type: "POST",
+                 url: "/TravelUserCenter/saveyouji",
+                 data: {id:travel_id,mainPic:mainPic,music:musicurl,title:title,desc:"分享来自【友伴】",author:vid,content:JSON.stringify(content),localId:images.localId.join(","),serverId:images.serverId.join(","),news:1},
+                 dataType: "json",
+                 success: function(data){
+                             if(data['MSG']=="SUCC"){
+                                submiting=0;
+                                
+                                travel_id=data['INFO'];
+                                //alert(data['INFO']+"__"+images.localId.length);
+                                var img = $(".no_upload_img");
+                                // //替换已成功上传的图片
+                                for (var i=0;i<img.length;i++){
+                                 //改变封面
+                                 if( mainPic==$(img[i]).attr("src") ){
+                                    
+                                    $(".title").attr("style","background:url(/upload/users/"+vid+"/"+images.serverId[i]+".jpg);background-size:cover"); 
+                                    mainPic = "/upload/users/"+vid+"/"+images.serverId[i]+".jpg";
+                                   }
+                                 $(img[i]).attr("src","/upload/users/"+vid+"/"+images.serverId[i]+".jpg");
+                                 $(img[i]).removeClass("no_upload_img");
+                                 }
+
+                                images.localId=[];
+                                images.serverId=[];
+                                //history.back();
+                               if(isPublic==1)
+                                { //如果点发布就跳转
+                                location.href='/article/travel1/id/'+data['INFO'];
+                                }else{
+                                    callTips("保存成功");
+                                }
+                            }
+                 },
+                error: function(xhr, type){
+                    submiting = 0;
+                    //alert(type)
+                }
+        }) }
+
+function del(obj) {
+var dialog_confirm = $("#dialog_confirm").html();
+var objParentTR = $(obj).parent().parent();
+objParentTR.append(dialog_confirm); location.hash='#open';scrollAc(1);
+}
+function del_ok(obj){
+    var src = "";
+    if($('#dialog1').parent().find(".upload_img"))
+    { //如果删除图片区域
+    src = $('#dialog1').parent().find(".upload_img").attr("src");
+     //如果是封面
+    if($(".title").css("background").indexOf(src)>0)$(".title").css( "background",'#FFF');
+
+    $('#dialog1').parent().remove(); location.hash='';
+    getLocalId(); //重构images.localId
+}
+}
+function up(obj) {
+var objParentTR = $(obj).parent().parent();
+var prevTR = objParentTR.prev();
+if (prevTR.length > 0) {
+prevTR.insertAfter(objParentTR);
+$("html,body").animate({scrollTop:objParentTR.offset().top-10},1000);//1000是ms,
+getLocalId(); //重构images.localId
+} else {
+return;
+}
+}
+function down(obj) {
+var objParentTR = $(obj).parent().parent();
+;
+var nextTR = objParentTR.next();
+if (nextTR.length > 0) {
+nextTR.insertBefore(objParentTR);
+$("html,body").animate({scrollTop:objParentTR.offset().top-10},1000);//1000是ms,
+getLocalId(); //重构images.localId
+} else {
+return;
+}
+}
+function callTips(txt){
+    $(document.body).append('<style>.new_tips{z-index:301;position:fixed;width:150px;border-radius:30px;line-height:40px;margin:0 auto;left:0;right:0;bottom:100px; background-color: rgba(0,0,0,0.7); color:#FFF;text-align:center;font-size:18px}</style><div class="new_tips">'+txt+'</div>');setTimeout(function () {$('.new_tips').remove();}, 2000);
+}
+var HtmlUtil = {
+    /*1.用正则表达式实现html转码*/
+    htmlEncodeByRegExp:function (str){  
+         var s = "";
+         if(str.length == 0) return "";
+         s = str.replace(/&/g,"&amp;");
+         s = s.replace(/</g,"&lt;");
+         s = s.replace(/>/g,"&gt;");
+         //s = s.replace(/ /g,"&nbsp;");
+         s = s.replace(/\'/g,"&#39;");
+         s = s.replace(/\"/g,"&quot;");
+         return s;  
+   },
+   /*2.用正则表达式实现html解码*/
+   htmlDecodeByRegExp:function (str){  
+         var s = "";
+         if(str.length == 0) return "";
+         s = str.replace(/&amp;/g,"&");
+         s = s.replace(/&lt;/g,"<");
+         s = s.replace(/&gt;/g,">");
+         s = s.replace(/&nbsp;/g," ");
+         s = s.replace(/&#39;/g,"\'");
+         s = s.replace(/&quot;/g,"\"");
+         return s;  
+   }
+};
+//编辑
+$(document).ready(function(){
+    var getMusic = eval("");
+    var title_= '我的游记';
+    var mainPic_= '/upload/users/24002/HJwz-zXiJ-73P2cwR46Vh9-36O2GLPy4WogWx2haDnmm7AnXHl_7mNnMkNzAY7aQ.jpg';
+    var content_ = eval([{"type":"img","src":"/upload/users/24002/HJwz-zXiJ-73P2cwR46Vh9-36O2GLPy4WogWx2haDnmm7AnXHl_7mNnMkNzAY7aQ.jpg"},{"type":"text","css":{"font-weight":"400","font-size":"14px","text-align":"start","color":"rgb(238, 34, 7)"},"text":"哥们儿说的是我最爱你爱的那个我爱你爱的"},{"type":"link","url_txt":"帅中的第十","url":"http://mp.weixin.qq.com/s?__biz=mza5ntc3mjc2oa==&mid=2653952084&idx=1&sn=6be7da77b3ba2376947ed0835465e07a&scene=0#wechat_redirect"}]);
+    travel_id = '1858'; //ID
+    if(getMusic){ //音乐
+         musicurl = {audio:getMusic.audio,name:getMusic.name,author:getMusic.author}; 
+         if(musicurl!=''){$(".musicName").text(getMusic.name+" "+getMusic.author); $(".delmusic").show();}
+         $("#media").attr("src",getMusic.audio);
+    }
+    if(title_){ //标题
+        $('#a_title').text(title_);
+    }
+   if(mainPic_){ //封面
+        mainPic = mainPic_ ;
+        $(".title").css( "background","url('" + mainPic_ + "')");
+        $(".title").css( "background-size","cover");
+        $(".mainPic").show();
+    }
+    if(content_){ //正文
+        $.each(content_, function (n, value) {
+        switch(value.type)
+        {
+        case "img":
+        var addnewstr = example_img.replace("$IMG$", value.src);
+            addnewstr = addnewstr.replace('no_upload_img','');
+            $("#content").append("<div class='group_item'>"+addnewstr+example_add+"</div>");
+           break;
+        case "text":
+        var addnewstr = example_text.replace('<p class="p" onclick="opentextdiv(this)"></p>', '<p class="p" onclick="opentextdiv(this)" style="color:'+value.css.color+';font-size:'+value.css['font-size'] +';font-weight: '+value.css['font-weight'] +';text-align: '+value.css['text-align'] +'">'+HtmlUtil.htmlDecodeByRegExp(value.text)+'</p>'); 
+        var addnewstr2 = example_txt_input.replace('<div class="input_txt_div" contenteditable="true"></div>','<div class="input_txt_div" contenteditable="true" style="color:'+value.css.color+';font-size:'+value.css['font-size'] +';font-weight: '+value.css['font-weight'] +';text-align: '+value.css['text-align'] +'">'+HtmlUtil.htmlDecodeByRegExp(value.text)+'</div>');
+        addnewstr2 = addnewstr2.replace('style="display:block"','style="display:none"');
+        if(value.css['font-weight']=='bold')addnewstr2 = addnewstr2.replace('font-size:20px','font-size:20px;color:rgb(255, 102, 0)');
+        if(value.css['font-size']=='16px')addnewstr2 = addnewstr2.replace('class="iconfont0 icon-ziti"','class="iconfont0 icon-ziti" style="color:rgb(255, 102, 0);');
+        if(value.css.color!='rgb(68, 68, 68)')
+            {addnewstr2 = addnewstr2.replace('class="iconfont0 icon-color"','class="iconfont0 icon-color" style="color:'+value.css.color+'"');
+            addnewstr2 = addnewstr2.replace('class="color_group"','class="color_group" style="display:block"');
+            }
+        if(value.css['text-align']=='center')addnewstr2 = addnewstr2.replace('class="iconfont0 icon-center"','class="iconfont0 icon-center" style="color:rgb(255, 102, 0);"');
+        $("#content").append("<div class='group_item'>"+addnewstr+example_add+addnewstr2+"</div>")
+           break; 
+        case "link":
+        var addnewstr = example_link.replace('onclick="openlinkdiv(this)">', 'onclick="openlinkdiv(this)"><span class="url_txt">'+value.url_txt+'</span><br><span class="url">'+value.url+'</span>');
+        var addnewstr2 = example_url_input.replace('id="url"','id="url" value="'+value.url+'"');
+            addnewstr2 = addnewstr2.replace('id="url_txt"','id="url_txt" value="'+value.url_txt+'"');
+            addnewstr2 = addnewstr2.replace('class="url_input_div"','class="url_input_div" style="display:none"');
+        $("#content").append("<div class='group_item'>"+addnewstr+example_add+addnewstr2+"</div>");
+        }
+        })
+        images.localId=[];
+        images.serverId=[];
+    }
+
+    })
+  </script>
+
+</body>
+</html>

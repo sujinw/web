@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="description" content="不超过150个字符"/>
+    <meta name="keywords" content=""/>
+    <meta name="author" content="slade, sujinw@qq.com"/>
+    <!-- 为移动设备添加 viewport -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no" />
+    <!-- `width=device-width` 会导致 iPhone 5 添加到主屏后以 WebApp 全屏模式打开页面时出现黑边 http://bigc.at/ios-webapp-viewport-meta.orz -->
+
+    <!-- iOS 设备 begin -->
+    <meta name="apple-mobile-web-app-title" content="标题" />
+    <!-- 添加到主屏后的标题（iOS 6 新增） -->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <!-- 是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏 -->
+
+    <meta name="apple-itunes-app" content="app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL" />
+    <!-- 添加智能 App 广告条 Smart App Banner（iOS 6+ Safari） -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <!-- 设置苹果工具栏颜色 -->
+    <meta name="format-detection" content="telphone=no, email=no"/>
+    <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+    <!-- 启用360浏览器的极速模式(webkit) -->
+    <meta name="renderer" content="webkit" />
+    <!-- 避免IE使用兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>编辑文章</title>
+    <link rel="stylesheet" href="css/common.css?v=3.1.3">
+    <link rel="stylesheet" type="text/css" href="css/weui.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="css/miniEditor.css?v=3.1.3">
+    <style type="text/css">
+        .m-zdbg{
+              display: none;
+              width: 100%;
+              position: fixed;
+              left: 0;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              background: rgba(0,0,0,0.1);
+              z-index: 110;
+              overflow: hidden;
+            }
+        .active1{
+          display: block;
+        }
+        .group_item .icon{color:#fff;}
+    </style>
+    </head>
+<body style="overflow-y:scroll;">
+    <div class="warrp">
+        <!-- 编辑文章标题  -->
+        <div class="edit-title">
+            <div class="title-background">
+                <div class="textarea" contenteditable='true'>编辑文章标题文章标题文章标题文章标题</div>
+                <div class="changebackground">
+                    <span class="icon icon-tupian" style="margin-right:10px"></span>
+                    更改背景
+                </div>
+            </div>
+            <div class="title-music">
+                <div class="music-btn">
+                    <span class="icon icon-music" style="margin-right: 10px"></span>
+                    未设置背景音乐
+                </div>
+                <div class="delmusic" style="width:40px;float:left;height:30px;display: none">
+                    <span class="icon icon-shanchu" style="color:#FFF;font-size:13px;"></span>
+                </div>
+                <div style="float:right" class="mainPic">
+                    <span class="iconfont0 icon-huanyihuan" style="color:#FFF;font-size:18px;"></span>
+                </div>
+                <audio loop="loop" src id="media" autoplay="preload"></audio>
+            </div>
+        </div>
+
+        <!-- 编辑文章内容 -->
+        <div class="edit-content" id="cont"></div>
+
+        <!-- 发布和保存 -->
+        <div class="edit-footer">
+            <div class="btn_div" style="padding-top: 25px;width:260px;">
+            <div class="cancle submit_btn weui_btn_plain_primary" data-save="0">保存草稿</div>
+            <div class="ok submit_btn weui_btn_plain_primary" data-save="1">确定发布</div>
+        </div>
+        <div style="height:50px"></div>
+        </div>
+        <div class="template">
+<script type="text" id="example_add">
+    <div class="add" title="增加按钮区域">
+        <span class="icon icon-add add_btn" style="color:#ddd;font-weight: bold;line-height:45px;font-size:18px" onclick="show_annu(this)">添加内容</span>
+    <div class="add_btn_group">
+    <div class="addico">
+        <div class="addimg_btn" onclick="add_img(this)">
+            <span class="icon icon-tupian " style="color:#04BE02;" ></span><br>图片</div>
+        <div class="addtxt_btn" onclick="add_txt(this)">
+            <span class="icon icon-wenzi14 " style="font-size:20px;color:#04BE02;font-weight: bold;"></span><br>文字</div>
+        <div class="addlink_btn" onclick="add_link(this)"><span class="icon icon-lianjie " style="color:#04BE02;"></span><br>链接</div>
+    </div>
+</div>
+</div>
+</script>
+<script type="text" id="example_img">
+    <div class="newimg item" title="增加图片区域" data-type="img">
+        <img src="$IMG$" class="upload_img no_upload_img">
+        <div class="del" onclick="del(this)"><span class='icon icon-shanchu' style="display:inline-block;width:100%;height:100%;line-height:70%;text-align:center;"></span></div><div class="up" onclick="up(this)"><span class='icon icon-shangyi' style="display:inline-block;width:100%;height:100%;line-height:70%;text-align:center;"></span></div><div class="down" onclick="down(this)"><span class='icon icon-shangyi' style="display:inline-block;width:100%;height:50%;line-height:70%;text-align:center; transform:rotate(180deg);-webkit-transform:rotate(180deg)"></span></div>
+    </div>
+</script>
+<script type="text" id="example_text">
+    <div class="newtext item" title="增加文字区域" data-type="text">
+        <p class="p" onclick="opentextdiv(this)" style='$textStyle$'>$text$</p>
+    <div style="position:absolute;width:80px;height:80px;right:0;top:0;filter:alpha(opacity=10); -moz-opacity:0.1; -khtml-opacity: 0.1; opacity: 0.1; "><span class="iconfont0 icon-comiiswenzimoshi " style="color:#333;font-size:80px;line-height:80px"></span></div>
+    <div class="del" onclick="del(this)"><span class='icon icon-shanchu' style="display:inline-block;width:100%;height:100%;line-height:70%;text-align:center;"></span></div><div class="up" onclick="up(this)"><span class='icon icon-shangyi' style="display:inline-block;width:100%;height:100%;line-height:70%;text-align:center;"></span></div><div class="down" onclick="down(this)"><span class='icon icon-shangyi' style="display:inline-block;width:100%;height:50%;line-height:70%;text-align:center; transform:rotate(180deg);-webkit-transform:rotate(180deg)"></span></div>
+    </div>
+</script>
+<script type="text" id="example_link">
+    <div class="newlink item" title="增加链接区域" data-type="link">
+        <p class="p" onclick="openlinkdiv(this)"></p>
+        <div style="position:absolute;width:80px;height:80px;right:0;top:0;filter:alpha(opacity=10); -moz-opacity:0.1; -khtml-opacity: 0.1; opacity: 0.1; "><span class="iconfont0 icon-wenzilianjie " style="color:#333;font-size:80px;line-height:80px"></span></div>
+        <div class="del" onclick="del(this)"><span class='icon icon-shanchu' style="display:inline-block;width:100%;height:100%;line-height:70%;text-align:center;"></span></div><div class="up" onclick="up(this)"><span class='icon icon-shangyi' style="display:inline-block;width:100%;height:100%;line-height:70%;text-align:center;"></span></div><div class="down" onclick="down(this)"><span class='icon icon-shangyi' style="display:inline-block;width:100%;height:50%;line-height:70%;text-align:center; transform:rotate(180deg);-webkit-transform:rotate(180deg)"></span></div>
+    </div> 
+</script>
+<script type="text" id="example_url_input">
+    <div title="弹出链接框" class="url_input_div">
+        <div class="mask_div">
+            <div><br><input type="text" placeholder="添加网址(如：http://www.baidu.com)" id="url"></div><div><input type="text" placeholder="显示的文字(如：百度)" id="url_txt"></div>
+            <div class="btn_div">
+                <div class="cancle" onclick="cancle(this)">取消</div>
+                <div class="ok" onclick="link_ok(this)">确定</div>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script type="text" id="dialog_confirm">
+    <div class="weui_dialog_confirm" id="dialog1">
+        <div class="weui_mask"></div>
+        <div class="weui_dialog">
+            <div class="weui_dialog_hd"><strong class="weui_dialog_title">删除提醒</strong></div>
+            <div class="weui_dialog_bd">确定删除此内容吗？</div>
+            <div class="weui_dialog_ft">
+                <a href="javascript:location.hash='';$('#dialog1').remove();" class="weui_btn_dialog default">取消</a>
+                <a href="javascript:del_ok(this);" class="weui_btn_dialog primary">确定</a>
+            </div>
+        </div>
+    </div>
+</script>
+</div>
+</div>
+<div id="uploadImg" style="display:none">
+    <div class="upload-title">插入图片</div>
+    <div class="preview-img">
+        <div class="photo" id="getfile">
+            <span class="icon icon-add" style='font-size: 110px;'></span>
+            <img src="" alt='' id="img" />
+            <input type="file" id="file" />
+        </div>
+        <div class="photo-txt">注：每次只能添加一张图片</div>
+    </div>
+    <div class="preview-btn">
+        <input type="hidden" value="" id="img-id" />
+        <a href="javascript:;" onclick='imgSub(this)'>确定</a>
+        <a href="javascript:;">取消</a>
+    </div>
+</div>
+<!-- //编辑器 -->    
+<div id='text-input' style="position: fixed; top: 0; left: 0; bottom: 0; right: 0; background: #333; display:none;">
+    <header class="m-topbarbox" id="m-topbarbox">
+        <div class="m-topbar">
+            <div class="m-tlebox">
+                <h1>
+                    <span>文字编辑</span>
+                </h1>
+            </div>
+        </div>
+    </header>
+    <div class="m-pagecont">
+        <div class="txtEdit">
+            <h1>文本编辑已支持段落，用户可使用回车，空格来调整</h1>
+        </div>
+        <div class="txtEditBox-menu fixed">
+            <ul>
+                <li class="bold">
+                    <a href="#"></a>
+                </li>
+                <li class="tilt">
+                    <a href="#"></a>
+                </li>
+                <li class="increase">
+                    <a href="#"></a>
+                </li>
+                <li class="reduce">
+                    <a href="#"></a>
+                </li>
+                <!-- 文字颜色 -->    
+                <li class="fontColor">
+                    <a href="#"></a>
+                    <s style="background-color:rgb(0,0,0);"></s>
+                    <i style="display: none;"><b></b></i> 
+                    <div class="pop-fontColor" style="display: none;">
+                        <span class="bg1"></span>
+                        <span class="bg2"></span>
+                        <span class="bg3"></span>
+                        <span class="bg4"></span>
+                        <span class="bg5"></span>
+                        <span class="bg6"></span>
+                        <span class="bg7"></span>
+                        <span class="bg8"></span>
+                        <span class="bg9"></span>
+                        <span class="bg10"></span>
+                        <span class="bg11"></span>
+                        <span class="bg12"></span>
+                        <span class="bg13"></span>
+                        <span class="bg14"></span>
+                        <span class="bg15"></span>
+                        <span class="bg16"></span>
+                        <span class="bg17"></span>
+                        <span class="bg18"></span>
+                        <span class="bg19"></span>
+                        <span class="bg20"></span>
+                        <span class="bg21"></span>
+                        <span class="bg22"></span>
+                        <span class="bg23"></span>
+                        <span class="bg24"></span>
+                        <span class="bg25"></span>
+                        <span class="bg26"></span>
+                        <span class="bg27"></span>
+                        <span class="bg28"></span>
+                        <span class="bg29"></span>
+                        <span class="bg30"></span>
+                    </div>
+                </li>
+                <!-- 文字居中 -->    
+                <li class="alignL" id="align">
+                    <a href="#"></a>
+                    <i style="display: none;"><b></b></i> 
+                    <div class="pop-align" style="display: none;">
+                        <ul>
+                            <li class="alignL" id="alignL"></li>
+                            <li class="alignC" id="alignC"></li>
+                            <li class="alignR" id="alignR"></li>
+                        </ul>
+                    </div>
+                </li>
+                <!-- 边框 -->    
+                <li class="jamb">
+                    <a href="#" style="background-color:rgba(255,255,255,0);"></a>
+                    <i style="display: inline;">
+                        <b></b>
+                    </i>
+                </li>
+                <!-- 背景颜色 -->    
+                <li class="bgColor">
+                    <a href="#"></a>
+                    <i style="display: none;">
+                        <b></b>
+                    </i>
+                    <div class="pop-bgColor" style="display: none;">
+                        <span class="bg1"></span>
+                        <span class="bg2"></span>
+                        <span class="bg3"></span>
+                        <span class="bg4"></span>
+                        <span class="bg5"></span>
+                        <span class="bg6"></span>
+                        <span class="bg7"></span>
+                        <span class="bg8"></span>
+                        <span class="bg9"></span>
+                        <span class="bg10"></span>
+                        <span class="bg11"></span>
+                        <span class="bg12"></span>
+                        <span class="bg13"></span>
+                        <span class="bg14"></span>
+                        <span class="bg15"></span>
+                        <span class="bg16"></span>
+                        <span class="bg17"></span>
+                        <span class="bg18"></span>
+                        <span class="bg19"></span>
+                        <span class="bg20"></span>
+                        <span class="bg21"></span>
+                        <span class="bg22"></span>
+                        <span class="bg23"></span>
+                        <span class="bg24"></span>
+                        <span class="bg25"></span>
+                        <span class="bg26"></span>
+                        <span class="bg27"></span>
+                        <span class="bg28"></span>
+                        <span class="bg29"></span>
+                        <span class="bg30"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="txtEditBox">
+            <div class="m-zdbg"></div>
+            <!-- 边框样式 -->    
+            <div class="pop-borderEdit" style="display: none;">
+                <div class="boderEdit">
+                    <ul class="focus fixed" id="boderEdit">
+                        <li class="none" date-bdindex="0">无</li>
+                        <li class="solid" date-bdindex="1"></li>
+                        <li class="dashed" date-bdindex="2"></li>
+                        <li class="dotted" date-bdindex="3"></li>
+                        <li class="bdStyle4" date-bdindex="8"></li>
+                        <li class="bdStyle5" date-bdindex="9"></li>
+                        <li class="bdStyle6" date-bdindex="10"></li>
+                        <li class="bdStyle7" date-bdindex="11"></li>
+                        <li class="bdStyle8" date-bdindex="12"></li>
+                        <li class="bdStyle9" date-bdindex="13"></li>
+                        <li class="bdStyle10" date-bdindex="14"></li>
+                        <li class="bdStyle11" date-bdindex="15"></li>
+                        <li class="bdStyle12" date-bdindex="16"></li>
+                        <li class="bdStyle13" date-bdindex="17"></li>
+                        <li class="bdStyle14" date-bdindex="18"></li>
+                    </ul>
+                </div>
+                <div class="bordCorlor" style="">
+                    <ul class="slide fixed" id="bordCorlor">
+                        <li class="bg1"></li>
+                        <li class="bg2"></li>
+                        <li class="bg3"></li>
+                        <li class="bg4"></li>
+                        <li class="bg5"></li>
+                        <li class="bg6"></li>
+                        <li class="bg7"></li>
+                        <li class="bg8"></li>
+                        <li class="bg9"></li>
+                        <li class="bg10"></li>
+                        <li class="bg11"></li>
+                        <li class="bg12"></li>
+                        <li class="bg13"></li>
+                        <li class="bg14"></li>
+                        <li class="bg15"></li>
+                        <li class="bg16"></li>
+                        <li class="bg17"></li>
+                        <li class="bg18"></li>
+                        <li class="bg19"></li>
+                        <li class="bg20"></li>
+                        <li class="bg21"></li>
+                        <li class="bg22"></li>
+                        <li class="bg23"></li>
+                        <li class="bg24"></li>
+                        <li class="bg25"></li>
+                        <li class="bg26"></li>
+                        <li class="bg27"></li>
+                        <li class="bg28"></li>
+                        <li class="bg29"></li>
+                        <li class="bg30"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="txtEditBox-cnt">
+                <textarea class="EditResult" style="font-weight:400;font-style:normal;font-size:1.6rem;color:rgb(0,0,0);text-align:left;background-color:rgb(255,255,255);border-style:solid;border-width:1px;padding: 10px;border-color:rgb(0,0,0);line-height:180%;" id="EditResult" placeholder="这里输入文本"></textarea>
+            </div>
+        </div>
+        <div class="btn_div" style="padding-top: 5px;position: absolute; bottom: 70px; left: 50%; margin-left: -100px;">
+            <input type="hidden" value='0' id="state" />
+            <div class="cancle" onclick="cancle(this)">取消</div>
+            <div class="ok" onclick="input_txt_ok(this)">确定</div>
+        </div>
+        <input type="hidden" value="" id="bold">    
+        <input type="hidden" value="" id="italic">    
+        <input type="hidden" value="" id="fontsize">    
+        <input type="hidden" value="" id="fontscolor">    
+        <input type="hidden" value="" id="position">    
+        <input type="hidden" value="" id="border">    
+        <input type="hidden" value="" id="bordercolor">    
+        <input type="hidden" value="" id="backgroundcolor"></div>
+    <div class="ui-toast" id="j-toast-default">
+        <div class="toast-cont">默认的Toast通知</div>
+    </div>
+</div>
+<script src="js/zepto.min.js"></script>
+<script src="js/noticeJs.js"></script>
+<script type="text/javascript" src="js/miniEditor.js?v=3.1.3"></script>
+
+<script type="text/javascript">
+$().ready(function(){
+   var example_add = $("#example_add").html();
+   $("<div>"+example_add+"</div>").appendTo("#cont") 
+});
+var example_add = $("#example_add").html();
+var example_img = $("#example_img").html();
+var example_text = $("#example_text").html();
+var example_link = $("#example_link").html();
+var example_url_input = $("#example_url_input").html(); //弹出url层
+var example_txt_input = $("#example_txt_input").html(); //弹出text层
+var mainpage = location.href;
+var mainPic = '';
+var music_temp='';
+var images = {
+    localId: [],
+    serverId: []
+  };
+//重构images.localId:添加新图片，移动位置时都要更新
+function getLocalId(){
+    images.localId = [] ;
+    var img = $(".no_upload_img");
+     for (var i=0; i < img.length; i++) {
+        images.localId.push( $(img[i]).attr("src") ); 
+     }
+}
+function callTips(txt){
+    $(document.body).append('<style>.new_tips{z-index:301;position:fixed;width:150px;border-radius:30px;line-height:40px;margin:0 auto;left:0;right:0;bottom:100px; background-color: rgba(0,0,0,0.7); color:#FFF;text-align:center;font-size:18px}</style><div class="new_tips">'+txt+'</div>');setTimeout(function () {$('.new_tips').remove();}, 2000);
+}
+function del(obj) {
+    var dialog_confirm = $("#dialog_confirm").html();
+    var objParentTR = $(obj).parent().parent();
+    objParentTR.append(dialog_confirm); location.hash='#open';scrollAc(1);
+}
+function del_ok(obj){
+    var src = "";
+    if($('#dialog1').parent().find(".upload_img")){ //如果删除图片区域
+        src = $('#dialog1').parent().find(".upload_img").attr("src");
+     //如果是封面
+        if($(".title").css("background").indexOf(src)>0)$(".title").css( "background",'#FFF');
+
+        $('#dialog1').parent().remove(); location.hash='';
+        getLocalId(); //重构images.localId
+    }
+}
+function up(obj) {
+    var objParentTR = $(obj).parent().parent();
+    var prevTR = objParentTR.prev();
+    if (prevTR.length > 0) {
+        prevTR.insertAfter(objParentTR);
+        $("html,body").animate({scrollTop:objParentTR.offset().top-10},1000);//1000是ms,
+        getLocalId(); //重构images.localId
+    } else {
+        return;
+    }
+}
+function down(obj) {
+    var objParentTR = $(obj).parent().parent();
+    var nextTR = objParentTR.next();
+    if (nextTR.length > 0) {
+        nextTR.insertBefore(objParentTR);
+        $("html,body").animate({scrollTop:objParentTR.offset().top-10},1000);//1000是ms,
+        getLocalId(); //重构images.localId
+    } else {
+        return;
+    }
+}
+//点击添加按钮，出现三个子按钮
+function show_annu(o) {
+    $(o).hide();
+    $(o).parent().children(".add_btn_group").show();
+    menu = $(o).parent();
+}
+//点击添加图片框
+function add_img(o){
+    $("#img").attr('src','');//清空圖片標籤的src
+   $("#uploadImg").show();//打開上傳遮罩
+}
+//获取图片
+if ( typeof(FileReader) === 'undefined' ){ 
+
+    $('.photo-txt').html("抱歉，你的浏览器不支持 FileReader，请使用现代浏览器操作！"); 
+    $("#file").attr( 'disabled','disabled' ); 
+
+} else { 
+    $("#file").on( 'change',readFile );
+}
+
+//添加图片界面确定按钮
+function imgSub(o){
+    var imgPath = $('#img').attr('src');
+    var obj=$("#cont");
+    console.log(obj)
+    var imghtml = example_img;
+    // console.log(imgPath)
+    if(imgPath == '' || imgPath == null || imgPath=='undefined')
+        alert('没有选择图片！');
+
+    var html = imghtml.replace("$IMG$", imgPath);
+    var str  = "<div class='group_item'>"+ html+example_add +"</div>";
+    if(imghtml!='')$(str).appendTo(obj);              
+        getLocalId(); //重构images.localId
+
+    $('#uploadImg').hide(200)
+}
+//========================================================
+ //点击添加文本框
+function add_txt(o){
+    //$(o).parent().parent().parent().parent().after("<div class='group_item'>"+example_text+example_add+"</div>");
+    $("#EditResult").val('').attr('style','font-weight:400;font-style:normal;font-size:1.6rem;color:rgb(0,0,0);text-align:left;background-color:rgb(255,255,255);border-style:solid;border-width:1px;padding: 10px;border-color:rgb(0,0,0);line-height:180%;');
+    $("#text-input").show();
+
+}
+//点击添加文本框出现输入框
+function opentextdiv(o){
+    console.log(o)
+    var text = $(o).text();
+    var style = $(o).attr('style');
+    $("#EditResult").html(text).attr('style','font-weight:400;font-style:normal;font-size:1.6rem;color:rgb(0,0,0);text-align:left;background-color:rgb(255,255,255);border-style:solid;border-width:1px;padding: 10px;border-color:rgb(0,0,0);line-height:180%;'+style);
+    $("#state").val(1).attr("myObj",o);
+    $("#text-input").show();
+    location.hash="#open";
+}
+ //文本框“确定”
+function input_txt_ok(){
+    var state = $('#state').val()*1 || 0;
+    //判断条件
+    var input_txt_div=$('#EditResult').val();
+    if(input_txt_div==''){callTips("请输入文字！");return false;}
+    $(".text-input").hide();
+    location.hash="";
+    //获取样式
+    var style = $("#EditResult").attr("style");
+    var html = example_text.replace("$text$", input_txt_div);
+    var res = html.replace("$textStyle$", style);
+    if(state == 0){
+        $("#cont").append("<div class='group_item'>"+res+example_add+"</div>");
+        $("#text-input").hide(300);
+    }else{
+        console.log($('#state').attr("myobj"))
+    }
+}
+//=============================================================================
+//点击添加链接框
+function add_link(o){
+    var timestamp = Date.parse(new Date()); //时间戳
+    $(o).parent().parent().parent().parent().after("<div class='group_item'>"+example_link+example_add+example_url_input+"</div>");
+    location.hash="#open";
+}    
+//点其它地方隐藏三个子按钮
+var menu = $('.add');
+document.addEventListener('click',function(e) { 
+   if(!(e.target == menu[0] || $.contains(menu[0], e.target))) {
+        $(".add_btn_group").hide();
+        $(".add_btn").show();
+    }
+});
+
+//点击添加链接框出现输入链接框
+function openlinkdiv(o){
+    $(o).parent().parent().children(".url_input_div").show();
+    location.hash="#open";scrollAc(1);
+    jinzhi = 0 ;
+}
+//链接框“取消”
+ function cancle(o){
+    $(o).parent().parent().parent().hide();
+    location.hash="";
+    jinzhi = 1 ;
+}    
+//链接框“确定”
+function link_ok(o){
+    //判断条件
+    var url=$(o).parent().parent().find("#url").val().toLowerCase();
+    var url_txt=$(o).parent().parent().find("#url_txt").val();
+    var reg = /^([hH][tT]{2}[pP]:\/\/|[hH][tT]{2}[pP][sS]:\/\/)+/;   
+    if(!reg.test(url)){callTips("网址不正确");return false;}
+    if(url_txt==''){callTips("请输入文字");return false;}
+    $(o).parent().parent().parent().parent().find(".p").html("<div class='url_txt'>"+url_txt+"</div><div class='url'>"+url+"</div>");
+    $(o).parent().parent().parent().hide();
+    location.hash="";
+    jinzhi = 1 ;
+}    
+function readFile(){ 
+    var file = this.files[0]; 
+    //这里判断下类型如果不是图片就返回 去掉就可以上传任意文件 
+    if(!/image\/\w+/.test(file.type)){ 
+        alert("请确保文件为图像类型"); 
+        return false; 
+    } 
+    var reader = new FileReader(); 
+    reader.readAsDataURL(file); 
+    reader.onload = function(e){ 
+        $('#img').attr('src',this.result); 
+    } 
+} 
+</script>
+<!-- mimeditor -->
+<script type="text/javascript">
+    function IsPC() {   //判断是否是PC
+        var userAgentInfo = navigator.userAgent;
+        var Agents = ["Android", "iPhone","SymbianOS", "Windows Phone", "iPad", "iPod"];
+        var flag = true;
+        for (var v = 0; v < Agents.length; v++) {
+            if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                flag = false;
+                break;
+            }
+        }
+        return flag;
+    }
+    var start = "mousedown";
+    var move = "mousemove";
+    var end = "mouseup";
+    var click = "click";
+    if(IsPC()){
+        start = "mousedown";
+        move = "mousemove";
+        end = "mouseup";
+    }else{
+        start = "touchstart";
+        move = "touchmove";
+        end = "touchend";
+    }
+</script>
+<script type="text/javascript">
+        var x = 0;
+        var touche;
+        var focus = $('.focus');
+        var cwz=0;
+        var num=$(".boderEdit li").length;
+        var wd=num*40+(num-1)*20-40;
+        var mouseleft1 = false;
+        $('.boderEdit').on(end,function(){
+            mouseleft1 = false;
+        })
+        $('.boderEdit').on(start,function(){
+            if(IsPC()){
+                touche = event;
+                mouseleft1 = true;
+            }else{
+                touche = event.touches[0];
+                mouseleft1 = true;
+            }
+            x=touche.clientX;
+            cwz = focus.attr('offsetLeft');
+        });
+        $('.boderEdit').on(move,function(){
+            if(IsPC()){
+                touche = event;
+            }else{
+                touche = event.touches[0];
+            }
+            var curLeft=cwz+touche.clientX-x;
+            if(touche.clientX-x<0 && mouseleft1){
+                //右移动
+                if(curLeft>-wd){
+                    $('.focus').attr('style','position: absolute;left:'+(cwz+touche.clientX-x)+'px');
+                }else{
+                    console.info("最右边");
+                }
+            }else if(touche.clientX-x>0  && mouseleft1){
+                if(curLeft<10 && curLeft>-wd){
+                    $('.focus').attr('style','position: absolute;left:'+(cwz+touche.clientX-x)+'px');
+                }else{
+                    console.info("最左边");
+                    $('.focus').attr('style','position: absolute;left:7px');
+                    return 0;
+                }
+
+            }
+            event.preventDefault();
+        });
+
+        var s = 0;
+        var stouche;
+        var slide = $('.slide');
+        var swz=0;
+        var snum=$(".bordCorlor li").length;
+        var swd=snum*30+(snum-1)*20-30;
+        var mouseleft = false;
+        $('.bordCorlor').on(end,function(){
+            mouseleft = false;
+        })
+        $('.bordCorlor').on(start,function(){
+            if(IsPC()){
+                stouche = event;
+                if(stouche.button == 0){
+                    mouseleft = true;
+                }               
+            }else{
+                stouche = event.touches[0];
+                mouseleft = true;
+            }
+            s=touche.clientX;
+            swz = slide.attr('offsetLeft');
+        });
+        $('.bordCorlor').on(move,function(){
+            if(IsPC()){
+                stouche = event;
+            }else{
+                stouche = event.touches[0];
+            }
+            var scurLeft=swz+stouche.clientX-s;
+            if(stouche.clientX-s<0 && mouseleft){
+                //右移动
+                if(scurLeft>-swd){
+                    $('.slide').attr('style','position: absolute;left:'+(swz+stouche.clientX-s)+'px');
+                }else{
+                    console.info("最右边");
+                }
+            }else if(stouche.clientX-s>0 && mouseleft){
+                if(scurLeft<10 && scurLeft>-swd){
+                    $('.slide').attr('style','position: absolute;left:'+(swz+stouche.clientX-s)+'px');
+                }else{
+                    console.info("最左边");
+                    $('.slide').attr('style','position: absolute;left:7px');
+                    return 0;
+                }
+
+            }
+            event.preventDefault();
+        });
+</script>
+    <script type="text/javascript">
+        $(".txtEditBox-menu li a").bind('click',function(){
+            var c = this;
+            $(c).attr('style','background-color:rgba(111,111,111,0.5);');
+            setTimeout(function(){
+                $(c).attr('style','background-color:rgba(255,255,255,0);');
+            },300)
+            if($(this).parent().hasClass("jamb")){
+                $(".pop-borderEdit").toggle();
+//              $(".txtEditBox-cnt").addClass("Editbg1");
+//              $(".EditResult").addClass("pad-10 EditBdStyle6 EditBdColor1 EditColor bold");
+            }else{
+//              $(".txtEditBox-cnt").removeClass("Editbg1");
+//              $(".EditResult").removeClass("pad-10 EditBdStyle6 EditBdColor1 EditColor bold");
+                $(".pop-borderEdit").hide();
+            }
+            $(this).parent().siblings("li").find("i").hide();
+            $(this).parent().siblings("li").find("div").hide();
+            $(this).parent().find("i").toggle();
+            $(this).parent().find("div").toggle();
+            
+        });
+        var c = '0';
+        $('.bgColor,.align,.fontColor').on(click,function(){
+                var cclass = $(this).attr('class');
+                console.info(cclass + '' +c);
+                if(c == '0'){
+                    $('.m-zdbg').toggleClass('active1');
+                }else{
+                    if(c != cclass){
+                        
+                    }else{
+                        $('.m-zdbg').toggleClass('active1');
+                    }
+                }
+                c = cclass;
+            });
+        $('.m-zdbg').on(click,function(){
+            $('.m-zdbg').toggleClass('active1');
+            $('.pop-bgColor,.pop-align,.pop-fontColor').hide();
+            $('.txtEditBox-menu li i').hide();
+        })
+        $("#align a").bind(click,function(){
+            var c = this;
+            $(c).attr('style','background-color:rgba(111,111,111,0.5);');
+            setTimeout(function(){
+                $(c).attr('style','background-color:rgba(255,255,255,0);');
+            },100)
+            if($(this).parent().hasClass("alignL")){
+                $(".pop-align ul li.alignL").hide();
+                $(".pop-align ul li.alignC").show();
+                $(".pop-align ul li.alignR").show();
+            }else if($(this).parent().hasClass("alignC")){
+                $(".pop-align ul li.alignL").show();
+                $(".pop-align ul li.alignC").hide();
+                $(".pop-align ul li.alignR").show();
+            }else if($(this).parent().hasClass("alignR")){
+                $(".pop-align ul li.alignL").show();
+                $(".pop-align ul li.alignC").show();
+                $(".pop-align ul li.alignR").hide();
+            }
+        });
+        $(".pop-align li").bind(click,function(){
+            if($(this).hasClass("alignL")){
+                $("#align").attr("class","alignL");
+            }else if($(this).hasClass("alignC")){
+                $("#align").attr("class","alignC");
+            }else if($(this).hasClass("alignR")){
+                $("#align").attr("class","alignR");
+            }
+            $(".pop-align").hide();
+        });
+    </script>
+</body>
+</html>

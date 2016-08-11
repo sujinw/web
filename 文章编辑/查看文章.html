@@ -1,0 +1,288 @@
+﻿<!DOCTYPE html><html><head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+
+<title>我的游记</title>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.lazyload.min.js"></script>
+
+
+<style>
+ html{ -ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;line-height:1.6}body{ margin-bottom: 80px;-webkit-touch-callout:none;font-family:"Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;line-height:inherit}body.rich_media_empty_extra{background-color:#fff}body.rich_media_empty_extra .rich_media_area_primary:before{display:none}h1,h2,h3,h4,h5,h6{font-weight:400;font-size:16px}*{margin:0;padding:0}a{color:#607fa6;text-decoration:none}.rich_media_inner{font-size:16px;word-wrap:break-word;-webkit-hyphens:auto;-ms-hyphens:auto;hyphens:auto}.rich_media_area_primary{position:relative;padding:20px 15px 15px;}.rich_media_area_primary:before{content:" ";position:absolute;left:0;top:0;width:100%;height:1px;border-top:1px solid #e5e5e5;-webkit-transform-origin:0 0;transform-origin:0 0;-webkit-transform:scaleY(0.5);transform:scaleY(0.5);top:auto;bottom:-2px}.rich_media_area_primary .original_img_wrp{display:inline-block;font-size:0}.rich_media_area_primary .original_img_wrp .tips_global{display:block;margin-top:.5em;font-size:14px;text-align:right;width:auto;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal}.rich_media_area_extra{padding:0 15px 0}.rich_media_title{margin-bottom:10px;line-height:1.4;font-weight:400;font-size:24px}.rich_media_meta_list{margin-bottom:18px;line-height:20px;font-size:0}.rich_media_meta_list em{font-style:normal}.rich_media_meta{display:inline-block;vertical-align:middle;margin-right:8px;margin-bottom:10px;font-size:14px}.meta_original_tag{display:inline-block;vertical-align:middle;padding:1px .5em;border:1px solid #9e9e9e;color:#8c8c8c;border-radius:20% 50%;-moz-border-radius:20% 50%;-webkit-border-radius:20% 50%;font-size:15px;line-height:1.1}.meta_enterprise_tag img{width:30px;height:30px!important;display:block;position:relative;margin-top:-3px;border:0}.rich_media_meta_text{color:#8c8c8c}span.rich_media_meta_nickname{display:none}.rich_media_thumb_wrp{margin-bottom:6px}.rich_media_thumb_wrp .original_img_wrp{display:block}.rich_media_thumb{display:block;width:100%}.rich_media_content{overflow:hidden;color:#3e3e3e}.rich_media_content *{max-width:100%!important;box-sizing:border-box!important;-webkit-box-sizing:border-box!important;word-wrap:break-word!important}.rich_media_content p{clear:both;min-height:1em;}.rich_media_content em{font-style:italic}.rich_media_content fieldset{min-width:0}.rich_media_content .list-paddingleft-2{padding-left:30px}.rich_media_content blockquote{margin:0;padding-left:10px;border-left:3px solid #dbdbdb}img{height:auto!important}@media(min-device-width:375px) and (max-device-width:667px) and (-webkit-min-device-pixel-ratio:2){.mm_appmsg .rich_media_inner,.mm_appmsg .rich_media_meta,.mm_appmsg .discuss_list,.mm_appmsg .rich_media_extra,.mm_appmsg .title_tips .tips{font-size:17px}.mm_appmsg .meta_original_tag{font-size:15px}}@media(min-device-width:414px) and (max-device-width:736px) and (-webkit-min-device-pixel-ratio:3){.mm_appmsg .rich_media_title{font-size:25px}}.radius_avatar{display:inline-block;background-color:#fff;padding:3px;border-radius:50%;-moz-border-radius:50%;-webkit-border-radius:50%;overflow:hidden;vertical-align:middle}.radius_avatar img{width:100%;height:100%;border-radius:50%;-moz-border-radius:50%;-webkit-border-radius:50%;background-color:#eee}.cell{padding:.8em 0;display:block;position:relative}.cell_hd,.cell_bd,.cell_ft{display:table-cell;vertical-align:middle;word-wrap:break-word;word-break:break-all;white-space:nowrap}.cell_primary{width:2000px;white-space:normal}.flex_cell{padding:10px 0;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}.flex_cell_primary{width:100%;-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;box-flex:1;flex:1}.original_tool_area{display:block;padding:.75em 1em 0;-webkit-tap-highlight-color:rgba(0,0,0,0);color:#3e3e3e;border:1px solid #eaeaea;margin:20px 0}.original_tool_area .tips_global{position:relative;padding-bottom:.5em;font-size:15px}.original_tool_area .tips_global:after{content:" ";position:absolute;left:0;bottom:0;width:100%;height:1px;border-bottom:1px solid #dbdbdb;-webkit-transform-origin:0 100%;transform-origin:0 100%;-webkit-transform:scaleY(0.5);transform:scaleY(0.5)}.original_tool_area .radius_avatar{width:27px;height:27px;padding:0;margin-right:.5em}.original_tool_area .radius_avatar img{height:100%!important}.original_tool_area .flex_cell_bd{width:auto;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal}.original_tool_area .flex_cell_ft{font-size:14px;color:#8c8c8c;padding-left:1em;white-space:nowrap}.original_tool_area .icon_access:after{content:" ";display:inline-block;height:8px;width:8px;border-width:1px 1px 0 0;border-color:#cbcad0;border-style:solid;transform:matrix(0.71,0.71,-0.71,0.71,0,0);-ms-transform:matrix(0.71,0.71,-0.71,0.71,0,0);-webkit-transform:matrix(0.71,0.71,-0.71,0.71,0,0);position:relative;top:-2px;top:-1px}   
+.rich_media_content img{ vertical-align: bottom; width:100%;}
+ .rich_media_content #_Pic{background-color: #FFF;border-bottom: #E5E6E0 solid 2px;margin-bottom:15px;padding:15px 10px;position: relative;}
+.rich_media_content h5{padding-bottom:20px;}
+@font-face {font-family: "iconfont";
+        src:url('/fonts/iconfont.ttf') format('truetype'); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    }
+    .iconfont0{
+    font-family:"iconfont" !important;
+    line-height: 10px;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: normal;
+    font-style: normal;   
+    text-decoration: none;
+    color:#888;
+    -webkit-font-smoothing: antialiased;
+    
+}
+.icon-wenzilianjie:before { content: "\e638"; }
+.icon-qqkongjian:before { content: "\e640"; }
+.icon-weibo:before { content: "\e63f"; }
+.icon-renren:before { content: "\e641"; }
+.icon-facebook:before { content: "\e63e"; }
+.icon-musicStop:before { content: "\e62e"; }
+.icon-musicPlay:before { content: "\e63b"; }
+#music:active{background-color: #efefef}
+    </style>
+
+
+
+ 
+<script src="js/jweixin-1.0.0.js"></script>
+<script>
+var appid='wx25deccb89d6615cd';
+            var timestamp='1469155502';
+            var nonceStr='ATiCV8GfnTOFL3Js';
+            var signature='afc4e9ba37886eab5a3d39d47f98a4f8b47d4b71';var musicIco='';
+var  music = eval("");
+if( '""' != '')musicIco='?';
+var title=musicIco+"我的游记"; // 分享标题
+var imgUrl="http://m.yourbrand.cn/upload/users/24002/HJwz-zXiJ-73P2cwR46Vh9-36O2GLPy4WogWx2haDnmm7AnXHl_7mNnMkNzAY7aQ.jpg";// 分享图标
+var link=location.href; // 分享链接
+var desc="分享来自【友伴】";// 分享描述
+var type=""; // 分享类型,music、video或link，不填默认为link
+var dataUrl=""; // 如果type是music或video，则要提供数据链接，默认为空
+wx.config({
+    debug: false,
+    appId: appid,
+    timestamp: timestamp,
+    nonceStr: nonceStr,
+    signature: signature,
+    jsApiList: ['previewImage','onMenuShareTimeline','onMenuShareAppMessage','onMenuShareQQ','onMenuShareWeibo']
+  });
+ 
+  wx.ready(function () {
+    wx.onMenuShareTimeline({
+    title: title, // 分享标题
+    link: link, // 分享链接
+    imgUrl: imgUrl, // 分享图标
+    success: function () { 
+        // 用户确认分享后执行的回调函数
+        var obj={ id:1858,vid:24002,title:title,url:link,share:"朋友圈"}
+        $.post("/article/sharesucc", obj,function(result){
+        });
+    },
+    cancel: function () { 
+        // 用户取消分享后执行的回调函数
+    }
+});
+
+
+
+wx.onMenuShareAppMessage({
+    title: title, // 分享标题
+    desc: desc, // 分享描述
+    link: link, // 分享链接
+    imgUrl: imgUrl, // 分享图标
+    type: '', // 分享类型,music、video或link，不填默认为link
+    dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+    success: function () { 
+        // 用户确认分享后执行的回调函数
+        var obj={ id:1858,vid:24002,title:title,url:link,share:"微信好友"}
+        $.post("/article/sharesucc", obj,function(result){
+        });
+
+    },
+    cancel: function () { 
+        // 用户取消分享后执行的回调函数
+    }
+});
+
+wx.getNetworkType({
+success: function (res) {
+document.getElementById('music').play()
+}
+});
+});
+function music_play(){
+var audio = document.getElementById('media'); 
+    if(audio!==null){             
+    //检测播放是否已暂停.audio.paused 在播放器播放时返回false.
+    if(audio.paused){                 
+        audio.play();//audio.play();// 这个就是播放  
+        $(".annu").removeClass("icon-musicStop");
+        $('.annu').addClass("icon-musicPlay");
+    }else{
+        audio.pause();// 这个就是暂停
+        $('.annu').removeClass("icon-musicPlay");
+        $('.annu').addClass("icon-musicStop");
+    }
+    } 
+}
+var HtmlUtil = {
+    /*1.用正则表达式实现html转码*/
+    htmlEncodeByRegExp:function (str){  
+         var s = "";
+         if(str.length == 0) return "";
+         s = str.replace(/&/g,"&amp;");
+         s = s.replace(/</g,"&lt;");
+         s = s.replace(/>/g,"&gt;");
+         s = s.replace(/ /g,"&nbsp;");
+         s = s.replace(/\'/g,"&#39;");
+         s = s.replace(/\"/g,"&quot;");
+         return s;  
+   },
+   /*2.用正则表达式实现html解码*/
+   htmlDecodeByRegExp:function (str){  
+         var s = "";
+         if(str.length == 0) return "";
+         s = str.replace(/&amp;/g,"&");
+         s = s.replace(/&lt;/g,"<");
+         s = s.replace(/&gt;/g,">");
+         s = s.replace(/&nbsp;/g," ");
+         s = s.replace(/&#39;/g,"\'");
+         s = s.replace(/&quot;/g,"\"");
+         return s;  
+   }
+};
+$(document).ready(function(){
+
+//解析正文
+var contentHtml='';
+
+var content = eval([{"type":"img","src":"/upload/users/24002/HJwz-zXiJ-73P2cwR46Vh9-36O2GLPy4WogWx2haDnmm7AnXHl_7mNnMkNzAY7aQ.jpg"},{"type":"text","css":{"font-weight":"400","font-size":"14px","text-align":"start","color":"rgb(238, 34, 7)"},"text":"哥们儿说的是我最爱你爱的那个我爱你爱的"},{"type":"link","url_txt":"帅中的第十","url":"http://mp.weixin.qq.com/s?__biz=mza5ntc3mjc2oa==&mid=2653952084&idx=1&sn=6be7da77b3ba2376947ed0835465e07a&scene=0#wechat_redirect"}]);
+if(music){
+    contentHtml += '<div id="music" style="padding:10px;width:100%;border:1px solid #efefef;overflow:auto;background-color:#FFF;margin-bottom:18px" onclick="music_play()"><div style="float:left;width:40px;"><span class="iconfont0 icon-musicPlay annu" style="color:#58AE43;font-size:30px;line-height:38px;text-align:center"></span></div><div style="float:left;line-height:19px;font-size:13px">' + music.name+"<br><span style='color:#999'>"+music.author+'</span></div></div><audio loop="loop" src="'+music.audio+'" id="media" autoplay="autoplay" preload></audio>';
+}
+if(content){
+    $.each(content, function (n, value) {
+        console.log(value);
+        switch(value.type)
+        {
+        case "img":
+          contentHtml += "<div style='margin-bottom:18px;'><img class=lazy data-original='"+value.src+"'></div>";
+          break;
+        case "text":
+        contentHtml +="<div style='margin-bottom:18px;color:"+value.css.color+";font-size:"+value.css['font-size'] +";font-weight: "+value.css['font-weight'] +";text-align: "+value.css['text-align'] +"'>"+HtmlUtil.htmlDecodeByRegExp(value.text)+"</div>"
+
+          break;
+        case "link":
+        contentHtml += "<div style='margin-bottom:18px;border-bottom:1px #607fa6 dashed '><a href='"+value.url+"'>"+'<span class="iconfont0 icon-wenzilianjie " style="color:#607fa6"></span>'+value.url_txt+"</a></div>";
+          break;
+        }
+
+    })
+}
+
+$("#js_content").html(contentHtml);
+})
+
+</script>
+</head>
+    <body id="activity-detail" class="zh_CN mm_appmsg" ontouchstart="">
+
+     
+    <div id="js_article" class="rich_media">
+        
+        <div id="js_top_ad_area" class="top_banner">
+ 
+        </div>
+                
+
+        <div class="rich_media_inner">
+            <div id="page-content">
+                <div id="img-content" class="rich_media_area_primary">
+                    <h2 class="rich_media_title" id="activity-name">
+                        我的游记                    </h2>
+                    <div class="rich_media_meta_list">
+                    <em id="post-date" class="rich_media_meta rich_media_meta_text">
+                    2016-07-22                    </em>
+                    <!-- <em class="rich_media_meta rich_media_meta_text">U分享</em> -->
+                    <a class="rich_media_meta rich_media_meta_link rich_media_meta_nickname" href="/TravelUser/index/vid/24002" id="post-user">拓源科技</a>
+                    <em class="rich_media_meta rich_media_meta_text">阅读 5  分享 0</em>
+                       
+                    </div>
+                    
+                   
+                    <div class="rich_media_content " id="js_content">
+                         
+                    </div>
+                                    
+                </div>
+
+               
+               
+            </div>
+            
+
+        </div>
+    </div>
+
+<!-- JiaThis Button BEGIN
+<div class="jiathis_style_m" style="clear:both;font-size:14px;margin:15px;width:90%;overflow:auto"></div> -->
+<script type="text/javascript" src="js/jiathis_m.js?uid=1556431" charset="utf-8"></script>
+<div style="border:1px solid #efefef;background-color: #FFF;border-radius: 5px;text-align:center;margin:10px;overflow: auto;color:#919191;padding:10px 0px;font-size:13px">
+  <div>分享到其它平台：</div>
+  <div style="float:left;width: 25%;" onClick="jiathis_mh5.sendTo('qzone');"><span class="iconfont0 icon-qqkongjian" style="color:#66CCFF;line-height:45px;font-size:30px;text-align:center"></span><br>QQ空间</div>
+  <div style="float:left;width: 25%;" onClick="jiathis_mh5.sendTo('tsina');"><span class="iconfont0 icon-weibo" style="color:#66CCFF;line-height:45px;font-size:30px;text-align:center"></span><br>微博</div>
+  <div style="float:left;width: 25%;" onClick="jiathis_mh5.sendTo('renren');"><span class="iconfont0 icon-renren" style="color:#66CCFF;line-height:45px;font-size:30px;text-align:center"></span><br>人人</div>
+  <div style="float:left;width: 25%;" onClick="jiathis_mh5.sendTo('fb');"><span class="iconfont0 icon-facebook" style="color:#66CCFF;line-height:45px;font-size:30px;text-align:center"></span><br>facebook</div>
+</div>
+<!-- JiaThis Button END -->    
+<!--底部菜单开始-->
+<style>
+body{margin-bottom: 60px;}
+.footer_ a{display: block;}
+.footer_ {
+clear:both;bottom: 0px;position: fixed;left: 0;height: 64px;width: 100%;background: rgba(0,0,0,0.5);z-index: 9999;-ms-flex-align: center;-webkit-align-items: center;-webkit-box-align: center;align-items: center;width:100%;display: -webkit-box;display: -webkit-flex; /* Safari */display: flex;}
+.kuai_headimg{margin:0 10px;position:relative;}.kuai_headimg .red_{position: absolute;width:10px;height: 10px;background-color: red;top:8px;right:0px;border-radius: 6px;} 
+.kuai_txt{ -moz-box-flex: 1; -webkit-box-flex: 1;box-flex: 1;-webkit-flex: 1;color:#fff;font-size:16px;width:50%;line-height:1.5em } 
+.kuai_txt span{font-size:11px;line-height: 1.3em;text-overflow: -o-ellipsis-lastline;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;}
+.kuai_btn{  /*-moz-box-flex: 1; -webkit-box-flex: 1; box-flex: 1;-webkit-flex: 1;*/border-radius: 4px;background-color: #52D203;color:#fff;margin:0 10px;width:80px;text-align: center;line-height: 35px;font-size:13px;}
+.headerimg_{ height:55px;width:55px;border-radius: 50%;border:1px solid #FFF;overflow: hidden;display: block; background: url(http://wx.qlogo.cn/mmopen/gWicbXPiajJn9lhbe8TrUib7JsrFWr9h6NibDnl1O2gtesltpfhR8fOibXrCaiaz13lcQfBtXdFCcPjU12icENodlbUZicwTZibic5XgGib/0) center center;background-size: cover;margin:0 auto;}.expire_footer{background-color: #005AA9;clear:both;bottom: 0px;position: fixed;left: 0;height: 55px;width: 100%;text-align: center;}
+
+</style>
+
+<!-- <div class="footer_">
+<a class="kuai_headimg" href="/TravelUser/index/vid/24002"><i class="headerimg_"></i><div class="red_"></div></a>
+<a class="kuai_txt">拓源科技<br><span></span></a>
+<a class="kuai_btn" href="/TravelUser/travelProduct/vid/24002">我也想旅行</a>       
+</div> -->
+<!--底部菜单结束--> 
+
+</body>
+
+<script>
+$(function()
+{
+    var allimg=$('#js_content').find("img");
+        var srcgroup= [];
+        for (var i=0;i<allimg.length;i++) {
+            var src = $(allimg[i]).attr("data-original");
+            if(!src){  src = allimg[i].src; }
+            if(src.substr(0,4)!="http")src="http://m.yourbrand.cn"+src;
+            srcgroup.push( src );
+        }
+       $('#js_content img').on('click',function(){
+        var theSrc=$(this).attr("src"); 
+        if(theSrc.substr(0,4)!="http")theSrc="http://m.yourbrand.cn"+theSrc;
+       wx.previewImage({
+      current: theSrc,
+      urls: srcgroup
+    });
+        }); 
+
+
+$("img.lazy").lazyload({ threshold:600, placeholder:"/images/blank.gif" });
+}); 
+
+
+</script>
+
+ <img src="http://c.cnzz.com/wapstat.php?siteid=1254917461&r=http%3A%2F%2Fm.yourbrand.cn%2FTravelUserCenter%2Ftravel&rnd=2075855017" width="0" height="0"/></html>
